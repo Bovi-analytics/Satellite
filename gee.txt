@@ -1,0 +1,54 @@
+//[out:json];
+// 1. Grab the New York boundary
+//area["name"="New York"]["admin_level"="4"]->.ny;
+
+[out:json][timeout:25];
+area["name"="New York"]["admin_level"="4"]->.a;
+(
+  way["landuse"="farmyard"](area.a);
+  relation["landuse"="farmyard"](area.a);
+);
+out body;
+>;
+out skel qt;
+
+
+
+var farms = ee.FeatureCollection('projects/dairy-farms-detection/assets/export_New_York_farmyard');
+
+// Load NAIP imagery for New York
+var naip = ee.ImageCollection("USDA/NAIP/DOQQ")
+  .filterBounds(farms)
+  .filterDate('2021-01-01', '2022-12-31')
+  .mosaic();  // Merge all images into one layer
+
+// Clip NAIP imagery to your farm polygons
+var naipClipped = naip.clip(farms);
+
+// Visualize
+Map.centerObject(farms, 11);
+Map.addLayer(naipClipped, {
+  bands: ['R', 'G', 'B'], // NAIP band names
+  min: 0,
+  max: 255
+}, 'NAIP RGB');
+
+// Optional: Add farm polygons outline
+Map.addLayer(farms.style({color: 'black', fillColor: '00000000', width: 1.5}), {}, 'Farm Boundaries');
+
+naip = naip.reproject({crs: 'EPSG:4326', scale: 1});
+
+var exportSingleFarm = function(feature) {
+  var farmId = feature.id();  // Unique ID for filename
+
+  Export.image.toDrive({
+    image: naip.clip(feature),
+    description: 'farm_patch_' + farmId,
+    folder: 'naip_farms',
+    fileNamePrefix: 'farm_patch_' + farmId,
+    scale: 1,  // 1 meter per pixel
+    region: feature.geometry(),
+    maxPixels: 1e9,
+    crs: 'EPSG:4326'
+  });
+};

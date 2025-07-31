@@ -1,0 +1,4782 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_78221cb4a3989a691ace0846ebe94f8a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_78221cb4a3989a691ace0846ebe94f8a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_78221cb4a3989a691ace0846ebe94f8a = L.map(
+                "map_78221cb4a3989a691ace0846ebe94f8a",
+                {
+                    center: [43.07673802970675, -76.58101051401047],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cd1a1ccdf839762ae64fc58184c542cf = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_cd1a1ccdf839762ae64fc58184c542cf.addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var tile_layer_c4d35d33301567c641a15ef05cc681e9 = L.tileLayer(
+                "http://{s}.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Satellite",
+  "subdomains": [
+"mt0",
+"mt1",
+"mt2",
+"mt3",
+],
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c4d35d33301567c641a15ef05cc681e9.addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var layer_control_41bd01032d3107d5ec57daff9140a773_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_cd1a1ccdf839762ae64fc58184c542cf,
+                    "Google Satellite" : tile_layer_c4d35d33301567c641a15ef05cc681e9,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_41bd01032d3107d5ec57daff9140a773 = L.control.layers(
+                layer_control_41bd01032d3107d5ec57daff9140a773_layers.base_layers,
+                layer_control_41bd01032d3107d5ec57daff9140a773_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+
+        
+    
+            var marker_4e817d90e5b0d77346a22b2f6df5c9de = L.marker(
+                [42.9148321132475, -76.6632867511567],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_1f3501faea41989208d50d6198a33803 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2156bcd432f7cb29f95c62da4efd41b0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b218476549a90b5595b77c346b9e815 = $(`<div id="html_3b218476549a90b5595b77c346b9e815" style="width: 100.0%; height: 100.0%;">Aurora-Oakwood Dairy, LLC</div>`)[0];
+                popup_2156bcd432f7cb29f95c62da4efd41b0.setContent(html_3b218476549a90b5595b77c346b9e815);
+            
+        
+
+        marker_4e817d90e5b0d77346a22b2f6df5c9de.bindPopup(popup_2156bcd432f7cb29f95c62da4efd41b0)
+        ;
+
+        
+    
+    
+                marker_4e817d90e5b0d77346a22b2f6df5c9de.setIcon(icon_1f3501faea41989208d50d6198a33803);
+            
+    
+            var marker_9ffe1d6897aae779997a9fc65a1498c7 = L.marker(
+                [42.7388262113656, -76.657021096048],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_0c81f44c726846b3df2ab12a20c805cc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8c0f1a017806db9520048ad9ebc65574 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0872a332297bdba6bcf560bcac5395cc = $(`<div id="html_0872a332297bdba6bcf560bcac5395cc" style="width: 100.0%; height: 100.0%;">Aurora Ridge Dairy, LLC</div>`)[0];
+                popup_8c0f1a017806db9520048ad9ebc65574.setContent(html_0872a332297bdba6bcf560bcac5395cc);
+            
+        
+
+        marker_9ffe1d6897aae779997a9fc65a1498c7.bindPopup(popup_8c0f1a017806db9520048ad9ebc65574)
+        ;
+
+        
+    
+    
+                marker_9ffe1d6897aae779997a9fc65a1498c7.setIcon(icon_0c81f44c726846b3df2ab12a20c805cc);
+            
+    
+            var marker_1af6b74f0cf14485f9cca872ec19b39b = L.marker(
+                [42.6715465597816, -76.6237330007397],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_263266d0cbb1d6df4c473ccc190d4de7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6004d8b2acc83b991feb59d485322502 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_39a9fe9bb5090582e8bb9af738a0a307 = $(`<div id="html_39a9fe9bb5090582e8bb9af738a0a307" style="width: 100.0%; height: 100.0%;">Fessenden Dairy, LLC</div>`)[0];
+                popup_6004d8b2acc83b991feb59d485322502.setContent(html_39a9fe9bb5090582e8bb9af738a0a307);
+            
+        
+
+        marker_1af6b74f0cf14485f9cca872ec19b39b.bindPopup(popup_6004d8b2acc83b991feb59d485322502)
+        ;
+
+        
+    
+    
+                marker_1af6b74f0cf14485f9cca872ec19b39b.setIcon(icon_263266d0cbb1d6df4c473ccc190d4de7);
+            
+    
+            var marker_ea3ad14d3f7e3bdd12e6c3866ab98803 = L.marker(
+                [43.0525046289013, -75.8957112143522],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_4152a91d942dba4f2a47bab89fae438a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c82c317dd69eaba9c2aab91cf3664344 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_005b8a6992a6dd1f80f8c5ef9bf48535 = $(`<div id="html_005b8a6992a6dd1f80f8c5ef9bf48535" style="width: 100.0%; height: 100.0%;">Tuscarora Dairy LLC</div>`)[0];
+                popup_c82c317dd69eaba9c2aab91cf3664344.setContent(html_005b8a6992a6dd1f80f8c5ef9bf48535);
+            
+        
+
+        marker_ea3ad14d3f7e3bdd12e6c3866ab98803.bindPopup(popup_c82c317dd69eaba9c2aab91cf3664344)
+        ;
+
+        
+    
+    
+                marker_ea3ad14d3f7e3bdd12e6c3866ab98803.setIcon(icon_4152a91d942dba4f2a47bab89fae438a);
+            
+    
+            var marker_e5d3105242cd97bdf4827d04d28f9fd4 = L.marker(
+                [42.859108195418, -78.2486512548263],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_61434f986b2883715f1850fb408ce96d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9592b4465046eed118067fa564316beb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3f569715b74e31f955271405e047f84c = $(`<div id="html_3f569715b74e31f955271405e047f84c" style="width: 100.0%; height: 100.0%;">Red Maples Dairy</div>`)[0];
+                popup_9592b4465046eed118067fa564316beb.setContent(html_3f569715b74e31f955271405e047f84c);
+            
+        
+
+        marker_e5d3105242cd97bdf4827d04d28f9fd4.bindPopup(popup_9592b4465046eed118067fa564316beb)
+        ;
+
+        
+    
+    
+                marker_e5d3105242cd97bdf4827d04d28f9fd4.setIcon(icon_61434f986b2883715f1850fb408ce96d);
+            
+    
+            var marker_90ae65b33607a930aa03a01e97481643 = L.marker(
+                [42.8827814999671, -78.2499449578678],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_f9aa84e2b7d9ad0ab05e1f41045dd909 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cf43c07f6191004b6ec37660ca0c9d84 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_16e3ac8984380179f7cff148a94fcb5c = $(`<div id="html_16e3ac8984380179f7cff148a94fcb5c" style="width: 100.0%; height: 100.0%;">McCormick Family Dairy</div>`)[0];
+                popup_cf43c07f6191004b6ec37660ca0c9d84.setContent(html_16e3ac8984380179f7cff148a94fcb5c);
+            
+        
+
+        marker_90ae65b33607a930aa03a01e97481643.bindPopup(popup_cf43c07f6191004b6ec37660ca0c9d84)
+        ;
+
+        
+    
+    
+                marker_90ae65b33607a930aa03a01e97481643.setIcon(icon_f9aa84e2b7d9ad0ab05e1f41045dd909);
+            
+    
+            var marker_5eb8a919ee4f0afa5adf22c1d771c480 = L.marker(
+                [43.0452038505527, -78.2100162574578],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_99779f8b4da00168d286364a2a04e571 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ac22ad1b57e731b58e3786b8d54968d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3d2d2ca2dc802585460df43b66669e29 = $(`<div id="html_3d2d2ca2dc802585460df43b66669e29" style="width: 100.0%; height: 100.0%;">Post Dairy Farms</div>`)[0];
+                popup_ac22ad1b57e731b58e3786b8d54968d4.setContent(html_3d2d2ca2dc802585460df43b66669e29);
+            
+        
+
+        marker_5eb8a919ee4f0afa5adf22c1d771c480.bindPopup(popup_ac22ad1b57e731b58e3786b8d54968d4)
+        ;
+
+        
+    
+    
+                marker_5eb8a919ee4f0afa5adf22c1d771c480.setIcon(icon_99779f8b4da00168d286364a2a04e571);
+            
+    
+            var marker_3e5f9e9db5e3102ba7fd66b411d3f584 = L.marker(
+                [42.9796036577333, -74.8325908643636],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_280c6aa5ccb12537b4676c2e09c18647 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_48df585ab7e73d2d36d519f746c62900 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a7ff71082d67adde20e9960437208171 = $(`<div id="html_a7ff71082d67adde20e9960437208171" style="width: 100.0%; height: 100.0%;">Insight Dairy</div>`)[0];
+                popup_48df585ab7e73d2d36d519f746c62900.setContent(html_a7ff71082d67adde20e9960437208171);
+            
+        
+
+        marker_3e5f9e9db5e3102ba7fd66b411d3f584.bindPopup(popup_48df585ab7e73d2d36d519f746c62900)
+        ;
+
+        
+    
+    
+                marker_3e5f9e9db5e3102ba7fd66b411d3f584.setIcon(icon_280c6aa5ccb12537b4676c2e09c18647);
+            
+    
+            var marker_bdae82b5b69478009187db8388d578f7 = L.marker(
+                [43.8699179682481, -75.6153411152599],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_36588dc2a93ae5d53b6f66550d48f790 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fb17d7131fb440844f7ec9c002e2125c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_586c0b57bf79f9c16f691bebc5a5fa3e = $(`<div id="html_586c0b57bf79f9c16f691bebc5a5fa3e" style="width: 100.0%; height: 100.0%;">Moserdale Dairy</div>`)[0];
+                popup_fb17d7131fb440844f7ec9c002e2125c.setContent(html_586c0b57bf79f9c16f691bebc5a5fa3e);
+            
+        
+
+        marker_bdae82b5b69478009187db8388d578f7.bindPopup(popup_fb17d7131fb440844f7ec9c002e2125c)
+        ;
+
+        
+    
+    
+                marker_bdae82b5b69478009187db8388d578f7.setIcon(icon_36588dc2a93ae5d53b6f66550d48f790);
+            
+    
+            var marker_5b7e662aea3af037f10c0d5f5bba750d = L.marker(
+                [43.7013097647555, -75.457641121217],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_2e7ed309c18de7fa011af053821bf370 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_13d20dba4b7d60d8d68a98806706ff37 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4c7596de6bfb08bf7bf14509ba878091 = $(`<div id="html_4c7596de6bfb08bf7bf14509ba878091" style="width: 100.0%; height: 100.0%;">Demko Dairy</div>`)[0];
+                popup_13d20dba4b7d60d8d68a98806706ff37.setContent(html_4c7596de6bfb08bf7bf14509ba878091);
+            
+        
+
+        marker_5b7e662aea3af037f10c0d5f5bba750d.bindPopup(popup_13d20dba4b7d60d8d68a98806706ff37)
+        ;
+
+        
+    
+    
+                marker_5b7e662aea3af037f10c0d5f5bba750d.setIcon(icon_2e7ed309c18de7fa011af053821bf370);
+            
+    
+            var marker_0f4570e051dcce47723b3e246da5e407 = L.marker(
+                [43.1843475363184, -76.7970110256383],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_9a6b4b4dbc85d02e240935499958db78 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2bc93b318611662f6ce6791e32dec669 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8dbbc9772ab4212393b19e5eb23f1c65 = $(`<div id="html_8dbbc9772ab4212393b19e5eb23f1c65" style="width: 100.0%; height: 100.0%;">Merrell Dairy, LLC</div>`)[0];
+                popup_2bc93b318611662f6ce6791e32dec669.setContent(html_8dbbc9772ab4212393b19e5eb23f1c65);
+            
+        
+
+        marker_0f4570e051dcce47723b3e246da5e407.bindPopup(popup_2bc93b318611662f6ce6791e32dec669)
+        ;
+
+        
+    
+    
+                marker_0f4570e051dcce47723b3e246da5e407.setIcon(icon_9a6b4b4dbc85d02e240935499958db78);
+            
+    
+            var marker_7d944e5200ef7fe4ad3364282e64b095 = L.marker(
+                [43.9190952893772, -75.7978598193026],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_f965dc942b4aaa015bd8387fa613bb46 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_65df4c4baf2062a0420160e0886cc91e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_298e354f5d618c569f779604e5b691ed = $(`<div id="html_298e354f5d618c569f779604e5b691ed" style="width: 100.0%; height: 100.0%;">Milk Street Dairy</div>`)[0];
+                popup_65df4c4baf2062a0420160e0886cc91e.setContent(html_298e354f5d618c569f779604e5b691ed);
+            
+        
+
+        marker_7d944e5200ef7fe4ad3364282e64b095.bindPopup(popup_65df4c4baf2062a0420160e0886cc91e)
+        ;
+
+        
+    
+    
+                marker_7d944e5200ef7fe4ad3364282e64b095.setIcon(icon_f965dc942b4aaa015bd8387fa613bb46);
+            
+    
+            var marker_6344e9fa91b037ed3d5125866a537ad1 = L.marker(
+                [42.6387775293678, -76.4965983767044],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_5293762523bec4d08d28214eb87915e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_83bbfdc56081af9583d3ee3f73917e46 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bdc9cce152c1ba6909980bd99e48644c = $(`<div id="html_bdc9cce152c1ba6909980bd99e48644c" style="width: 100.0%; height: 100.0%;">Willet Dairy LLC</div>`)[0];
+                popup_83bbfdc56081af9583d3ee3f73917e46.setContent(html_bdc9cce152c1ba6909980bd99e48644c);
+            
+        
+
+        marker_6344e9fa91b037ed3d5125866a537ad1.bindPopup(popup_83bbfdc56081af9583d3ee3f73917e46)
+        ;
+
+        
+    
+    
+                marker_6344e9fa91b037ed3d5125866a537ad1.setIcon(icon_5293762523bec4d08d28214eb87915e7);
+            
+    
+            var marker_f93baeb4c4156e89c7ad8bf5ee14f318 = L.marker(
+                [42.7563485277497, -76.5781426721774],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_0af6ac0d810b1b02f4e94ef85984bdc9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_895113421a4e623782b2f91b68a64b19 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_76c3444d307c8e938addf39b48a35574 = $(`<div id="html_76c3444d307c8e938addf39b48a35574" style="width: 100.0%; height: 100.0%;">Vansridge Dairy, LLC</div>`)[0];
+                popup_895113421a4e623782b2f91b68a64b19.setContent(html_76c3444d307c8e938addf39b48a35574);
+            
+        
+
+        marker_f93baeb4c4156e89c7ad8bf5ee14f318.bindPopup(popup_895113421a4e623782b2f91b68a64b19)
+        ;
+
+        
+    
+    
+                marker_f93baeb4c4156e89c7ad8bf5ee14f318.setIcon(icon_0af6ac0d810b1b02f4e94ef85984bdc9);
+            
+    
+            var marker_0167000dad53a039b4bc132f2cf0d93c = L.marker(
+                [44.5987469283177, -75.3506091556295],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_b4235d5fe9765dc60fae6627e56a1a7b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_476a2d4afa4e3d210de6b3cdf88f4907 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c020a7faf32abbbb5aa3bb27d9a7dc13 = $(`<div id="html_c020a7faf32abbbb5aa3bb27d9a7dc13" style="width: 100.0%; height: 100.0%;">KELLY DAIRY, LLC</div>`)[0];
+                popup_476a2d4afa4e3d210de6b3cdf88f4907.setContent(html_c020a7faf32abbbb5aa3bb27d9a7dc13);
+            
+        
+
+        marker_0167000dad53a039b4bc132f2cf0d93c.bindPopup(popup_476a2d4afa4e3d210de6b3cdf88f4907)
+        ;
+
+        
+    
+    
+                marker_0167000dad53a039b4bc132f2cf0d93c.setIcon(icon_b4235d5fe9765dc60fae6627e56a1a7b);
+            
+    
+            var marker_4f668242e4bee98a8902e6e3ad8f1cae = L.marker(
+                [44.5926289334095, -75.1866721016636],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_668fd4932ef0e2efa4bd8765a6b6b5d6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_af3c265ea1333a01ea2c73620062449f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c1162053454fa8bf5c968155fdf7d2e2 = $(`<div id="html_c1162053454fa8bf5c968155fdf7d2e2" style="width: 100.0%; height: 100.0%;">TERIELE FAMILY DAIRY, LLC</div>`)[0];
+                popup_af3c265ea1333a01ea2c73620062449f.setContent(html_c1162053454fa8bf5c968155fdf7d2e2);
+            
+        
+
+        marker_4f668242e4bee98a8902e6e3ad8f1cae.bindPopup(popup_af3c265ea1333a01ea2c73620062449f)
+        ;
+
+        
+    
+    
+                marker_4f668242e4bee98a8902e6e3ad8f1cae.setIcon(icon_668fd4932ef0e2efa4bd8765a6b6b5d6);
+            
+    
+            var marker_d7576e83f9233d1fd7ba92f4a4130efe = L.marker(
+                [42.077140387717, -79.7348796629],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_4b7ffada13f7b03ca18a8ddf3f17b4ac = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5e1a689f46b0734a2aa2e18312da423e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f28baaaf22e1f1e0beb318eeecc9af78 = $(`<div id="html_f28baaaf22e1f1e0beb318eeecc9af78" style="width: 100.0%; height: 100.0%;">4 Jacks Dairy, LLC</div>`)[0];
+                popup_5e1a689f46b0734a2aa2e18312da423e.setContent(html_f28baaaf22e1f1e0beb318eeecc9af78);
+            
+        
+
+        marker_d7576e83f9233d1fd7ba92f4a4130efe.bindPopup(popup_5e1a689f46b0734a2aa2e18312da423e)
+        ;
+
+        
+    
+    
+                marker_d7576e83f9233d1fd7ba92f4a4130efe.setIcon(icon_4b7ffada13f7b03ca18a8ddf3f17b4ac);
+            
+    
+            var marker_ee633b801ebd09887896fc470802398a = L.marker(
+                [44.8274871159586, -74.3994159190034],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_aad79ad5836f78a8da781bf0f330dc1c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9f1d84e8ef75dc0a46ab02757b85e099 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d8b5b7d69eed06cdf614068dfd534e03 = $(`<div id="html_d8b5b7d69eed06cdf614068dfd534e03" style="width: 100.0%; height: 100.0%;">Carsada Dairy</div>`)[0];
+                popup_9f1d84e8ef75dc0a46ab02757b85e099.setContent(html_d8b5b7d69eed06cdf614068dfd534e03);
+            
+        
+
+        marker_ee633b801ebd09887896fc470802398a.bindPopup(popup_9f1d84e8ef75dc0a46ab02757b85e099)
+        ;
+
+        
+    
+    
+                marker_ee633b801ebd09887896fc470802398a.setIcon(icon_aad79ad5836f78a8da781bf0f330dc1c);
+            
+    
+            var marker_0391021bafa221010538e239207e0f94 = L.marker(
+                [44.6344644943533, -73.5583838160257],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_f450e22bf2b5a07204dd6359d1615d63 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_52b69091601746eea616ddf393004043 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_500175c13af13d421fb57a9145ac64cd = $(`<div id="html_500175c13af13d421fb57a9145ac64cd" style="width: 100.0%; height: 100.0%;">Ashline Dairy</div>`)[0];
+                popup_52b69091601746eea616ddf393004043.setContent(html_500175c13af13d421fb57a9145ac64cd);
+            
+        
+
+        marker_0391021bafa221010538e239207e0f94.bindPopup(popup_52b69091601746eea616ddf393004043)
+        ;
+
+        
+    
+    
+                marker_0391021bafa221010538e239207e0f94.setIcon(icon_f450e22bf2b5a07204dd6359d1615d63);
+            
+    
+            var marker_5c592f384f2cd819691fff2a5b1bc02f = L.marker(
+                [43.0515303246278, -73.6728606007276],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_3ed96c07089228494c7a5091e0cc69b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_765cef56f40f2a7805bc695e4ae92139 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c2fb8b947ced652562a8b7e0c911b8da = $(`<div id="html_c2fb8b947ced652562a8b7e0c911b8da" style="width: 100.0%; height: 100.0%;">Koval Brothers Dairy</div>`)[0];
+                popup_765cef56f40f2a7805bc695e4ae92139.setContent(html_c2fb8b947ced652562a8b7e0c911b8da);
+            
+        
+
+        marker_5c592f384f2cd819691fff2a5b1bc02f.bindPopup(popup_765cef56f40f2a7805bc695e4ae92139)
+        ;
+
+        
+    
+    
+                marker_5c592f384f2cd819691fff2a5b1bc02f.setIcon(icon_3ed96c07089228494c7a5091e0cc69b7);
+            
+    
+            var marker_38cc8364b1f3233ba0258ac430b39d16 = L.marker(
+                [44.8677845149446, -74.3597594499112],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_eda8b5c59e3bd02ce8cfd8a6d03c67a4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3efeab45f93a96ce1c077c0897ef3559 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d891c6140ae318010ccd074ff5878b66 = $(`<div id="html_d891c6140ae318010ccd074ff5878b66" style="width: 100.0%; height: 100.0%;">PAPAS Dairy</div>`)[0];
+                popup_3efeab45f93a96ce1c077c0897ef3559.setContent(html_d891c6140ae318010ccd074ff5878b66);
+            
+        
+
+        marker_38cc8364b1f3233ba0258ac430b39d16.bindPopup(popup_3efeab45f93a96ce1c077c0897ef3559)
+        ;
+
+        
+    
+    
+                marker_38cc8364b1f3233ba0258ac430b39d16.setIcon(icon_eda8b5c59e3bd02ce8cfd8a6d03c67a4);
+            
+    
+            var marker_af5f3437055d2547f9314c798537aed3 = L.marker(
+                [43.06417281603, -73.6831685950075],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_4be1f561c44136230b150829a4c93784 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ae00ac4465386811d32c3646ce58e8b9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2fadb984d0565e50d329e01688cd989b = $(`<div id="html_2fadb984d0565e50d329e01688cd989b" style="width: 100.0%; height: 100.0%;">Turning Point Dairy</div>`)[0];
+                popup_ae00ac4465386811d32c3646ce58e8b9.setContent(html_2fadb984d0565e50d329e01688cd989b);
+            
+        
+
+        marker_af5f3437055d2547f9314c798537aed3.bindPopup(popup_ae00ac4465386811d32c3646ce58e8b9)
+        ;
+
+        
+    
+    
+                marker_af5f3437055d2547f9314c798537aed3.setIcon(icon_4be1f561c44136230b150829a4c93784);
+            
+    
+            var marker_03a6154195cb0cba7830ef03f77b890d = L.marker(
+                [43.0602065259881, -73.6855249852254],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_ccc9801d457a33e87366507edfbb3465 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_162ed5bb0905fcc32bd2d106b610ac1e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_995e66bf0251eef83fcf847067fb86d0 = $(`<div id="html_995e66bf0251eef83fcf847067fb86d0" style="width: 100.0%; height: 100.0%;">Hanehan Family Dairy</div>`)[0];
+                popup_162ed5bb0905fcc32bd2d106b610ac1e.setContent(html_995e66bf0251eef83fcf847067fb86d0);
+            
+        
+
+        marker_03a6154195cb0cba7830ef03f77b890d.bindPopup(popup_162ed5bb0905fcc32bd2d106b610ac1e)
+        ;
+
+        
+    
+    
+                marker_03a6154195cb0cba7830ef03f77b890d.setIcon(icon_ccc9801d457a33e87366507edfbb3465);
+            
+    
+            var marker_a3228cfaff441d9e50876470e4a3cb6e = L.marker(
+                [43.1554270351828, -73.6252227328054],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_9e2acae2d3d2b03784d1338f2eafd23c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4c8709ff492dd23979c9bdde04fc6687 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2aaa372f9d6fbda5564835172c841329 = $(`<div id="html_2aaa372f9d6fbda5564835172c841329" style="width: 100.0%; height: 100.0%;">Barber Bros. Dairy</div>`)[0];
+                popup_4c8709ff492dd23979c9bdde04fc6687.setContent(html_2aaa372f9d6fbda5564835172c841329);
+            
+        
+
+        marker_a3228cfaff441d9e50876470e4a3cb6e.bindPopup(popup_4c8709ff492dd23979c9bdde04fc6687)
+        ;
+
+        
+    
+    
+                marker_a3228cfaff441d9e50876470e4a3cb6e.setIcon(icon_9e2acae2d3d2b03784d1338f2eafd23c);
+            
+    
+            var marker_58a48e03e1ca54d2acdb65c64aff53b8 = L.marker(
+                [44.7391139601101, -75.156766102627],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_3dbe02fb501789bd6807afa477d81649 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_316e721fe1a2d37d8786621990b77490 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd9d0be2ce277c4f63f80bd408d4ed50 = $(`<div id="html_fd9d0be2ce277c4f63f80bd408d4ed50" style="width: 100.0%; height: 100.0%;">Mapleview Dairy</div>`)[0];
+                popup_316e721fe1a2d37d8786621990b77490.setContent(html_fd9d0be2ce277c4f63f80bd408d4ed50);
+            
+        
+
+        marker_58a48e03e1ca54d2acdb65c64aff53b8.bindPopup(popup_316e721fe1a2d37d8786621990b77490)
+        ;
+
+        
+    
+    
+                marker_58a48e03e1ca54d2acdb65c64aff53b8.setIcon(icon_3dbe02fb501789bd6807afa477d81649);
+            
+    
+            var marker_9504cfe089b1c99ade720a37fe14ee4a = L.marker(
+                [44.8364652993262, -75.1013395227522],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_81ce8b3ce4976c6eb0ab4e451d8beae9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f47c03079fbf25eddfa84ff964939dee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd9683702db9f3a6859ac8a0bc554530 = $(`<div id="html_fd9683702db9f3a6859ac8a0bc554530" style="width: 100.0%; height: 100.0%;">River Breeze Dairy</div>`)[0];
+                popup_f47c03079fbf25eddfa84ff964939dee.setContent(html_fd9683702db9f3a6859ac8a0bc554530);
+            
+        
+
+        marker_9504cfe089b1c99ade720a37fe14ee4a.bindPopup(popup_f47c03079fbf25eddfa84ff964939dee)
+        ;
+
+        
+    
+    
+                marker_9504cfe089b1c99ade720a37fe14ee4a.setIcon(icon_81ce8b3ce4976c6eb0ab4e451d8beae9);
+            
+    
+            var marker_60f6e7b9dea56f1d157f88dcd955a205 = L.marker(
+                [42.9767326210313, -75.512967435025],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_927726dfc965db1e28235e05ac9f9140 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5a3537c5764f7f1cc5719259c0cb3bca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fad0cc15590bc8bba1e3838656e568c4 = $(`<div id="html_fad0cc15590bc8bba1e3838656e568c4" style="width: 100.0%; height: 100.0%;">Truandvin Dairy</div>`)[0];
+                popup_5a3537c5764f7f1cc5719259c0cb3bca.setContent(html_fad0cc15590bc8bba1e3838656e568c4);
+            
+        
+
+        marker_60f6e7b9dea56f1d157f88dcd955a205.bindPopup(popup_5a3537c5764f7f1cc5719259c0cb3bca)
+        ;
+
+        
+    
+    
+                marker_60f6e7b9dea56f1d157f88dcd955a205.setIcon(icon_927726dfc965db1e28235e05ac9f9140);
+            
+    
+            var marker_3f9e2280a189999059ed4a45468f1890 = L.marker(
+                [42.5942715198803, -76.5223073820854],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_27a2b16d68cda697f30f568f970c26dc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c6ab02d9bc016d6e78cdc58dc0dddef3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd1b25e208b110c44e496172c071cabd = $(`<div id="html_dd1b25e208b110c44e496172c071cabd" style="width: 100.0%; height: 100.0%;">Walnut Ridge Dairy LLC</div>`)[0];
+                popup_c6ab02d9bc016d6e78cdc58dc0dddef3.setContent(html_dd1b25e208b110c44e496172c071cabd);
+            
+        
+
+        marker_3f9e2280a189999059ed4a45468f1890.bindPopup(popup_c6ab02d9bc016d6e78cdc58dc0dddef3)
+        ;
+
+        
+    
+    
+                marker_3f9e2280a189999059ed4a45468f1890.setIcon(icon_27a2b16d68cda697f30f568f970c26dc);
+            
+    
+            var marker_b2685616dddadfb1f4ea8f508b55a2b1 = L.marker(
+                [42.836333497959, -75.9469865051821],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_75367a80aaaddd4031423cdbfd1bdd77 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_273b7f62e78efe45fe2b950155ad083d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e9389414489c945b97e257bb9984f7e7 = $(`<div id="html_e9389414489c945b97e257bb9984f7e7" style="width: 100.0%; height: 100.0%;">Barbland Dairy, LLC</div>`)[0];
+                popup_273b7f62e78efe45fe2b950155ad083d.setContent(html_e9389414489c945b97e257bb9984f7e7);
+            
+        
+
+        marker_b2685616dddadfb1f4ea8f508b55a2b1.bindPopup(popup_273b7f62e78efe45fe2b950155ad083d)
+        ;
+
+        
+    
+    
+                marker_b2685616dddadfb1f4ea8f508b55a2b1.setIcon(icon_75367a80aaaddd4031423cdbfd1bdd77);
+            
+    
+            var marker_c3445e05ffc34b58af85ac42a6538365 = L.marker(
+                [42.8263242395347, -76.5886966205374],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_2fb3472c9318e090c270d57b92d50ec2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bb623342c6bfab035c0440d981a6954d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af1663bd8ad5aab01a7e438597a0e113 = $(`<div id="html_af1663bd8ad5aab01a7e438597a0e113" style="width: 100.0%; height: 100.0%;">Green Hill Dairy, Inc.</div>`)[0];
+                popup_bb623342c6bfab035c0440d981a6954d.setContent(html_af1663bd8ad5aab01a7e438597a0e113);
+            
+        
+
+        marker_c3445e05ffc34b58af85ac42a6538365.bindPopup(popup_bb623342c6bfab035c0440d981a6954d)
+        ;
+
+        
+    
+    
+                marker_c3445e05ffc34b58af85ac42a6538365.setIcon(icon_2fb3472c9318e090c270d57b92d50ec2);
+            
+    
+            var marker_dbef479ffca69c0cf3e8a6c95d555c21 = L.marker(
+                [42.8091732108443, -77.9236796177737],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_96757cc70170461f597a6b183db1a814 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0f2da658b09ddfa0d0ef4919954e8c65 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7270e8db1a4191b3a04877e1b519320f = $(`<div id="html_7270e8db1a4191b3a04877e1b519320f" style="width: 100.0%; height: 100.0%;">Thornapple Dairy</div>`)[0];
+                popup_0f2da658b09ddfa0d0ef4919954e8c65.setContent(html_7270e8db1a4191b3a04877e1b519320f);
+            
+        
+
+        marker_dbef479ffca69c0cf3e8a6c95d555c21.bindPopup(popup_0f2da658b09ddfa0d0ef4919954e8c65)
+        ;
+
+        
+    
+    
+                marker_dbef479ffca69c0cf3e8a6c95d555c21.setIcon(icon_96757cc70170461f597a6b183db1a814);
+            
+    
+            var marker_328cb0c11f606adf6cdd8a107ed9650d = L.marker(
+                [42.5785773172555, -77.4822274884544],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_9de87a493fdd178ac178db9b8224b9c4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_286caf66224f17f49ab0e5dd4f206a08 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_11ffaf6c2e1983751c14d7ecc300dcc2 = $(`<div id="html_11ffaf6c2e1983751c14d7ecc300dcc2" style="width: 100.0%; height: 100.0%;">Schum-Acres Dairy Ops</div>`)[0];
+                popup_286caf66224f17f49ab0e5dd4f206a08.setContent(html_11ffaf6c2e1983751c14d7ecc300dcc2);
+            
+        
+
+        marker_328cb0c11f606adf6cdd8a107ed9650d.bindPopup(popup_286caf66224f17f49ab0e5dd4f206a08)
+        ;
+
+        
+    
+    
+                marker_328cb0c11f606adf6cdd8a107ed9650d.setIcon(icon_9de87a493fdd178ac178db9b8224b9c4);
+            
+    
+            var marker_239c7a3d0f5347b7d39a4c0f083f0560 = L.marker(
+                [42.1724441449353, -77.4300920814113],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_6319aab3e9300de523900ac7b18f75c8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d3f46563bcc392b76aa494801be2d02d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fa29d3290faf8876c779d6814b9031df = $(`<div id="html_fa29d3290faf8876c779d6814b9031df" style="width: 100.0%; height: 100.0%;">Dunlea Dairy Farm</div>`)[0];
+                popup_d3f46563bcc392b76aa494801be2d02d.setContent(html_fa29d3290faf8876c779d6814b9031df);
+            
+        
+
+        marker_239c7a3d0f5347b7d39a4c0f083f0560.bindPopup(popup_d3f46563bcc392b76aa494801be2d02d)
+        ;
+
+        
+    
+    
+                marker_239c7a3d0f5347b7d39a4c0f083f0560.setIcon(icon_6319aab3e9300de523900ac7b18f75c8);
+            
+    
+            var marker_d1e27655c055dac961ebee3d9061dfe6 = L.marker(
+                [42.8710223195159, -77.7365082126464],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_014b54afbce59a534df65dc4d3fb0a66 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0eea87da0a2cf404ac42c0615f9d60f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27450b6d44754e091264fef2e32c8eaf = $(`<div id="html_27450b6d44754e091264fef2e32c8eaf" style="width: 100.0%; height: 100.0%;">Anderson Farms Dairy</div>`)[0];
+                popup_0eea87da0a2cf404ac42c0615f9d60f6.setContent(html_27450b6d44754e091264fef2e32c8eaf);
+            
+        
+
+        marker_d1e27655c055dac961ebee3d9061dfe6.bindPopup(popup_0eea87da0a2cf404ac42c0615f9d60f6)
+        ;
+
+        
+    
+    
+                marker_d1e27655c055dac961ebee3d9061dfe6.setIcon(icon_014b54afbce59a534df65dc4d3fb0a66);
+            
+    
+            var marker_25bdcd25e20cc9cc09e56b15b19fdb0b = L.marker(
+                [43.0194282676486, -77.001720648051],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_a62d226943fba3611d35e726ab0021da = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2cb316ca50d7ece037c5180b05f3b514 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b0fa5b34f8e6aaec42941fefad606d9b = $(`<div id="html_b0fa5b34f8e6aaec42941fefad606d9b" style="width: 100.0%; height: 100.0%;">Maple Lawn Dairy</div>`)[0];
+                popup_2cb316ca50d7ece037c5180b05f3b514.setContent(html_b0fa5b34f8e6aaec42941fefad606d9b);
+            
+        
+
+        marker_25bdcd25e20cc9cc09e56b15b19fdb0b.bindPopup(popup_2cb316ca50d7ece037c5180b05f3b514)
+        ;
+
+        
+    
+    
+                marker_25bdcd25e20cc9cc09e56b15b19fdb0b.setIcon(icon_a62d226943fba3611d35e726ab0021da);
+            
+    
+            var marker_98e9f9c3149a01ddcbb92dbdcbb238d4 = L.marker(
+                [42.4138005569321, -77.7188084109542],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_a050b794b33a58d9a3bb82a2900faa7e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f9651cd8ab123c5b4daad4684037480b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_21923efde00d76505e3637cf7fa457f6 = $(`<div id="html_21923efde00d76505e3637cf7fa457f6" style="width: 100.0%; height: 100.0%;">Lismore Dairy</div>`)[0];
+                popup_f9651cd8ab123c5b4daad4684037480b.setContent(html_21923efde00d76505e3637cf7fa457f6);
+            
+        
+
+        marker_98e9f9c3149a01ddcbb92dbdcbb238d4.bindPopup(popup_f9651cd8ab123c5b4daad4684037480b)
+        ;
+
+        
+    
+    
+                marker_98e9f9c3149a01ddcbb92dbdcbb238d4.setIcon(icon_a050b794b33a58d9a3bb82a2900faa7e);
+            
+    
+            var marker_5045fcfc31b0b18e0c1e4a704d052e45 = L.marker(
+                [42.5213204676406, -77.4551276748327],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_d356012742c4ba26e94fc51c8e71899f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_675b59909939e6bc85002cd9d16f1148 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_55e8dc914fea4e6e01cb126077058044 = $(`<div id="html_55e8dc914fea4e6e01cb126077058044" style="width: 100.0%; height: 100.0%;">Lent Hill Dairy Farm</div>`)[0];
+                popup_675b59909939e6bc85002cd9d16f1148.setContent(html_55e8dc914fea4e6e01cb126077058044);
+            
+        
+
+        marker_5045fcfc31b0b18e0c1e4a704d052e45.bindPopup(popup_675b59909939e6bc85002cd9d16f1148)
+        ;
+
+        
+    
+    
+                marker_5045fcfc31b0b18e0c1e4a704d052e45.setIcon(icon_d356012742c4ba26e94fc51c8e71899f);
+            
+    
+            var marker_cd6056518b23e53e9fb9607da3ae325e = L.marker(
+                [42.3755134330171, -77.6542527275944],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_45220e388341191d22b3183786e45acd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a4a413bb0742458e7d4bb22aedecaf2e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1f185a9594b8dd97a81a8efa6408cf45 = $(`<div id="html_1f185a9594b8dd97a81a8efa6408cf45" style="width: 100.0%; height: 100.0%;">Karr Dairy Farms</div>`)[0];
+                popup_a4a413bb0742458e7d4bb22aedecaf2e.setContent(html_1f185a9594b8dd97a81a8efa6408cf45);
+            
+        
+
+        marker_cd6056518b23e53e9fb9607da3ae325e.bindPopup(popup_a4a413bb0742458e7d4bb22aedecaf2e)
+        ;
+
+        
+    
+    
+                marker_cd6056518b23e53e9fb9607da3ae325e.setIcon(icon_45220e388341191d22b3183786e45acd);
+            
+    
+            var marker_2e365220adc175f6f79dd14ee42ea5c8 = L.marker(
+                [42.3029374309775, -77.3724626318696],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_0e86223ac8bec3c1e947330cba8084de = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b9d9883412c2eea97d3a100d9add1961 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fc85276938ea1d067eebcac1ac336ad3 = $(`<div id="html_fc85276938ea1d067eebcac1ac336ad3" style="width: 100.0%; height: 100.0%;">Wilkins Dairy Farm</div>`)[0];
+                popup_b9d9883412c2eea97d3a100d9add1961.setContent(html_fc85276938ea1d067eebcac1ac336ad3);
+            
+        
+
+        marker_2e365220adc175f6f79dd14ee42ea5c8.bindPopup(popup_b9d9883412c2eea97d3a100d9add1961)
+        ;
+
+        
+    
+    
+                marker_2e365220adc175f6f79dd14ee42ea5c8.setIcon(icon_0e86223ac8bec3c1e947330cba8084de);
+            
+    
+            var marker_800b89fc1d34a8be58b1302351baa304 = L.marker(
+                [43.1160376662023, -73.4149517607676],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_09361e2cd9dd553e5c566a54ac522017 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_788e1787824551868d6fab6dfffc7a4f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b3c2d5490124205bcc6abf6675972570 = $(`<div id="html_b3c2d5490124205bcc6abf6675972570" style="width: 100.0%; height: 100.0%;">Battenkill Dairy Farms, LLC</div>`)[0];
+                popup_788e1787824551868d6fab6dfffc7a4f.setContent(html_b3c2d5490124205bcc6abf6675972570);
+            
+        
+
+        marker_800b89fc1d34a8be58b1302351baa304.bindPopup(popup_788e1787824551868d6fab6dfffc7a4f)
+        ;
+
+        
+    
+    
+                marker_800b89fc1d34a8be58b1302351baa304.setIcon(icon_09361e2cd9dd553e5c566a54ac522017);
+            
+    
+            var marker_9fe76f9c5a9942425267f36e8b4ad073 = L.marker(
+                [43.057654293989, -78.1936641643262],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_6ec50f2749622fa0170933ed18bce1c8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a176e809b2ad8f3df06986da482db892 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a57253bc7c0e4d220d785d10c8730354 = $(`<div id="html_a57253bc7c0e4d220d785d10c8730354" style="width: 100.0%; height: 100.0%;">Torrey Farms Dairy, Inc.</div>`)[0];
+                popup_a176e809b2ad8f3df06986da482db892.setContent(html_a57253bc7c0e4d220d785d10c8730354);
+            
+        
+
+        marker_9fe76f9c5a9942425267f36e8b4ad073.bindPopup(popup_a176e809b2ad8f3df06986da482db892)
+        ;
+
+        
+    
+    
+                marker_9fe76f9c5a9942425267f36e8b4ad073.setIcon(icon_6ec50f2749622fa0170933ed18bce1c8);
+            
+    
+            var marker_e5f15ec06ae81115e221b4f2134f401b = L.marker(
+                [42.4742420014848, -78.3365496129267],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_d902e916b7b0c9bf20b36f83edca93e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0ade5269341fd90b88f8069638627c81 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3ebd1475e7854fd5a6fbeea72362fbaf = $(`<div id="html_3ebd1475e7854fd5a6fbeea72362fbaf" style="width: 100.0%; height: 100.0%;">Edelweiss Dairy</div>`)[0];
+                popup_0ade5269341fd90b88f8069638627c81.setContent(html_3ebd1475e7854fd5a6fbeea72362fbaf);
+            
+        
+
+        marker_e5f15ec06ae81115e221b4f2134f401b.bindPopup(popup_0ade5269341fd90b88f8069638627c81)
+        ;
+
+        
+    
+    
+                marker_e5f15ec06ae81115e221b4f2134f401b.setIcon(icon_d902e916b7b0c9bf20b36f83edca93e7);
+            
+    
+            var marker_9b8f6c58f48de5d6d1e747976da03237 = L.marker(
+                [42.7435984764465, -78.2166429356729],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_178ab233731b16406bd3d1130547b2a9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_992fc2ec07c6380db71ec4f11eee958e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_142abb3e9a52d1ba23c1fd5c7a8a2982 = $(`<div id="html_142abb3e9a52d1ba23c1fd5c7a8a2982" style="width: 100.0%; height: 100.0%;">Flint's Dairy Farm</div>`)[0];
+                popup_992fc2ec07c6380db71ec4f11eee958e.setContent(html_142abb3e9a52d1ba23c1fd5c7a8a2982);
+            
+        
+
+        marker_9b8f6c58f48de5d6d1e747976da03237.bindPopup(popup_992fc2ec07c6380db71ec4f11eee958e)
+        ;
+
+        
+    
+    
+                marker_9b8f6c58f48de5d6d1e747976da03237.setIcon(icon_178ab233731b16406bd3d1130547b2a9);
+            
+    
+            var marker_bbe795744e06a7d62d48d516e054005e = L.marker(
+                [42.8290484992232, -78.0476318890902],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_5d9a2f31ed9757fc0d87938e8164f0c1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_59714a04857f46f1f097fe4850afc561 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_16e0d68797fecdcbb5908e245076323d = $(`<div id="html_16e0d68797fecdcbb5908e245076323d" style="width: 100.0%; height: 100.0%;">Half Full Dairy #4</div>`)[0];
+                popup_59714a04857f46f1f097fe4850afc561.setContent(html_16e0d68797fecdcbb5908e245076323d);
+            
+        
+
+        marker_bbe795744e06a7d62d48d516e054005e.bindPopup(popup_59714a04857f46f1f097fe4850afc561)
+        ;
+
+        
+    
+    
+                marker_bbe795744e06a7d62d48d516e054005e.setIcon(icon_5d9a2f31ed9757fc0d87938e8164f0c1);
+            
+    
+            var marker_59885e5cd7a587dad3595f5435667473 = L.marker(
+                [42.7491693684562, -78.4181829002007],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_96f5682242e9441f555fa3e12b0235db = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_682af4c16cbbc6ed9944918d63409ece = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1677ce53bb5f1589090f60ae54c66736 = $(`<div id="html_1677ce53bb5f1589090f60ae54c66736" style="width: 100.0%; height: 100.0%;">Breezyhill Dairy</div>`)[0];
+                popup_682af4c16cbbc6ed9944918d63409ece.setContent(html_1677ce53bb5f1589090f60ae54c66736);
+            
+        
+
+        marker_59885e5cd7a587dad3595f5435667473.bindPopup(popup_682af4c16cbbc6ed9944918d63409ece)
+        ;
+
+        
+    
+    
+                marker_59885e5cd7a587dad3595f5435667473.setIcon(icon_96f5682242e9441f555fa3e12b0235db);
+            
+    
+            var marker_d436dbdc72c789827d7c24db3202e70a = L.marker(
+                [43.2895788249566, -78.8741687106259],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_675fb2de85ad017f037443e69a933732 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_25873fe6acc933f31a1bc4149fdc540c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_95dfca12608cf1392086ed142f39ef7e = $(`<div id="html_95dfca12608cf1392086ed142f39ef7e" style="width: 100.0%; height: 100.0%;">Lakeshore Dairy</div>`)[0];
+                popup_25873fe6acc933f31a1bc4149fdc540c.setContent(html_95dfca12608cf1392086ed142f39ef7e);
+            
+        
+
+        marker_d436dbdc72c789827d7c24db3202e70a.bindPopup(popup_25873fe6acc933f31a1bc4149fdc540c)
+        ;
+
+        
+    
+    
+                marker_d436dbdc72c789827d7c24db3202e70a.setIcon(icon_675fb2de85ad017f037443e69a933732);
+            
+    
+            var marker_30b7c7638c7db9bcd440cf2f01bae96f = L.marker(
+                [43.1937049824196, -78.5608353327546],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_3cc5415777ecc729c39bb3f687a3a9b3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aec4c060ca323438b5708b1ebe680da5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c6cebb02e5cef4c29a3f692e38e6acfc = $(`<div id="html_c6cebb02e5cef4c29a3f692e38e6acfc" style="width: 100.0%; height: 100.0%;">Gasport View Dairy Farms</div>`)[0];
+                popup_aec4c060ca323438b5708b1ebe680da5.setContent(html_c6cebb02e5cef4c29a3f692e38e6acfc);
+            
+        
+
+        marker_30b7c7638c7db9bcd440cf2f01bae96f.bindPopup(popup_aec4c060ca323438b5708b1ebe680da5)
+        ;
+
+        
+    
+    
+                marker_30b7c7638c7db9bcd440cf2f01bae96f.setIcon(icon_3cc5415777ecc729c39bb3f687a3a9b3);
+            
+    
+            var marker_644f3a2dac9cca4075c41ec8b5e3a860 = L.marker(
+                [42.7536478943352, -78.3007190029225],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_05f3f25f65f10694c151f0de843bb9cd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d30516150f5d3ab0bafb858231bdb1c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_31a414e86c0d293462135df4b66b54b3 = $(`<div id="html_31a414e86c0d293462135df4b66b54b3" style="width: 100.0%; height: 100.0%;">Boxler Dairy Farms</div>`)[0];
+                popup_d30516150f5d3ab0bafb858231bdb1c6.setContent(html_31a414e86c0d293462135df4b66b54b3);
+            
+        
+
+        marker_644f3a2dac9cca4075c41ec8b5e3a860.bindPopup(popup_d30516150f5d3ab0bafb858231bdb1c6)
+        ;
+
+        
+    
+    
+                marker_644f3a2dac9cca4075c41ec8b5e3a860.setIcon(icon_05f3f25f65f10694c151f0de843bb9cd);
+            
+    
+            var marker_4b8f8351a34d1eb64ba376946966d45c = L.marker(
+                [42.322097994693, -78.3090290316539],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_06227f3142be75684987d279c8aa8e7d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d5095832679997b9e5cc412f512c8660 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_67c414d350ff51f48bdcda5ce7f915f7 = $(`<div id="html_67c414d350ff51f48bdcda5ce7f915f7" style="width: 100.0%; height: 100.0%;">Mallards Dairy, LLC</div>`)[0];
+                popup_d5095832679997b9e5cc412f512c8660.setContent(html_67c414d350ff51f48bdcda5ce7f915f7);
+            
+        
+
+        marker_4b8f8351a34d1eb64ba376946966d45c.bindPopup(popup_d5095832679997b9e5cc412f512c8660)
+        ;
+
+        
+    
+    
+                marker_4b8f8351a34d1eb64ba376946966d45c.setIcon(icon_06227f3142be75684987d279c8aa8e7d);
+            
+    
+            var marker_d0c195d8367f6f4a3737c582c328e718 = L.marker(
+                [42.7269739499677, -78.2913313385702],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_2b520c72d5f08c5046cf8a3948780a26 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5ea5441fce1b0edaf51dfa382ad3e029 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e6b7dc6e2023b3249c789bfd061bd583 = $(`<div id="html_e6b7dc6e2023b3249c789bfd061bd583" style="width: 100.0%; height: 100.0%;">Luce Dairy Farms</div>`)[0];
+                popup_5ea5441fce1b0edaf51dfa382ad3e029.setContent(html_e6b7dc6e2023b3249c789bfd061bd583);
+            
+        
+
+        marker_d0c195d8367f6f4a3737c582c328e718.bindPopup(popup_5ea5441fce1b0edaf51dfa382ad3e029)
+        ;
+
+        
+    
+    
+                marker_d0c195d8367f6f4a3737c582c328e718.setIcon(icon_2b520c72d5f08c5046cf8a3948780a26);
+            
+    
+            var marker_9c482d289e480e75e05e2588e922b2b3 = L.marker(
+                [43.2405185541827, -78.4744220590271],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_5c6d5dcd4c8e729eeb1f392d2c85bf0b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e6048c230692edeff265b131ee3d5287 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ce43eeccb1fa82fcd13e9ec6a0341e33 = $(`<div id="html_ce43eeccb1fa82fcd13e9ec6a0341e33" style="width: 100.0%; height: 100.0%;">Dacoda Dairy</div>`)[0];
+                popup_e6048c230692edeff265b131ee3d5287.setContent(html_ce43eeccb1fa82fcd13e9ec6a0341e33);
+            
+        
+
+        marker_9c482d289e480e75e05e2588e922b2b3.bindPopup(popup_e6048c230692edeff265b131ee3d5287)
+        ;
+
+        
+    
+    
+                marker_9c482d289e480e75e05e2588e922b2b3.setIcon(icon_5c6d5dcd4c8e729eeb1f392d2c85bf0b);
+            
+    
+            var marker_082b81174cb084251b0553e3cb6fc49f = L.marker(
+                [42.8666085045322, -78.0752029009719],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_7047d667cc76fb21a133f27d103d37e5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7ae32e7738698f730703ed707361f371 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_869494f6e9d13be231b6f14ffdbd4b4a = $(`<div id="html_869494f6e9d13be231b6f14ffdbd4b4a" style="width: 100.0%; height: 100.0%;">Harkins Dairy Farm</div>`)[0];
+                popup_7ae32e7738698f730703ed707361f371.setContent(html_869494f6e9d13be231b6f14ffdbd4b4a);
+            
+        
+
+        marker_082b81174cb084251b0553e3cb6fc49f.bindPopup(popup_7ae32e7738698f730703ed707361f371)
+        ;
+
+        
+    
+    
+                marker_082b81174cb084251b0553e3cb6fc49f.setIcon(icon_7047d667cc76fb21a133f27d103d37e5);
+            
+    
+            var marker_a49b747607654ac1883602d3cb0e275d = L.marker(
+                [43.2557917863804, -78.9354568268362],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_78ff30a553776c3e68faf4594adb552d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed9c7e8393cdce18df605d388cce3b53 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2f17383e200cf9c4f19bc66e385badb1 = $(`<div id="html_2f17383e200cf9c4f19bc66e385badb1" style="width: 100.0%; height: 100.0%;">Wills Dairy</div>`)[0];
+                popup_ed9c7e8393cdce18df605d388cce3b53.setContent(html_2f17383e200cf9c4f19bc66e385badb1);
+            
+        
+
+        marker_a49b747607654ac1883602d3cb0e275d.bindPopup(popup_ed9c7e8393cdce18df605d388cce3b53)
+        ;
+
+        
+    
+    
+                marker_a49b747607654ac1883602d3cb0e275d.setIcon(icon_78ff30a553776c3e68faf4594adb552d);
+            
+    
+            var marker_a51dd3013c0aeb6b830b45954175861f = L.marker(
+                [42.1620083071773, -79.6420033405002],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_d883430f38ba4db452332b78d679dc4a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dd6bd3abf25d3b8685c65d1931144b3f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e8a875e6e42313d21497ac7efb3a3436 = $(`<div id="html_e8a875e6e42313d21497ac7efb3a3436" style="width: 100.0%; height: 100.0%;">Reliance Dairy, LLC</div>`)[0];
+                popup_dd6bd3abf25d3b8685c65d1931144b3f.setContent(html_e8a875e6e42313d21497ac7efb3a3436);
+            
+        
+
+        marker_a51dd3013c0aeb6b830b45954175861f.bindPopup(popup_dd6bd3abf25d3b8685c65d1931144b3f)
+        ;
+
+        
+    
+    
+                marker_a51dd3013c0aeb6b830b45954175861f.setIcon(icon_d883430f38ba4db452332b78d679dc4a);
+            
+    
+            var marker_d65629d3b968203d5d024daf3c7a093e = L.marker(
+                [42.3735619236957, -75.3949177036429],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_62f3c9a67465dde2527c9400dc91bd0d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_305ba236a4f347c42ecbef20e40779e2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6b5c1da5fe3bfb6c7f2a57169027bc9b = $(`<div id="html_6b5c1da5fe3bfb6c7f2a57169027bc9b" style="width: 100.0%; height: 100.0%;">Cobar Dairy LLC</div>`)[0];
+                popup_305ba236a4f347c42ecbef20e40779e2.setContent(html_6b5c1da5fe3bfb6c7f2a57169027bc9b);
+            
+        
+
+        marker_d65629d3b968203d5d024daf3c7a093e.bindPopup(popup_305ba236a4f347c42ecbef20e40779e2)
+        ;
+
+        
+    
+    
+                marker_d65629d3b968203d5d024daf3c7a093e.setIcon(icon_62f3c9a67465dde2527c9400dc91bd0d);
+            
+    
+            var marker_1066779e08129826a2258fa92cf6bf1d = L.marker(
+                [42.7510385712684, -75.9602822126551],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_de1af522921d7fbf8795d4dc4b70f2d2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8292317fa0cb7640bedbaf8ff3999270 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6e69ad7ebd71aa9b92055a99f3f95b0b = $(`<div id="html_6e69ad7ebd71aa9b92055a99f3f95b0b" style="width: 100.0%; height: 100.0%;">Whey Street Dairy</div>`)[0];
+                popup_8292317fa0cb7640bedbaf8ff3999270.setContent(html_6e69ad7ebd71aa9b92055a99f3f95b0b);
+            
+        
+
+        marker_1066779e08129826a2258fa92cf6bf1d.bindPopup(popup_8292317fa0cb7640bedbaf8ff3999270)
+        ;
+
+        
+    
+    
+                marker_1066779e08129826a2258fa92cf6bf1d.setIcon(icon_de1af522921d7fbf8795d4dc4b70f2d2);
+            
+    
+            var marker_18f7e99f33dfaf7da20b184ecf5a73ea = L.marker(
+                [42.6475264455173, -76.1217619573357],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_7d344b702bf14f18640d52afbe810a34 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_549a0b9982d2c15e93c12a59c752e8fb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_77eda650daa0d9f03f5a0967d9307443 = $(`<div id="html_77eda650daa0d9f03f5a0967d9307443" style="width: 100.0%; height: 100.0%;">East River Dairy, LLC</div>`)[0];
+                popup_549a0b9982d2c15e93c12a59c752e8fb.setContent(html_77eda650daa0d9f03f5a0967d9307443);
+            
+        
+
+        marker_18f7e99f33dfaf7da20b184ecf5a73ea.bindPopup(popup_549a0b9982d2c15e93c12a59c752e8fb)
+        ;
+
+        
+    
+    
+                marker_18f7e99f33dfaf7da20b184ecf5a73ea.setIcon(icon_7d344b702bf14f18640d52afbe810a34);
+            
+    
+            var marker_6635b07448d32c63696e41211bf1389c = L.marker(
+                [43.1256326241262, -76.3516703668477],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_548446a98e5f80cbc2ae230949600c74 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bd6738d3c47d03c5132c98207f939993 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9cfaa043abdc63ef0b1dfcc0e3b73f49 = $(`<div id="html_9cfaa043abdc63ef0b1dfcc0e3b73f49" style="width: 100.0%; height: 100.0%;">Scholten Dairy</div>`)[0];
+                popup_bd6738d3c47d03c5132c98207f939993.setContent(html_9cfaa043abdc63ef0b1dfcc0e3b73f49);
+            
+        
+
+        marker_6635b07448d32c63696e41211bf1389c.bindPopup(popup_bd6738d3c47d03c5132c98207f939993)
+        ;
+
+        
+    
+    
+                marker_6635b07448d32c63696e41211bf1389c.setIcon(icon_548446a98e5f80cbc2ae230949600c74);
+            
+    
+            var marker_b046ddd047fa00d1b35e8627b12159ad = L.marker(
+                [42.5844065966689, -76.5504437703903],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_801fbee85215baa3bae186138a656362 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c43521f4b8d6a5af96343799aa018835 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_54c63621274ce7970089c173eff5f94b = $(`<div id="html_54c63621274ce7970089c173eff5f94b" style="width: 100.0%; height: 100.0%;">Vision Quest Dairy, LLC</div>`)[0];
+                popup_c43521f4b8d6a5af96343799aa018835.setContent(html_54c63621274ce7970089c173eff5f94b);
+            
+        
+
+        marker_b046ddd047fa00d1b35e8627b12159ad.bindPopup(popup_c43521f4b8d6a5af96343799aa018835)
+        ;
+
+        
+    
+    
+                marker_b046ddd047fa00d1b35e8627b12159ad.setIcon(icon_801fbee85215baa3bae186138a656362);
+            
+    
+            var marker_81d4341a05b266a205f8010eb7cfca51 = L.marker(
+                [43.0580964474459, -76.4538483556194],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_bccdf27fbdf9787a110ce6178435ff7b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c7f9815023086ffb6f328442d8c6f393 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bafb9e1708337e6abc7635586fe12c1d = $(`<div id="html_bafb9e1708337e6abc7635586fe12c1d" style="width: 100.0%; height: 100.0%;">Blume Again Dairy, LLC</div>`)[0];
+                popup_c7f9815023086ffb6f328442d8c6f393.setContent(html_bafb9e1708337e6abc7635586fe12c1d);
+            
+        
+
+        marker_81d4341a05b266a205f8010eb7cfca51.bindPopup(popup_c7f9815023086ffb6f328442d8c6f393)
+        ;
+
+        
+    
+    
+                marker_81d4341a05b266a205f8010eb7cfca51.setIcon(icon_bccdf27fbdf9787a110ce6178435ff7b);
+            
+    
+            var marker_a15f4dbdc7880c36abc7dbf0c815a492 = L.marker(
+                [43.8831590766334, -75.9563802979028],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_111c515a8c00142387814b454c96fb7e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9fc24ffd7c99df1046064bb2824ec307 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8a3e4108a043182c27d20d3b24813292 = $(`<div id="html_8a3e4108a043182c27d20d3b24813292" style="width: 100.0%; height: 100.0%;">Windsong Dairy </div>`)[0];
+                popup_9fc24ffd7c99df1046064bb2824ec307.setContent(html_8a3e4108a043182c27d20d3b24813292);
+            
+        
+
+        marker_a15f4dbdc7880c36abc7dbf0c815a492.bindPopup(popup_9fc24ffd7c99df1046064bb2824ec307)
+        ;
+
+        
+    
+    
+                marker_a15f4dbdc7880c36abc7dbf0c815a492.setIcon(icon_111c515a8c00142387814b454c96fb7e);
+            
+    
+            var marker_b60cac521393c96119ba72963a9a9531 = L.marker(
+                [44.1315928251153, -75.8477812823024],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_90c120ed57f81a5333acbe32987eb68a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bc0cb98f365431c416a93d106dab2da4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_86d4fb3e0b27ca439d04265b84f01dcf = $(`<div id="html_86d4fb3e0b27ca439d04265b84f01dcf" style="width: 100.0%; height: 100.0%;">Carsada Dairy II</div>`)[0];
+                popup_bc0cb98f365431c416a93d106dab2da4.setContent(html_86d4fb3e0b27ca439d04265b84f01dcf);
+            
+        
+
+        marker_b60cac521393c96119ba72963a9a9531.bindPopup(popup_bc0cb98f365431c416a93d106dab2da4)
+        ;
+
+        
+    
+    
+                marker_b60cac521393c96119ba72963a9a9531.setIcon(icon_90c120ed57f81a5333acbe32987eb68a);
+            
+    
+            var marker_f00035bcf28404b499b73dc1802a84ce = L.marker(
+                [43.9838865478595, -75.3780246770224],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_9003beedf617eeb29390c5a2b747b442 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_654b123f4d23f52399ed3cc9936212cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff86a609e07d1537e3f9854d28218789 = $(`<div id="html_ff86a609e07d1537e3f9854d28218789" style="width: 100.0%; height: 100.0%;">Pominville Dairy</div>`)[0];
+                popup_654b123f4d23f52399ed3cc9936212cd.setContent(html_ff86a609e07d1537e3f9854d28218789);
+            
+        
+
+        marker_f00035bcf28404b499b73dc1802a84ce.bindPopup(popup_654b123f4d23f52399ed3cc9936212cd)
+        ;
+
+        
+    
+    
+                marker_f00035bcf28404b499b73dc1802a84ce.setIcon(icon_9003beedf617eeb29390c5a2b747b442);
+            
+    
+            var marker_b4028fe0bd2ac9875c6aefa9afe38815 = L.marker(
+                [43.6288186243391, -75.3945852644957],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_1556f7de618f52aba92db72863767994 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e47f87d18a9ac6c29fdcb8af4359cca8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_02595686e054abdae15746a42441b2e9 = $(`<div id="html_02595686e054abdae15746a42441b2e9" style="width: 100.0%; height: 100.0%;">Conway Dairy Farm</div>`)[0];
+                popup_e47f87d18a9ac6c29fdcb8af4359cca8.setContent(html_02595686e054abdae15746a42441b2e9);
+            
+        
+
+        marker_b4028fe0bd2ac9875c6aefa9afe38815.bindPopup(popup_e47f87d18a9ac6c29fdcb8af4359cca8)
+        ;
+
+        
+    
+    
+                marker_b4028fe0bd2ac9875c6aefa9afe38815.setIcon(icon_1556f7de618f52aba92db72863767994);
+            
+    
+            var marker_c73ab6de834912114a2f990e67755283 = L.marker(
+                [42.8268255591145, -76.6056384269871],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_7d42821142175a013f4ade1ce97963b9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e1077a68d2ae1d6b6162a8874672ac39 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1b57890c5f5e2c36b82c67b1d4a03dbd = $(`<div id="html_1b57890c5f5e2c36b82c67b1d4a03dbd" style="width: 100.0%; height: 100.0%;">Scipio Springs Dairy</div>`)[0];
+                popup_e1077a68d2ae1d6b6162a8874672ac39.setContent(html_1b57890c5f5e2c36b82c67b1d4a03dbd);
+            
+        
+
+        marker_c73ab6de834912114a2f990e67755283.bindPopup(popup_e1077a68d2ae1d6b6162a8874672ac39)
+        ;
+
+        
+    
+    
+                marker_c73ab6de834912114a2f990e67755283.setIcon(icon_7d42821142175a013f4ade1ce97963b9);
+            
+    
+            var marker_ef6b3240837454291c7345aab4810cf1 = L.marker(
+                [44.6698826381804, -75.1504346859462],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_ef8f1c4b491dff9ece994389fb4286dd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_89d6bdf9614e2ce16d8b7bcbeb136759 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_81edb87e44c7641415c5df7d007f8ca8 = $(`<div id="html_81edb87e44c7641415c5df7d007f8ca8" style="width: 100.0%; height: 100.0%;">Greenwood Dairy Farm</div>`)[0];
+                popup_89d6bdf9614e2ce16d8b7bcbeb136759.setContent(html_81edb87e44c7641415c5df7d007f8ca8);
+            
+        
+
+        marker_ef6b3240837454291c7345aab4810cf1.bindPopup(popup_89d6bdf9614e2ce16d8b7bcbeb136759)
+        ;
+
+        
+    
+    
+                marker_ef6b3240837454291c7345aab4810cf1.setIcon(icon_ef8f1c4b491dff9ece994389fb4286dd);
+            
+    
+            var marker_7a122d3b84e367b19c32bf9765d412dc = L.marker(
+                [43.6985887364383, -76.1322723408425],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_1bc9ffb784d176487ae843045ed23bd2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d283792e3e0c931e97c0d0e6db34dbd4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b6dbfc6f0d55217f7ddc9c1dbdf6191c = $(`<div id="html_b6dbfc6f0d55217f7ddc9c1dbdf6191c" style="width: 100.0%; height: 100.0%;">LOCUST HILL DAIRY, LLC</div>`)[0];
+                popup_d283792e3e0c931e97c0d0e6db34dbd4.setContent(html_b6dbfc6f0d55217f7ddc9c1dbdf6191c);
+            
+        
+
+        marker_7a122d3b84e367b19c32bf9765d412dc.bindPopup(popup_d283792e3e0c931e97c0d0e6db34dbd4)
+        ;
+
+        
+    
+    
+                marker_7a122d3b84e367b19c32bf9765d412dc.setIcon(icon_1bc9ffb784d176487ae843045ed23bd2);
+            
+    
+            var marker_795ff67ae9adec10721cfa61a878195d = L.marker(
+                [44.733838956872, -75.2206021238787],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_f260843600652e5b7e82cf557a89ee0e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_253bb092633c5266258e4bc50be37d49 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e41000eb09901cde146c4cdc707fe592 = $(`<div id="html_e41000eb09901cde146c4cdc707fe592" style="width: 100.0%; height: 100.0%;">C&M DAIRY LLC</div>`)[0];
+                popup_253bb092633c5266258e4bc50be37d49.setContent(html_e41000eb09901cde146c4cdc707fe592);
+            
+        
+
+        marker_795ff67ae9adec10721cfa61a878195d.bindPopup(popup_253bb092633c5266258e4bc50be37d49)
+        ;
+
+        
+    
+    
+                marker_795ff67ae9adec10721cfa61a878195d.setIcon(icon_f260843600652e5b7e82cf557a89ee0e);
+            
+    
+            var marker_83865d744582e9dad4fe6e972a5d6012 = L.marker(
+                [42.8628882625994, -76.4485382980221],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_f1979ce443fd9521e8a1bf9844d2f3f1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_39adce0b15dc54006e0d035dd8d6354c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_148a7b2e6f763a7ec981369bfac76ad2 = $(`<div id="html_148a7b2e6f763a7ec981369bfac76ad2" style="width: 100.0%; height: 100.0%;">Twin Birch Dairy, LLC</div>`)[0];
+                popup_39adce0b15dc54006e0d035dd8d6354c.setContent(html_148a7b2e6f763a7ec981369bfac76ad2);
+            
+        
+
+        marker_83865d744582e9dad4fe6e972a5d6012.bindPopup(popup_39adce0b15dc54006e0d035dd8d6354c)
+        ;
+
+        
+    
+    
+                marker_83865d744582e9dad4fe6e972a5d6012.setIcon(icon_f1979ce443fd9521e8a1bf9844d2f3f1);
+            
+    
+            var marker_7858e43e800ded7f3f472dcce1cd4a0a = L.marker(
+                [42.8975299825126, -76.3429501472822],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_fd7440800c9a81e27644ca3726913676 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_292dbb782a116762cccbe4797ac2a5b3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1330cb60ec265f35fe008f8653aa106f = $(`<div id="html_1330cb60ec265f35fe008f8653aa106f" style="width: 100.0%; height: 100.0%;">Leubner Dairy LLC</div>`)[0];
+                popup_292dbb782a116762cccbe4797ac2a5b3.setContent(html_1330cb60ec265f35fe008f8653aa106f);
+            
+        
+
+        marker_7858e43e800ded7f3f472dcce1cd4a0a.bindPopup(popup_292dbb782a116762cccbe4797ac2a5b3)
+        ;
+
+        
+    
+    
+                marker_7858e43e800ded7f3f472dcce1cd4a0a.setIcon(icon_fd7440800c9a81e27644ca3726913676);
+            
+    
+            var marker_313e7f138e24589949b2154a2545d325 = L.marker(
+                [42.9089275888519, -76.2414593154962],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_c53c59c8b20980021114d578b8ef4d51 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_05366e024cae233a639c6de84eecafc6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_05023f661d3ccfe522e47b9afb26607e = $(`<div id="html_05023f661d3ccfe522e47b9afb26607e" style="width: 100.0%; height: 100.0%;">Volles Dairy</div>`)[0];
+                popup_05366e024cae233a639c6de84eecafc6.setContent(html_05023f661d3ccfe522e47b9afb26607e);
+            
+        
+
+        marker_313e7f138e24589949b2154a2545d325.bindPopup(popup_05366e024cae233a639c6de84eecafc6)
+        ;
+
+        
+    
+    
+                marker_313e7f138e24589949b2154a2545d325.setIcon(icon_c53c59c8b20980021114d578b8ef4d51);
+            
+    
+            var marker_87b1266e1351eebde93d82bdc53bee14 = L.marker(
+                [42.8781982644428, -77.1806897555288],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_6c49afb2fbbc6c1990b28ebf68cef634 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ef316e06d6631d9bc31c02f1b4387961 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fdb84f9adc05372c7fe9c6b98f9bce68 = $(`<div id="html_fdb84f9adc05372c7fe9c6b98f9bce68" style="width: 100.0%; height: 100.0%;">Hilton Dairy</div>`)[0];
+                popup_ef316e06d6631d9bc31c02f1b4387961.setContent(html_fdb84f9adc05372c7fe9c6b98f9bce68);
+            
+        
+
+        marker_87b1266e1351eebde93d82bdc53bee14.bindPopup(popup_ef316e06d6631d9bc31c02f1b4387961)
+        ;
+
+        
+    
+    
+                marker_87b1266e1351eebde93d82bdc53bee14.setIcon(icon_6c49afb2fbbc6c1990b28ebf68cef634);
+            
+    
+            var marker_86d2587f6273664a99af618d9c64d7c7 = L.marker(
+                [42.8260574288966, -77.0882406515069],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_0ff5ef953cb5fe38ae14a63010ab846a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_59029ac6b5c13089d1d02a09d63cef61 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_05347865b325775d7b305ddd76fbfe73 = $(`<div id="html_05347865b325775d7b305ddd76fbfe73" style="width: 100.0%; height: 100.0%;">Ivy Lakes Dairy</div>`)[0];
+                popup_59029ac6b5c13089d1d02a09d63cef61.setContent(html_05347865b325775d7b305ddd76fbfe73);
+            
+        
+
+        marker_86d2587f6273664a99af618d9c64d7c7.bindPopup(popup_59029ac6b5c13089d1d02a09d63cef61)
+        ;
+
+        
+    
+    
+                marker_86d2587f6273664a99af618d9c64d7c7.setIcon(icon_0ff5ef953cb5fe38ae14a63010ab846a);
+            
+    
+            var marker_683ae92bbe1ee5e22fdd5e8e51992d32 = L.marker(
+                [43.1190362486532, -76.9441011475734],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_b9488d66d8382fffc9aa5ef76cd7e02a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_14c409d8dddf97f4bd4135c5adfe62e8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fb086c3cd7f32db0dbed241f0c8cece3 = $(`<div id="html_fb086c3cd7f32db0dbed241f0c8cece3" style="width: 100.0%; height: 100.0%;">Stillwater Dairy</div>`)[0];
+                popup_14c409d8dddf97f4bd4135c5adfe62e8.setContent(html_fb086c3cd7f32db0dbed241f0c8cece3);
+            
+        
+
+        marker_683ae92bbe1ee5e22fdd5e8e51992d32.bindPopup(popup_14c409d8dddf97f4bd4135c5adfe62e8)
+        ;
+
+        
+    
+    
+                marker_683ae92bbe1ee5e22fdd5e8e51992d32.setIcon(icon_b9488d66d8382fffc9aa5ef76cd7e02a);
+            
+    
+            var marker_78b3ebeab8d65d0da9bec0076b93730f = L.marker(
+                [42.5180085309964, -75.8970021751939],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_a8407f8e2ae36d87771aa4d59d0f2668 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a97944b4b5cd3a2f597ee3be1321ce13 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b36a6b852d3410bb7a59ebb5fadaf3e = $(`<div id="html_2b36a6b852d3410bb7a59ebb5fadaf3e" style="width: 100.0%; height: 100.0%;">Riverside Dairy, LLC</div>`)[0];
+                popup_a97944b4b5cd3a2f597ee3be1321ce13.setContent(html_2b36a6b852d3410bb7a59ebb5fadaf3e);
+            
+        
+
+        marker_78b3ebeab8d65d0da9bec0076b93730f.bindPopup(popup_a97944b4b5cd3a2f597ee3be1321ce13)
+        ;
+
+        
+    
+    
+                marker_78b3ebeab8d65d0da9bec0076b93730f.setIcon(icon_a8407f8e2ae36d87771aa4d59d0f2668);
+            
+    
+            var marker_9f25268802db706bd472afc25a4b6d5e = L.marker(
+                [42.1491249386287, -77.2256043142482],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_4887992febc95186718f6b81c798924f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_36c0c2ba2892b67e310688ebcf417120 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb5d72a9e51e0e41a07201bc85f65c1f = $(`<div id="html_cb5d72a9e51e0e41a07201bc85f65c1f" style="width: 100.0%; height: 100.0%;">Crookercrest Dairy</div>`)[0];
+                popup_36c0c2ba2892b67e310688ebcf417120.setContent(html_cb5d72a9e51e0e41a07201bc85f65c1f);
+            
+        
+
+        marker_9f25268802db706bd472afc25a4b6d5e.bindPopup(popup_36c0c2ba2892b67e310688ebcf417120)
+        ;
+
+        
+    
+    
+                marker_9f25268802db706bd472afc25a4b6d5e.setIcon(icon_4887992febc95186718f6b81c798924f);
+            
+    
+            var marker_72b7e7035e74260ff42f9de15731f05f = L.marker(
+                [43.1112994243926, -78.1747399224186],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_df939a0f0e33b5df1c18b03c70e2a207 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_37c5d8620bd9d034892e673e9e3efdeb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8b4f5935ec97bd3e4ca03e2a5fdd95fd = $(`<div id="html_8b4f5935ec97bd3e4ca03e2a5fdd95fd" style="width: 100.0%; height: 100.0%;">Oak Orchard Dairy, LLC</div>`)[0];
+                popup_37c5d8620bd9d034892e673e9e3efdeb.setContent(html_8b4f5935ec97bd3e4ca03e2a5fdd95fd);
+            
+        
+
+        marker_72b7e7035e74260ff42f9de15731f05f.bindPopup(popup_37c5d8620bd9d034892e673e9e3efdeb)
+        ;
+
+        
+    
+    
+                marker_72b7e7035e74260ff42f9de15731f05f.setIcon(icon_df939a0f0e33b5df1c18b03c70e2a207);
+            
+    
+            var marker_392cdb7ca251416cf6e3fed535c0085f = L.marker(
+                [42.6042300563694, -78.5503031108668],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_b7f82304266bbebe64ffa51740122762 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e7934a032fde91352278901bbddd6beb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fadd193e72fedc8f555c6aef15a2d675 = $(`<div id="html_fadd193e72fedc8f555c6aef15a2d675" style="width: 100.0%; height: 100.0%;">Palmer Dairy Farms, LLC</div>`)[0];
+                popup_e7934a032fde91352278901bbddd6beb.setContent(html_fadd193e72fedc8f555c6aef15a2d675);
+            
+        
+
+        marker_392cdb7ca251416cf6e3fed535c0085f.bindPopup(popup_e7934a032fde91352278901bbddd6beb)
+        ;
+
+        
+    
+    
+                marker_392cdb7ca251416cf6e3fed535c0085f.setIcon(icon_b7f82304266bbebe64ffa51740122762);
+            
+    
+            var marker_5b44885e62967f2f5a6ff0a9b2514293 = L.marker(
+                [42.6176779499822, -78.2800851956841],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_f429c570297b521015156eaa56c4c031 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4da00f35134ae7bea0e78772d9f9defe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b1cbec31463d587afb560c50a4576e52 = $(`<div id="html_b1cbec31463d587afb560c50a4576e52" style="width: 100.0%; height: 100.0%;">Southview Dairy LLC - Maxwell Facility</div>`)[0];
+                popup_4da00f35134ae7bea0e78772d9f9defe.setContent(html_b1cbec31463d587afb560c50a4576e52);
+            
+        
+
+        marker_5b44885e62967f2f5a6ff0a9b2514293.bindPopup(popup_4da00f35134ae7bea0e78772d9f9defe)
+        ;
+
+        
+    
+    
+                marker_5b44885e62967f2f5a6ff0a9b2514293.setIcon(icon_f429c570297b521015156eaa56c4c031);
+            
+    
+            var marker_2b57c4c3cb8f47037dde2072da02cf3a = L.marker(
+                [42.6670084349046, -78.8387921274032],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_92384c14703e9f5ab07d2c77a3faf7c6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_61bb411d76ffc92d984f8bc152221f40 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_42ce7eed6c1737dbf6eccd072a715d58 = $(`<div id="html_42ce7eed6c1737dbf6eccd072a715d58" style="width: 100.0%; height: 100.0%;">Eden Valley Dairy, LLC</div>`)[0];
+                popup_61bb411d76ffc92d984f8bc152221f40.setContent(html_42ce7eed6c1737dbf6eccd072a715d58);
+            
+        
+
+        marker_2b57c4c3cb8f47037dde2072da02cf3a.bindPopup(popup_61bb411d76ffc92d984f8bc152221f40)
+        ;
+
+        
+    
+    
+                marker_2b57c4c3cb8f47037dde2072da02cf3a.setIcon(icon_92384c14703e9f5ab07d2c77a3faf7c6);
+            
+    
+            var marker_b52d8b7a53edcdeea3623f20a5cf564f = L.marker(
+                [42.4400084115802, -78.4290029786428],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_b81f12b15013b076b6aaf341fb7452e9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_abeaf698aaac559a48ff671c66e427e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6779c631f3a3e926d1668cf705513337 = $(`<div id="html_6779c631f3a3e926d1668cf705513337" style="width: 100.0%; height: 100.0%;">Schwab Dairy Farm, LLC</div>`)[0];
+                popup_abeaf698aaac559a48ff671c66e427e4.setContent(html_6779c631f3a3e926d1668cf705513337);
+            
+        
+
+        marker_b52d8b7a53edcdeea3623f20a5cf564f.bindPopup(popup_abeaf698aaac559a48ff671c66e427e4)
+        ;
+
+        
+    
+    
+                marker_b52d8b7a53edcdeea3623f20a5cf564f.setIcon(icon_b81f12b15013b076b6aaf341fb7452e9);
+            
+    
+            var marker_d03e45855b2f7034cb08452fff859f88 = L.marker(
+                [42.4370084102747, -78.4521306866262],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_b81e00a6e44ef1f3924006acdc86ffcd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1394cc84e4eb31f714adc6f28689a425 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c057d3723c8f4a3dd682500cf300a95 = $(`<div id="html_5c057d3723c8f4a3dd682500cf300a95" style="width: 100.0%; height: 100.0%;">C J Dairy Farms, Inc.</div>`)[0];
+                popup_1394cc84e4eb31f714adc6f28689a425.setContent(html_5c057d3723c8f4a3dd682500cf300a95);
+            
+        
+
+        marker_d03e45855b2f7034cb08452fff859f88.bindPopup(popup_1394cc84e4eb31f714adc6f28689a425)
+        ;
+
+        
+    
+    
+                marker_d03e45855b2f7034cb08452fff859f88.setIcon(icon_b81e00a6e44ef1f3924006acdc86ffcd);
+            
+    
+            var marker_43d84694801ce5f366209e84dd16b184 = L.marker(
+                [42.1858483427006, -78.9452921224459],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_2f78f8332d258ec9334271b8b9c48618 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4d76bc196aee6f41cf071fe4f61c79d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_504c1c35a83a1882a8eb21b69144d38f = $(`<div id="html_504c1c35a83a1882a8eb21b69144d38f" style="width: 100.0%; height: 100.0%;">R & D Adams Dairy Farms, LLC</div>`)[0];
+                popup_4d76bc196aee6f41cf071fe4f61c79d4.setContent(html_504c1c35a83a1882a8eb21b69144d38f);
+            
+        
+
+        marker_43d84694801ce5f366209e84dd16b184.bindPopup(popup_4d76bc196aee6f41cf071fe4f61c79d4)
+        ;
+
+        
+    
+    
+                marker_43d84694801ce5f366209e84dd16b184.setIcon(icon_2f78f8332d258ec9334271b8b9c48618);
+            
+    
+            var marker_f68a7a93626cb8d086b4f2233b2dcb5d = L.marker(
+                [42.4528084153316, -78.3956389700593],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_77f0c31c17540c579ebbb86b76bc0a8e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cac59e2d882b745fbd80a5f9fdbe89c0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1fd134ebac7f5c05bcd58c4bfece29d6 = $(`<div id="html_1fd134ebac7f5c05bcd58c4bfece29d6" style="width: 100.0%; height: 100.0%;">Bliss Dairy Company, Inc.</div>`)[0];
+                popup_cac59e2d882b745fbd80a5f9fdbe89c0.setContent(html_1fd134ebac7f5c05bcd58c4bfece29d6);
+            
+        
+
+        marker_f68a7a93626cb8d086b4f2233b2dcb5d.bindPopup(popup_cac59e2d882b745fbd80a5f9fdbe89c0)
+        ;
+
+        
+    
+    
+                marker_f68a7a93626cb8d086b4f2233b2dcb5d.setIcon(icon_77f0c31c17540c579ebbb86b76bc0a8e);
+            
+    
+            var marker_2707a3e0934e7f3f62c4d59007eb7eb9 = L.marker(
+                [42.4763135434276, -75.3930790098664],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_1401af05b93390c1142fa92721e8242c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eb083d39edac004f0b6b7b260ad2feda = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8a91c7d44ee5d00b01c0625c19b84556 = $(`<div id="html_8a91c7d44ee5d00b01c0625c19b84556" style="width: 100.0%; height: 100.0%;">Southtown Dairy</div>`)[0];
+                popup_eb083d39edac004f0b6b7b260ad2feda.setContent(html_8a91c7d44ee5d00b01c0625c19b84556);
+            
+        
+
+        marker_2707a3e0934e7f3f62c4d59007eb7eb9.bindPopup(popup_eb083d39edac004f0b6b7b260ad2feda)
+        ;
+
+        
+    
+    
+                marker_2707a3e0934e7f3f62c4d59007eb7eb9.setIcon(icon_1401af05b93390c1142fa92721e8242c);
+            
+    
+            var marker_50fa622ad1951b0afaa8a0ab8d207567 = L.marker(
+                [42.6309344626704, -78.041618871181],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_cdae1c7eee019be86b9d31e157a4dd60 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cbd48adeb9e4c479ef2c65a00a9223f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e89ed825798d6485621d9304c754d15 = $(`<div id="html_0e89ed825798d6485621d9304c754d15" style="width: 100.0%; height: 100.0%;">Southview Dairy, LLC - Table Rock Facility</div>`)[0];
+                popup_cbd48adeb9e4c479ef2c65a00a9223f5.setContent(html_0e89ed825798d6485621d9304c754d15);
+            
+        
+
+        marker_50fa622ad1951b0afaa8a0ab8d207567.bindPopup(popup_cbd48adeb9e4c479ef2c65a00a9223f5)
+        ;
+
+        
+    
+    
+                marker_50fa622ad1951b0afaa8a0ab8d207567.setIcon(icon_cdae1c7eee019be86b9d31e157a4dd60);
+            
+    
+            var marker_f65e3280e20261aa59d25b4fbf4b63a9 = L.marker(
+                [42.7005284783974, -77.9755918551658],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_65ece99a89a3cfbd723523cc742df485 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_799609fdc26dadb12f41b8c31a52d574 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5928ffc80d5689e433e3277407859fbe = $(`<div id="html_5928ffc80d5689e433e3277407859fbe" style="width: 100.0%; height: 100.0%;">Highbanks Dairy</div>`)[0];
+                popup_799609fdc26dadb12f41b8c31a52d574.setContent(html_5928ffc80d5689e433e3277407859fbe);
+            
+        
+
+        marker_f65e3280e20261aa59d25b4fbf4b63a9.bindPopup(popup_799609fdc26dadb12f41b8c31a52d574)
+        ;
+
+        
+    
+    
+                marker_f65e3280e20261aa59d25b4fbf4b63a9.setIcon(icon_65ece99a89a3cfbd723523cc742df485);
+            
+    
+            var marker_d210b97d52c1fc4edef82095c89755d8 = L.marker(
+                [42.8882986654201, -74.1807116454746],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_a5b684252b9c409e1f9070aba99e5843 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_54ad60df8f78a4c85d6f17a142d2219c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_32dd109256a9d03a59ee22e0dd1f6684 = $(`<div id="html_32dd109256a9d03a59ee22e0dd1f6684" style="width: 100.0%; height: 100.0%;">Envision Dairy, LLC</div>`)[0];
+                popup_54ad60df8f78a4c85d6f17a142d2219c.setContent(html_32dd109256a9d03a59ee22e0dd1f6684);
+            
+        
+
+        marker_d210b97d52c1fc4edef82095c89755d8.bindPopup(popup_54ad60df8f78a4c85d6f17a142d2219c)
+        ;
+
+        
+    
+    
+                marker_d210b97d52c1fc4edef82095c89755d8.setIcon(icon_a5b684252b9c409e1f9070aba99e5843);
+            
+    
+            var marker_c575ae781a6c59395b13fb4a10e7d510 = L.marker(
+                [43.0216106017555, -76.4398233882729],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_ce7e74b2a72bbaab2a72e310a548bc66 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_12886383ce2ff510d7c281d679bd46eb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e969ded3ab30e3f8b7c4bf9597bdb784 = $(`<div id="html_e969ded3ab30e3f8b7c4bf9597bdb784" style="width: 100.0%; height: 100.0%;">Half Full Dairy, LLC</div>`)[0];
+                popup_12886383ce2ff510d7c281d679bd46eb.setContent(html_e969ded3ab30e3f8b7c4bf9597bdb784);
+            
+        
+
+        marker_c575ae781a6c59395b13fb4a10e7d510.bindPopup(popup_12886383ce2ff510d7c281d679bd46eb)
+        ;
+
+        
+    
+    
+                marker_c575ae781a6c59395b13fb4a10e7d510.setIcon(icon_ce7e74b2a72bbaab2a72e310a548bc66);
+            
+    
+            var marker_77476fa43192f7b3c358626b64c70a40 = L.marker(
+                [42.9196185112761, -78.1331569232868],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_c933ad58512af19775c4dfd6ab8527e6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_06d9a40784fe67bbc1ea59705cddce03 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5808dcc8495ec15a43bca25b5bf06a9a = $(`<div id="html_5808dcc8495ec15a43bca25b5bf06a9a" style="width: 100.0%; height: 100.0%;">Lor-Rob Dairy Farm</div>`)[0];
+                popup_06d9a40784fe67bbc1ea59705cddce03.setContent(html_5808dcc8495ec15a43bca25b5bf06a9a);
+            
+        
+
+        marker_77476fa43192f7b3c358626b64c70a40.bindPopup(popup_06d9a40784fe67bbc1ea59705cddce03)
+        ;
+
+        
+    
+    
+                marker_77476fa43192f7b3c358626b64c70a40.setIcon(icon_c933ad58512af19775c4dfd6ab8527e6);
+            
+    
+            var marker_1fe7adb9de72891113141752c4eeb8f7 = L.marker(
+                [42.8761055568005, -76.8791035176469],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_d5acf20fcd63955f4110e45bf0077bc1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_389b08663845b018400b161ef6ddb91e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61826790bd75fe2d3f7a00d32dded631 = $(`<div id="html_61826790bd75fe2d3f7a00d32dded631" style="width: 100.0%; height: 100.0%;">Rose View Dairy</div>`)[0];
+                popup_389b08663845b018400b161ef6ddb91e.setContent(html_61826790bd75fe2d3f7a00d32dded631);
+            
+        
+
+        marker_1fe7adb9de72891113141752c4eeb8f7.bindPopup(popup_389b08663845b018400b161ef6ddb91e)
+        ;
+
+        
+    
+    
+                marker_1fe7adb9de72891113141752c4eeb8f7.setIcon(icon_d5acf20fcd63955f4110e45bf0077bc1);
+            
+    
+            var marker_6e016b4d11de14b4cf9bde1596e1080d = L.marker(
+                [42.9369913931187, -76.2737022474142],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_bbe320abd4098a9fdb645ab89697dd90 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7a3801d9f33c141db52c36cc950d910e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7ef138a710fca651687280b9945f0856 = $(`<div id="html_7ef138a710fca651687280b9945f0856" style="width: 100.0%; height: 100.0%;">Hourigan Family Dairy, LLC</div>`)[0];
+                popup_7a3801d9f33c141db52c36cc950d910e.setContent(html_7ef138a710fca651687280b9945f0856);
+            
+        
+
+        marker_6e016b4d11de14b4cf9bde1596e1080d.bindPopup(popup_7a3801d9f33c141db52c36cc950d910e)
+        ;
+
+        
+    
+    
+                marker_6e016b4d11de14b4cf9bde1596e1080d.setIcon(icon_bbe320abd4098a9fdb645ab89697dd90);
+            
+    
+            var marker_2866fc1ab6094fec171d5df2dc3be105 = L.marker(
+                [42.8402985728712, -75.5724641743805],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_4fe8d1e6f80c678803d10d3b2fadea89 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c9129d75fcdc177896684598d676cf6d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_613812554a22d7a037ab7c874e823764 = $(`<div id="html_613812554a22d7a037ab7c874e823764" style="width: 100.0%; height: 100.0%;">White Eagle Dairy, LLC</div>`)[0];
+                popup_c9129d75fcdc177896684598d676cf6d.setContent(html_613812554a22d7a037ab7c874e823764);
+            
+        
+
+        marker_2866fc1ab6094fec171d5df2dc3be105.bindPopup(popup_c9129d75fcdc177896684598d676cf6d)
+        ;
+
+        
+    
+    
+                marker_2866fc1ab6094fec171d5df2dc3be105.setIcon(icon_4fe8d1e6f80c678803d10d3b2fadea89);
+            
+    
+            var marker_48ea07b83e5f8e4daac9d35c9824b50e = L.marker(
+                [42.6918210395513, -76.4884365779983],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_809f2015b39d6164e1426e6a672de3ba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1a44065304838b7570445f763af84664 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_67add42798b8818129a2b737934698a5 = $(`<div id="html_67add42798b8818129a2b737934698a5" style="width: 100.0%; height: 100.0%;">Pine Hollow Dairy, LLC</div>`)[0];
+                popup_1a44065304838b7570445f763af84664.setContent(html_67add42798b8818129a2b737934698a5);
+            
+        
+
+        marker_48ea07b83e5f8e4daac9d35c9824b50e.bindPopup(popup_1a44065304838b7570445f763af84664)
+        ;
+
+        
+    
+    
+                marker_48ea07b83e5f8e4daac9d35c9824b50e.setIcon(icon_809f2015b39d6164e1426e6a672de3ba);
+            
+    
+            var marker_a39576b95f14af2d8d9cbc34cd63f82c = L.marker(
+                [42.8872255702727, -76.6084544323278],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_2f73397d1a7664f82ec85df5c2f73176 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fa39b820827603683b4e0225033e3e93 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8cba56fccebaf1db98be41acb74c9ac2 = $(`<div id="html_8cba56fccebaf1db98be41acb74c9ac2" style="width: 100.0%; height: 100.0%;">Lincoln Dairy, LLC</div>`)[0];
+                popup_fa39b820827603683b4e0225033e3e93.setContent(html_8cba56fccebaf1db98be41acb74c9ac2);
+            
+        
+
+        marker_a39576b95f14af2d8d9cbc34cd63f82c.bindPopup(popup_fa39b820827603683b4e0225033e3e93)
+        ;
+
+        
+    
+    
+                marker_a39576b95f14af2d8d9cbc34cd63f82c.setIcon(icon_2f73397d1a7664f82ec85df5c2f73176);
+            
+    
+            var marker_7a526ce70b3e6bb354685aceef51d2e3 = L.marker(
+                [42.6902681364875, -76.5519358989316],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_1b6553bbfff19874d320c04ebe19672a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d29f69dddb33815215bcdef791d8738c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f111eb1d480e91f3aa73596af0fa6318 = $(`<div id="html_f111eb1d480e91f3aa73596af0fa6318" style="width: 100.0%; height: 100.0%;">Ridgecrest Dairy, LLC</div>`)[0];
+                popup_d29f69dddb33815215bcdef791d8738c.setContent(html_f111eb1d480e91f3aa73596af0fa6318);
+            
+        
+
+        marker_7a526ce70b3e6bb354685aceef51d2e3.bindPopup(popup_d29f69dddb33815215bcdef791d8738c)
+        ;
+
+        
+    
+    
+                marker_7a526ce70b3e6bb354685aceef51d2e3.setIcon(icon_1b6553bbfff19874d320c04ebe19672a);
+            
+    
+            var marker_9ccaefff0258900f63069a4bdf35850c = L.marker(
+                [42.3550085198569, -75.4020020044925],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_2666df7388df3bd780aa7025fabbdaff = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d4cf580f27cc5ae5362c40c296fa619f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f04ef39982d129cc23a946bb068a96eb = $(`<div id="html_f04ef39982d129cc23a946bb068a96eb" style="width: 100.0%; height: 100.0%;">Hanehan Family Dairy, LLC</div>`)[0];
+                popup_d4cf580f27cc5ae5362c40c296fa619f.setContent(html_f04ef39982d129cc23a946bb068a96eb);
+            
+        
+
+        marker_9ccaefff0258900f63069a4bdf35850c.bindPopup(popup_d4cf580f27cc5ae5362c40c296fa619f)
+        ;
+
+        
+    
+    
+                marker_9ccaefff0258900f63069a4bdf35850c.setIcon(icon_2666df7388df3bd780aa7025fabbdaff);
+            
+    
+            var marker_9e60012e0486975b1d655e1e00273e1b = L.marker(
+                [42.9863679937347, -76.4676530941089],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_fccf39c9547945e330bd4e22b4ecb0c9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a71a51ab46e594b4e581dee27f95f765 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_72b8fb46cb51c4d33add062b5173cf05 = $(`<div id="html_72b8fb46cb51c4d33add062b5173cf05" style="width: 100.0%; height: 100.0%;">Peters Dairy Farm Inc.</div>`)[0];
+                popup_a71a51ab46e594b4e581dee27f95f765.setContent(html_72b8fb46cb51c4d33add062b5173cf05);
+            
+        
+
+        marker_9e60012e0486975b1d655e1e00273e1b.bindPopup(popup_a71a51ab46e594b4e581dee27f95f765)
+        ;
+
+        
+    
+    
+                marker_9e60012e0486975b1d655e1e00273e1b.setIcon(icon_fccf39c9547945e330bd4e22b4ecb0c9);
+            
+    
+            var marker_ebc3b209a474eda2364f8f8d87416776 = L.marker(
+                [42.9478665074941, -75.9690002305089],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_0d24773868ecea5656a3f0c79b66a829 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_64643ee019479209084799e7266e2cae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb8ea556aa4be497bddbfa20cae6d765 = $(`<div id="html_cb8ea556aa4be497bddbfa20cae6d765" style="width: 100.0%; height: 100.0%;">Pastureland Dairy, LLC</div>`)[0];
+                popup_64643ee019479209084799e7266e2cae.setContent(html_cb8ea556aa4be497bddbfa20cae6d765);
+            
+        
+
+        marker_ebc3b209a474eda2364f8f8d87416776.bindPopup(popup_64643ee019479209084799e7266e2cae)
+        ;
+
+        
+    
+    
+                marker_ebc3b209a474eda2364f8f8d87416776.setIcon(icon_0d24773868ecea5656a3f0c79b66a829);
+            
+    
+            var marker_cd012b0906b3a0af258279cf54a1cf2c = L.marker(
+                [43.8221275467191, -75.4326118013494],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_bdbdaefed166a0b27100b6e2a511217b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_33d4a98f726b26611b450de588a57681 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f1d1234f2eda5595e8da945596b41bd = $(`<div id="html_4f1d1234f2eda5595e8da945596b41bd" style="width: 100.0%; height: 100.0%;">Butler Creek Dairy Farm</div>`)[0];
+                popup_33d4a98f726b26611b450de588a57681.setContent(html_4f1d1234f2eda5595e8da945596b41bd);
+            
+        
+
+        marker_cd012b0906b3a0af258279cf54a1cf2c.bindPopup(popup_33d4a98f726b26611b450de588a57681)
+        ;
+
+        
+    
+    
+                marker_cd012b0906b3a0af258279cf54a1cf2c.setIcon(icon_bdbdaefed166a0b27100b6e2a511217b);
+            
+    
+            var marker_ef43dc94521b225a89adb73f2a7f1d02 = L.marker(
+                [43.7366805017717, -76.1629084039289],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_526384224d34c84320502f55545664b8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9cda8a8c9e88a1f82a0506980017f734 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_be71a659017878f4dbcdd160b5c12252 = $(`<div id="html_be71a659017878f4dbcdd160b5c12252" style="width: 100.0%; height: 100.0%;">CTS Dairy</div>`)[0];
+                popup_9cda8a8c9e88a1f82a0506980017f734.setContent(html_be71a659017878f4dbcdd160b5c12252);
+            
+        
+
+        marker_ef43dc94521b225a89adb73f2a7f1d02.bindPopup(popup_9cda8a8c9e88a1f82a0506980017f734)
+        ;
+
+        
+    
+    
+                marker_ef43dc94521b225a89adb73f2a7f1d02.setIcon(icon_526384224d34c84320502f55545664b8);
+            
+    
+            var marker_bd312236dee7575c8cefa9e97b41fbb0 = L.marker(
+                [43.7494864640408, -76.1646256443349],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_7b42671bcf3e511a421f0609f3d56347 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2944f76b25fbe118ec489f58623513d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_712e730fc2f8fd264ad675be8c6a97f6 = $(`<div id="html_712e730fc2f8fd264ad675be8c6a97f6" style="width: 100.0%; height: 100.0%;">Eastman Dairy Farm</div>`)[0];
+                popup_2944f76b25fbe118ec489f58623513d5.setContent(html_712e730fc2f8fd264ad675be8c6a97f6);
+            
+        
+
+        marker_bd312236dee7575c8cefa9e97b41fbb0.bindPopup(popup_2944f76b25fbe118ec489f58623513d5)
+        ;
+
+        
+    
+    
+                marker_bd312236dee7575c8cefa9e97b41fbb0.setIcon(icon_7b42671bcf3e511a421f0609f3d56347);
+            
+    
+            var marker_2e76a4691f763c178950a01d665c56e4 = L.marker(
+                [42.6702603676285, -77.8786115121603],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_c1846198c35e47c85c67354f447c2baa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4c252948d63dc9bff08144af2d496b32 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ead54741ccff48344cc634aaca2a76cf = $(`<div id="html_ead54741ccff48344cc634aaca2a76cf" style="width: 100.0%; height: 100.0%;">Mt. Morris Dairy Farms</div>`)[0];
+                popup_4c252948d63dc9bff08144af2d496b32.setContent(html_ead54741ccff48344cc634aaca2a76cf);
+            
+        
+
+        marker_2e76a4691f763c178950a01d665c56e4.bindPopup(popup_4c252948d63dc9bff08144af2d496b32)
+        ;
+
+        
+    
+    
+                marker_2e76a4691f763c178950a01d665c56e4.setIcon(icon_c1846198c35e47c85c67354f447c2baa);
+            
+    
+            var marker_26fa83fcaad18fe91312636137df9450 = L.marker(
+                [42.7196154919343, -77.74739478471],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_25572e142683c36ce4d6696b9ab2bd1a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_faf676d0b5671cd5c6c2d99107174256 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_70d248747f7929f88b99068627094a93 = $(`<div id="html_70d248747f7929f88b99068627094a93" style="width: 100.0%; height: 100.0%;">Dairy-Knoll Farms, LLC</div>`)[0];
+                popup_faf676d0b5671cd5c6c2d99107174256.setContent(html_70d248747f7929f88b99068627094a93);
+            
+        
+
+        marker_26fa83fcaad18fe91312636137df9450.bindPopup(popup_faf676d0b5671cd5c6c2d99107174256)
+        ;
+
+        
+    
+    
+                marker_26fa83fcaad18fe91312636137df9450.setIcon(icon_25572e142683c36ce4d6696b9ab2bd1a);
+            
+    
+            var marker_a9ce0288c56189a19d2671c1ce8099c7 = L.marker(
+                [44.7280627994708, -75.3827535866961],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_770569448696bda0781b2f98b21ac81c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5698b53986b100b45a96d8d329df63a8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_caae52378689030e24f793b98948d9c8 = $(`<div id="html_caae52378689030e24f793b98948d9c8" style="width: 100.0%; height: 100.0%;">Woodcrest Dairy, LLC</div>`)[0];
+                popup_5698b53986b100b45a96d8d329df63a8.setContent(html_caae52378689030e24f793b98948d9c8);
+            
+        
+
+        marker_a9ce0288c56189a19d2671c1ce8099c7.bindPopup(popup_5698b53986b100b45a96d8d329df63a8)
+        ;
+
+        
+    
+    
+                marker_a9ce0288c56189a19d2671c1ce8099c7.setIcon(icon_770569448696bda0781b2f98b21ac81c);
+            
+    
+            var marker_ec8b0b685d7659642a2668ca72821c2e = L.marker(
+                [43.9021747753386, -76.0786013387192],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_582096936f36ace2f7680ee9dba07415 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3a2e6892196600b5a49d1372ebad8664 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9f59054897298b54af105fda22cf88f5 = $(`<div id="html_9f59054897298b54af105fda22cf88f5" style="width: 100.0%; height: 100.0%;">North Harbor Dairy, LLC</div>`)[0];
+                popup_3a2e6892196600b5a49d1372ebad8664.setContent(html_9f59054897298b54af105fda22cf88f5);
+            
+        
+
+        marker_ec8b0b685d7659642a2668ca72821c2e.bindPopup(popup_3a2e6892196600b5a49d1372ebad8664)
+        ;
+
+        
+    
+    
+                marker_ec8b0b685d7659642a2668ca72821c2e.setIcon(icon_582096936f36ace2f7680ee9dba07415);
+            
+    
+            var marker_c0d6c84080b906d02e026c160d69b4b6 = L.marker(
+                [42.2360123598846, -76.3623741048196],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_8a23445c777a0d03df98848bb1500933 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6def558b005384e54c9d339834be2c24 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d085bb566b34126b537b0a2d04a566ca = $(`<div id="html_d085bb566b34126b537b0a2d04a566ca" style="width: 100.0%; height: 100.0%;">AA Dairy</div>`)[0];
+                popup_6def558b005384e54c9d339834be2c24.setContent(html_d085bb566b34126b537b0a2d04a566ca);
+            
+        
+
+        marker_c0d6c84080b906d02e026c160d69b4b6.bindPopup(popup_6def558b005384e54c9d339834be2c24)
+        ;
+
+        
+    
+    
+                marker_c0d6c84080b906d02e026c160d69b4b6.setIcon(icon_8a23445c777a0d03df98848bb1500933);
+            
+    
+            var marker_5997cf876d0d94c4c4871589533cd102 = L.marker(
+                [42.6939565496814, -76.2341529968275],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_e53285007646d15ff44bada8897515d5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f9deeca59f40ac0cdffe1e6a5e90cc19 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_012ce4ffc392a35fcdab7eb7a9410db0 = $(`<div id="html_012ce4ffc392a35fcdab7eb7a9410db0" style="width: 100.0%; height: 100.0%;">EZ Acres Dairy, LLC</div>`)[0];
+                popup_f9deeca59f40ac0cdffe1e6a5e90cc19.setContent(html_012ce4ffc392a35fcdab7eb7a9410db0);
+            
+        
+
+        marker_5997cf876d0d94c4c4871589533cd102.bindPopup(popup_f9deeca59f40ac0cdffe1e6a5e90cc19)
+        ;
+
+        
+    
+    
+                marker_5997cf876d0d94c4c4871589533cd102.setIcon(icon_e53285007646d15ff44bada8897515d5);
+            
+    
+            var marker_ad2c298dbe679bbd0b5101021f460b63 = L.marker(
+                [42.752183464928, -76.1214406654424],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_b3fb651ee67069671cdbb674b40aba81 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_29d39ddd022d0ae164ea71059a9915ec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f28db014a15b73d8f85b1b6fb4c68b43 = $(`<div id="html_f28db014a15b73d8f85b1b6fb4c68b43" style="width: 100.0%; height: 100.0%;">Currie Valley Dairy LLC</div>`)[0];
+                popup_29d39ddd022d0ae164ea71059a9915ec.setContent(html_f28db014a15b73d8f85b1b6fb4c68b43);
+            
+        
+
+        marker_ad2c298dbe679bbd0b5101021f460b63.bindPopup(popup_29d39ddd022d0ae164ea71059a9915ec)
+        ;
+
+        
+    
+    
+                marker_ad2c298dbe679bbd0b5101021f460b63.setIcon(icon_b3fb651ee67069671cdbb674b40aba81);
+            
+    
+            var marker_e517e0557cfb3cb80bccebb385fa9220 = L.marker(
+                [42.8383243742128, -76.2961457281791],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_90caf67180dc50e97f2bca2085c0933d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_17b95d4b4a91af42fb1201c5c4fbe158 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3abcc668b0a5906bdfa48a9d74e671ff = $(`<div id="html_3abcc668b0a5906bdfa48a9d74e671ff" style="width: 100.0%; height: 100.0%;">Fesko Dairy LLC</div>`)[0];
+                popup_17b95d4b4a91af42fb1201c5c4fbe158.setContent(html_3abcc668b0a5906bdfa48a9d74e671ff);
+            
+        
+
+        marker_e517e0557cfb3cb80bccebb385fa9220.bindPopup(popup_17b95d4b4a91af42fb1201c5c4fbe158)
+        ;
+
+        
+    
+    
+                marker_e517e0557cfb3cb80bccebb385fa9220.setIcon(icon_90caf67180dc50e97f2bca2085c0933d);
+            
+    
+            var marker_7a22bd64e4165524fb49183dd756c332 = L.marker(
+                [42.4528745144053, -76.0021242043079],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_68ceb5783a94f5d3a4b1c4c6099f4641 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_95db7e3ba63f13f579996f28251203fa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_31edc24435f3f727ad30b7f67e77df7b = $(`<div id="html_31edc24435f3f727ad30b7f67e77df7b" style="width: 100.0%; height: 100.0%;">Dairyland LLC</div>`)[0];
+                popup_95db7e3ba63f13f579996f28251203fa.setContent(html_31edc24435f3f727ad30b7f67e77df7b);
+            
+        
+
+        marker_7a22bd64e4165524fb49183dd756c332.bindPopup(popup_95db7e3ba63f13f579996f28251203fa)
+        ;
+
+        
+    
+    
+                marker_7a22bd64e4165524fb49183dd756c332.setIcon(icon_68ceb5783a94f5d3a4b1c4c6099f4641);
+            
+    
+            var marker_a2c1d6673f8d4ad1ab2fb64185028f41 = L.marker(
+                [42.7890827514721, -77.1064950141411],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_a273a6dca1169998581c7837a4b7f0ca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_72bba5e95cef58bb3efdc73500fd656e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_46e742bb274046e6f4c1ae8a2dff4c06 = $(`<div id="html_46e742bb274046e6f4c1ae8a2dff4c06" style="width: 100.0%; height: 100.0%;">Gorham Dairy</div>`)[0];
+                popup_72bba5e95cef58bb3efdc73500fd656e.setContent(html_46e742bb274046e6f4c1ae8a2dff4c06);
+            
+        
+
+        marker_a2c1d6673f8d4ad1ab2fb64185028f41.bindPopup(popup_72bba5e95cef58bb3efdc73500fd656e)
+        ;
+
+        
+    
+    
+                marker_a2c1d6673f8d4ad1ab2fb64185028f41.setIcon(icon_a273a6dca1169998581c7837a4b7f0ca);
+            
+    
+            var marker_c32323a4e624465d640074f8e9119a5e = L.marker(
+                [42.6428797606064, -78.3784074588514],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_c30a9b445d784cf3f69845178208cf11 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7ff4ee0d4ac49ee3843ae4333df94bcc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3895026956e8c324d2426992db3fd9a1 = $(`<div id="html_3895026956e8c324d2426992db3fd9a1" style="width: 100.0%; height: 100.0%;">Robbiehill Family Dairy</div>`)[0];
+                popup_7ff4ee0d4ac49ee3843ae4333df94bcc.setContent(html_3895026956e8c324d2426992db3fd9a1);
+            
+        
+
+        marker_c32323a4e624465d640074f8e9119a5e.bindPopup(popup_7ff4ee0d4ac49ee3843ae4333df94bcc)
+        ;
+
+        
+    
+    
+                marker_c32323a4e624465d640074f8e9119a5e.setIcon(icon_c30a9b445d784cf3f69845178208cf11);
+            
+    
+            var marker_5882f459fd70da659b0ffd35e8cc3f5e = L.marker(
+                [42.7871428549372, -74.7521623939156],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_a05f7c57ff1d1b1938751067a5376aaf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7b5494fbee9edeaa9c739f0d7f6de291 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_58cfcedde7871a9031d315bb1cb2136b = $(`<div id="html_58cfcedde7871a9031d315bb1cb2136b" style="width: 100.0%; height: 100.0%;">Young's Dairy Farm, LLC</div>`)[0];
+                popup_7b5494fbee9edeaa9c739f0d7f6de291.setContent(html_58cfcedde7871a9031d315bb1cb2136b);
+            
+        
+
+        marker_5882f459fd70da659b0ffd35e8cc3f5e.bindPopup(popup_7b5494fbee9edeaa9c739f0d7f6de291)
+        ;
+
+        
+    
+    
+                marker_5882f459fd70da659b0ffd35e8cc3f5e.setIcon(icon_a05f7c57ff1d1b1938751067a5376aaf);
+            
+    
+            var marker_e18605d94547d24f0bf1f2b9cf06d8b3 = L.marker(
+                [44.8617003198264, -74.202663796186],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_c2b7f67ad95147e6b025529661459fe6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0502faa30ab66a74619dc23dbf3e8fc5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_72e712a30c1dcc201be61f3c6c1eb425 = $(`<div id="html_72e712a30c1dcc201be61f3c6c1eb425" style="width: 100.0%; height: 100.0%;">Stargo Dairy Farm</div>`)[0];
+                popup_0502faa30ab66a74619dc23dbf3e8fc5.setContent(html_72e712a30c1dcc201be61f3c6c1eb425);
+            
+        
+
+        marker_e18605d94547d24f0bf1f2b9cf06d8b3.bindPopup(popup_0502faa30ab66a74619dc23dbf3e8fc5)
+        ;
+
+        
+    
+    
+                marker_e18605d94547d24f0bf1f2b9cf06d8b3.setIcon(icon_c2b7f67ad95147e6b025529661459fe6);
+            
+    
+            var marker_09ffb5f3eea5ffada850cd67adc0ab40 = L.marker(
+                [43.2651207015726, -73.4718359992194],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_7ef8bb2798433f53038bf198d3518b58 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6f5fad2fd52f0f613639fbd023a4f58e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_56083e0e6cdd8932bfb98caba7cba001 = $(`<div id="html_56083e0e6cdd8932bfb98caba7cba001" style="width: 100.0%; height: 100.0%;">Fullerton Dairy</div>`)[0];
+                popup_6f5fad2fd52f0f613639fbd023a4f58e.setContent(html_56083e0e6cdd8932bfb98caba7cba001);
+            
+        
+
+        marker_09ffb5f3eea5ffada850cd67adc0ab40.bindPopup(popup_6f5fad2fd52f0f613639fbd023a4f58e)
+        ;
+
+        
+    
+    
+                marker_09ffb5f3eea5ffada850cd67adc0ab40.setIcon(icon_7ef8bb2798433f53038bf198d3518b58);
+            
+    
+            var marker_cd6f04de6a430c6b35c174c809d82ed8 = L.marker(
+                [43.4281356781101, -73.2752702968789],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_9089e38d299fcb0aee9e6208bf13367d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_db79a313532ce660a3d3b8afada5cb54 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b1ff156e7b248a98a829fa149a83e6b9 = $(`<div id="html_b1ff156e7b248a98a829fa149a83e6b9" style="width: 100.0%; height: 100.0%;">Red Top Dairy</div>`)[0];
+                popup_db79a313532ce660a3d3b8afada5cb54.setContent(html_b1ff156e7b248a98a829fa149a83e6b9);
+            
+        
+
+        marker_cd6f04de6a430c6b35c174c809d82ed8.bindPopup(popup_db79a313532ce660a3d3b8afada5cb54)
+        ;
+
+        
+    
+    
+                marker_cd6f04de6a430c6b35c174c809d82ed8.setIcon(icon_9089e38d299fcb0aee9e6208bf13367d);
+            
+    
+            var marker_37e421d705df604373e8fdb55c960eff = L.marker(
+                [43.3321648692795, -73.5799892795255],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_884d6716327759cd9e21f3e4e6899f76 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_374204c4316c318185759ef983c681d6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41816fb15c4dffc3d25e32d3b3008911 = $(`<div id="html_41816fb15c4dffc3d25e32d3b3008911" style="width: 100.0%; height: 100.0%;">Ideal Dairy Farms</div>`)[0];
+                popup_374204c4316c318185759ef983c681d6.setContent(html_41816fb15c4dffc3d25e32d3b3008911);
+            
+        
+
+        marker_37e421d705df604373e8fdb55c960eff.bindPopup(popup_374204c4316c318185759ef983c681d6)
+        ;
+
+        
+    
+    
+                marker_37e421d705df604373e8fdb55c960eff.setIcon(icon_884d6716327759cd9e21f3e4e6899f76);
+            
+    
+            var marker_df29f3d6ff9a8b808dd43b662dbd18af = L.marker(
+                [44.9430090206707, -74.5470019168816],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_40528e23ea6e33839c218d3efaa15387 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_65609dd3fbfc3657aa4adb95b1979639 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6ca5aa6f694548fc33c20ab07da1588f = $(`<div id="html_6ca5aa6f694548fc33c20ab07da1588f" style="width: 100.0%; height: 100.0%;">Adventure Dairy</div>`)[0];
+                popup_65609dd3fbfc3657aa4adb95b1979639.setContent(html_6ca5aa6f694548fc33c20ab07da1588f);
+            
+        
+
+        marker_df29f3d6ff9a8b808dd43b662dbd18af.bindPopup(popup_65609dd3fbfc3657aa4adb95b1979639)
+        ;
+
+        
+    
+    
+                marker_df29f3d6ff9a8b808dd43b662dbd18af.setIcon(icon_40528e23ea6e33839c218d3efaa15387);
+            
+    
+            var marker_86b1f67a07187e5734e80484c06d3896 = L.marker(
+                [42.5750084210985, -78.7700030979099],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_4c745e7379c3f182ef8c499102547ab8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e4ef483194193938d6fabea608690efc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f650a45ffc4488b09b25eedcf805cc44 = $(`<div id="html_f650a45ffc4488b09b25eedcf805cc44" style="width: 100.0%; height: 100.0%;">Happy Hollow Dairy Farm, LLC</div>`)[0];
+                popup_e4ef483194193938d6fabea608690efc.setContent(html_f650a45ffc4488b09b25eedcf805cc44);
+            
+        
+
+        marker_86b1f67a07187e5734e80484c06d3896.bindPopup(popup_e4ef483194193938d6fabea608690efc)
+        ;
+
+        
+    
+    
+                marker_86b1f67a07187e5734e80484c06d3896.setIcon(icon_4c745e7379c3f182ef8c499102547ab8);
+            
+    
+            var marker_5a515d6c15d8db214d17935d539e824e = L.marker(
+                [42.7776106022857, -77.9905449763367],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_28e5aed1d98e3fb0489398c3c024c673 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bfee9fb3cacc1291ac4f68cc31a5eb28 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_06ee37508160403071508881f1452072 = $(`<div id="html_06ee37508160403071508881f1452072" style="width: 100.0%; height: 100.0%;">Marquart Dairy</div>`)[0];
+                popup_bfee9fb3cacc1291ac4f68cc31a5eb28.setContent(html_06ee37508160403071508881f1452072);
+            
+        
+
+        marker_5a515d6c15d8db214d17935d539e824e.bindPopup(popup_bfee9fb3cacc1291ac4f68cc31a5eb28)
+        ;
+
+        
+    
+    
+                marker_5a515d6c15d8db214d17935d539e824e.setIcon(icon_28e5aed1d98e3fb0489398c3c024c673);
+            
+    
+            var marker_b5ac4e32c55b26fea21bed338f9dccc3 = L.marker(
+                [43.2387198164533, -76.5404340373769],
+                {
+}
+            ).addTo(map_78221cb4a3989a691ace0846ebe94f8a);
+        
+    
+            var icon_c1235040f1a0621bc1ef85444234d329 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_57efe2e2d53219a0a39a2dfb72c2763b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f91ef7e9462b25a59a7fdab8d1de7d2 = $(`<div id="html_0f91ef7e9462b25a59a7fdab8d1de7d2" style="width: 100.0%; height: 100.0%;">Ox-Cart Dairy</div>`)[0];
+                popup_57efe2e2d53219a0a39a2dfb72c2763b.setContent(html_0f91ef7e9462b25a59a7fdab8d1de7d2);
+            
+        
+
+        marker_b5ac4e32c55b26fea21bed338f9dccc3.bindPopup(popup_57efe2e2d53219a0a39a2dfb72c2763b)
+        ;
+
+        
+    
+    
+                marker_b5ac4e32c55b26fea21bed338f9dccc3.setIcon(icon_c1235040f1a0621bc1ef85444234d329);
+            
+</script>
+</html>
