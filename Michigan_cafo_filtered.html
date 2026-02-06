@@ -1,0 +1,5732 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6a064cf2e008c333b2559a627f27c781 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_6a064cf2e008c333b2559a627f27c781" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6a064cf2e008c333b2559a627f27c781 = L.map(
+                "map_6a064cf2e008c333b2559a627f27c781",
+                {
+                    center: [43.194829931972784, -84.51843537414966],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_473b8ba587d488e80c4f9dba0fdc149a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_473b8ba587d488e80c4f9dba0fdc149a.addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var tile_layer_7c97bc690c4d892f929ab62a7d54a626 = L.tileLayer(
+                "http://{s}.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Satellite",
+  "subdomains": [
+"mt0",
+"mt1",
+"mt2",
+"mt3",
+],
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7c97bc690c4d892f929ab62a7d54a626.addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var layer_control_4630e23d201e2f226e26d239c1eb50a7_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_473b8ba587d488e80c4f9dba0fdc149a,
+                    "Google Satellite" : tile_layer_7c97bc690c4d892f929ab62a7d54a626,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_4630e23d201e2f226e26d239c1eb50a7 = L.control.layers(
+                layer_control_4630e23d201e2f226e26d239c1eb50a7_layers.base_layers,
+                layer_control_4630e23d201e2f226e26d239c1eb50a7_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+
+        
+    
+            var marker_a5e7b2e8f1c77ec952096fe0ca88fc75 = L.marker(
+                [43.47, -86.0],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_d366eeef33005c42d8eb5110c79da622 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3f370e4631268cbdb1f34511d531ddee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a24c703267637bb6e889a6e79c204f6 = $(`<div id="html_0a24c703267637bb6e889a6e79c204f6" style="width: 100.0%; height: 100.0%;">A&R Farms-CAFO (Newaygo)</div>`)[0];
+                popup_3f370e4631268cbdb1f34511d531ddee.setContent(html_0a24c703267637bb6e889a6e79c204f6);
+            
+        
+
+        marker_a5e7b2e8f1c77ec952096fe0ca88fc75.bindPopup(popup_3f370e4631268cbdb1f34511d531ddee)
+        ;
+
+        
+    
+    
+                marker_a5e7b2e8f1c77ec952096fe0ca88fc75.setIcon(icon_d366eeef33005c42d8eb5110c79da622);
+            
+    
+            var marker_388b07b2c3c9b682169a9b59f0f28867 = L.marker(
+                [44.19, -85.09],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_cd012fa3572d5537fc1dfaa538d2d587 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3abdfffb1e3092952b65c14a6422bfd4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf6b430d0c6cb99ce808fc079a74729c = $(`<div id="html_bf6b430d0c6cb99ce808fc079a74729c" style="width: 100.0%; height: 100.0%;">Agemas Sand Hill Farm-CAFO (Missaukee)</div>`)[0];
+                popup_3abdfffb1e3092952b65c14a6422bfd4.setContent(html_bf6b430d0c6cb99ce808fc079a74729c);
+            
+        
+
+        marker_388b07b2c3c9b682169a9b59f0f28867.bindPopup(popup_3abdfffb1e3092952b65c14a6422bfd4)
+        ;
+
+        
+    
+    
+                marker_388b07b2c3c9b682169a9b59f0f28867.setIcon(icon_cd012fa3572d5537fc1dfaa538d2d587);
+            
+    
+            var marker_997a495767174002b0bb7193b381870e = L.marker(
+                [41.97, -86.36],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_a14bce6b717fdb907326b47e2cafce61 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a291a50ec5cc8560ec9637b6df0b07c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_04c7c8f1fec7cfd58f840d6cd8b64c78 = $(`<div id="html_04c7c8f1fec7cfd58f840d6cd8b64c78" style="width: 100.0%; height: 100.0%;">Andrews University Dairy-CAFO (Berrien)</div>`)[0];
+                popup_a291a50ec5cc8560ec9637b6df0b07c2.setContent(html_04c7c8f1fec7cfd58f840d6cd8b64c78);
+            
+        
+
+        marker_997a495767174002b0bb7193b381870e.bindPopup(popup_a291a50ec5cc8560ec9637b6df0b07c2)
+        ;
+
+        
+    
+    
+                marker_997a495767174002b0bb7193b381870e.setIcon(icon_a14bce6b717fdb907326b47e2cafce61);
+            
+    
+            var marker_ae085322e359b20c4a3aa6025055c78f = L.marker(
+                [43.79, -83.11],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_c38ac6e3f65156ea8bc134527dd4f61e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4a49abe63dc1f406a1adf1f231a30d68 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5fb3527531893ecd0e4db62aaea12371 = $(`<div id="html_5fb3527531893ecd0e4db62aaea12371" style="width: 100.0%; height: 100.0%;">Aquila Farms-CAFO (Huron)</div>`)[0];
+                popup_4a49abe63dc1f406a1adf1f231a30d68.setContent(html_5fb3527531893ecd0e4db62aaea12371);
+            
+        
+
+        marker_ae085322e359b20c4a3aa6025055c78f.bindPopup(popup_4a49abe63dc1f406a1adf1f231a30d68)
+        ;
+
+        
+    
+    
+                marker_ae085322e359b20c4a3aa6025055c78f.setIcon(icon_c38ac6e3f65156ea8bc134527dd4f61e);
+            
+    
+            var marker_7daef43cf0baa4243be14a70ddb8c491 = L.marker(
+                [43.53, -83.46],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_3e59eab35476ad7dcced582948c625f3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_534be379b37f7b0ba1b3a07c5378a0a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b00d5ffe6786bfe1827b4e999d2b80ee = $(`<div id="html_b00d5ffe6786bfe1827b4e999d2b80ee" style="width: 100.0%; height: 100.0%;">Aurora Farms of Fairgrove-CAFO (Tuscola)</div>`)[0];
+                popup_534be379b37f7b0ba1b3a07c5378a0a9.setContent(html_b00d5ffe6786bfe1827b4e999d2b80ee);
+            
+        
+
+        marker_7daef43cf0baa4243be14a70ddb8c491.bindPopup(popup_534be379b37f7b0ba1b3a07c5378a0a9)
+        ;
+
+        
+    
+    
+                marker_7daef43cf0baa4243be14a70ddb8c491.setIcon(icon_3e59eab35476ad7dcced582948c625f3);
+            
+    
+            var marker_c72d1e7fae77d4640cedbc5a152b4188 = L.marker(
+                [44.19, -85.12],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_71a3ba7d7e01dcdf7c0c7b0a7e3e9157 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7b03dc6532fb76c5faebfefff43db5f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c5fec8fd7373c3d8c37be2b1bbf37a4c = $(`<div id="html_c5fec8fd7373c3d8c37be2b1bbf37a4c" style="width: 100.0%; height: 100.0%;">North Branch Dairy, LLC-CAFO (Missaukee)</div>`)[0];
+                popup_7b03dc6532fb76c5faebfefff43db5f1.setContent(html_c5fec8fd7373c3d8c37be2b1bbf37a4c);
+            
+        
+
+        marker_c72d1e7fae77d4640cedbc5a152b4188.bindPopup(popup_7b03dc6532fb76c5faebfefff43db5f1)
+        ;
+
+        
+    
+    
+                marker_c72d1e7fae77d4640cedbc5a152b4188.setIcon(icon_71a3ba7d7e01dcdf7c0c7b0a7e3e9157);
+            
+    
+            var marker_5ea9c53621928b7139fe73f2d64501cb = L.marker(
+                [43.89, -83.31],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_6e323bc2f79d0667068451582fdf3fa7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ffdbbf92f89b876f2188dab42ebc81ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bdee009b885b435d291904f09af8db41 = $(`<div id="html_bdee009b885b435d291904f09af8db41" style="width: 100.0%; height: 100.0%;">Highland Heifer LLC-CAFO (Huron)</div>`)[0];
+                popup_ffdbbf92f89b876f2188dab42ebc81ac.setContent(html_bdee009b885b435d291904f09af8db41);
+            
+        
+
+        marker_5ea9c53621928b7139fe73f2d64501cb.bindPopup(popup_ffdbbf92f89b876f2188dab42ebc81ac)
+        ;
+
+        
+    
+    
+                marker_5ea9c53621928b7139fe73f2d64501cb.setIcon(icon_6e323bc2f79d0667068451582fdf3fa7);
+            
+    
+            var marker_bdcd7638d3c481574b354d12e5f1d95f = L.marker(
+                [43.77, -83.42],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_69280ced43fad0805bc0422345eb5d00 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_54f81b4b5fdf915a49dc9c2fec20b300 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f1c8983a79505304546c98de1b7f6dcc = $(`<div id="html_f1c8983a79505304546c98de1b7f6dcc" style="width: 100.0%; height: 100.0%;">Bayside Livestock Co-CAFO (Huron)</div>`)[0];
+                popup_54f81b4b5fdf915a49dc9c2fec20b300.setContent(html_f1c8983a79505304546c98de1b7f6dcc);
+            
+        
+
+        marker_bdcd7638d3c481574b354d12e5f1d95f.bindPopup(popup_54f81b4b5fdf915a49dc9c2fec20b300)
+        ;
+
+        
+    
+    
+                marker_bdcd7638d3c481574b354d12e5f1d95f.setIcon(icon_69280ced43fad0805bc0422345eb5d00);
+            
+    
+            var marker_22f0870ef9544e390cbb39970a43697b = L.marker(
+                [43.1, -85.98],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_6a5dc3dc0512b1e20221b1bed776e355 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_28e7d260c8efad01a52a00738c7de5a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a76882b24786a9cf91d135cdac8f8983 = $(`<div id="html_a76882b24786a9cf91d135cdac8f8983" style="width: 100.0%; height: 100.0%;">Ottawa County Farm Co., LLC-CAFO (Ottawa)</div>`)[0];
+                popup_28e7d260c8efad01a52a00738c7de5a9.setContent(html_a76882b24786a9cf91d135cdac8f8983);
+            
+        
+
+        marker_22f0870ef9544e390cbb39970a43697b.bindPopup(popup_28e7d260c8efad01a52a00738c7de5a9)
+        ;
+
+        
+    
+    
+                marker_22f0870ef9544e390cbb39970a43697b.setIcon(icon_6a5dc3dc0512b1e20221b1bed776e355);
+            
+    
+            var marker_176105dccc2cfd0db23b83216e727ef8 = L.marker(
+                [43.42, -84.55],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_0ba9ee766d23828fd289ec08827d7be1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3f06c1fc84670a1d887daa018cb6c55f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_22fdea5b5c675cffe62969fcc044947f = $(`<div id="html_22fdea5b5c675cffe62969fcc044947f" style="width: 100.0%; height: 100.0%;">Leoma Dairy LLC-CAFO (Gratiot)</div>`)[0];
+                popup_3f06c1fc84670a1d887daa018cb6c55f.setContent(html_22fdea5b5c675cffe62969fcc044947f);
+            
+        
+
+        marker_176105dccc2cfd0db23b83216e727ef8.bindPopup(popup_3f06c1fc84670a1d887daa018cb6c55f)
+        ;
+
+        
+    
+    
+                marker_176105dccc2cfd0db23b83216e727ef8.setIcon(icon_0ba9ee766d23828fd289ec08827d7be1);
+            
+    
+            var marker_7f001853971c76961561ee6015068351 = L.marker(
+                [44.19, -85.25],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_12454b7ae37ab6c7d101d0e20cdd415e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2a7d6d644dd5e35fa1927cbaeb3355ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9a16a48d038d428069c871d2d9e43bc0 = $(`<div id="html_9a16a48d038d428069c871d2d9e43bc0" style="width: 100.0%; height: 100.0%;">Benthem Brothers Inc-CAFO (Missaukee)</div>`)[0];
+                popup_2a7d6d644dd5e35fa1927cbaeb3355ba.setContent(html_9a16a48d038d428069c871d2d9e43bc0);
+            
+        
+
+        marker_7f001853971c76961561ee6015068351.bindPopup(popup_2a7d6d644dd5e35fa1927cbaeb3355ba)
+        ;
+
+        
+    
+    
+                marker_7f001853971c76961561ee6015068351.setIcon(icon_12454b7ae37ab6c7d101d0e20cdd415e);
+            
+    
+            var marker_3cc7be11c40596e44209a15812d0b7ab = L.marker(
+                [42.98, -84.71],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_8628f78046fbc73ad879ba3435179e45 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7c0aabb3e7f1bf758905cc6132130782 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8e7e0e8a56fa905e4af21990cdccd909 = $(`<div id="html_8e7e0e8a56fa905e4af21990cdccd909" style="width: 100.0%; height: 100.0%;">Berlyn Acres-CAFO (Clinton)</div>`)[0];
+                popup_7c0aabb3e7f1bf758905cc6132130782.setContent(html_8e7e0e8a56fa905e4af21990cdccd909);
+            
+        
+
+        marker_3cc7be11c40596e44209a15812d0b7ab.bindPopup(popup_7c0aabb3e7f1bf758905cc6132130782)
+        ;
+
+        
+    
+    
+                marker_3cc7be11c40596e44209a15812d0b7ab.setIcon(icon_8628f78046fbc73ad879ba3435179e45);
+            
+    
+            var marker_3d8ade312877417622e95e6d0a3be056 = L.marker(
+                [43.76, -82.77],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_530ba9fe25816a63e91829d63873bde5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_20ed23da21405fbb1c256c5278c23167 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa6da333b229ae3313e31b0e750b7a44 = $(`<div id="html_aa6da333b229ae3313e31b0e750b7a44" style="width: 100.0%; height: 100.0%;">Bischer Farms-CAFO (Huron)</div>`)[0];
+                popup_20ed23da21405fbb1c256c5278c23167.setContent(html_aa6da333b229ae3313e31b0e750b7a44);
+            
+        
+
+        marker_3d8ade312877417622e95e6d0a3be056.bindPopup(popup_20ed23da21405fbb1c256c5278c23167)
+        ;
+
+        
+    
+    
+                marker_3d8ade312877417622e95e6d0a3be056.setIcon(icon_530ba9fe25816a63e91829d63873bde5);
+            
+    
+            var marker_4b9a22d445d6472e65a8e0421e85edf7 = L.marker(
+                [41.9, -84.37],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_ad9c7bfacdb3a6e731824fc51576ac1e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4b35c97bb97ae5c1b09e61559e8643d3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a39b61cd452bcf20dd4ed2a1db3d3dad = $(`<div id="html_a39b61cd452bcf20dd4ed2a1db3d3dad" style="width: 100.0%; height: 100.0%;">Bleich Dairy - CAFO (Lenawee)</div>`)[0];
+                popup_4b35c97bb97ae5c1b09e61559e8643d3.setContent(html_a39b61cd452bcf20dd4ed2a1db3d3dad);
+            
+        
+
+        marker_4b9a22d445d6472e65a8e0421e85edf7.bindPopup(popup_4b35c97bb97ae5c1b09e61559e8643d3)
+        ;
+
+        
+    
+    
+                marker_4b9a22d445d6472e65a8e0421e85edf7.setIcon(icon_ad9c7bfacdb3a6e731824fc51576ac1e);
+            
+    
+            var marker_6540d81459685840265d207a26058173 = L.marker(
+                [43.21, -82.73],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_f87392ee01b7ba1e0e02dfd51c63bffe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e1a75353fc6c5155942cd3f10d05209d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e4bd276cc6454f37e3f56a1c5452386 = $(`<div id="html_0e4bd276cc6454f37e3f56a1c5452386" style="width: 100.0%; height: 100.0%;">Bob Shinn Farms - CAFO (Sanilac)</div>`)[0];
+                popup_e1a75353fc6c5155942cd3f10d05209d.setContent(html_0e4bd276cc6454f37e3f56a1c5452386);
+            
+        
+
+        marker_6540d81459685840265d207a26058173.bindPopup(popup_e1a75353fc6c5155942cd3f10d05209d)
+        ;
+
+        
+    
+    
+                marker_6540d81459685840265d207a26058173.setIcon(icon_f87392ee01b7ba1e0e02dfd51c63bffe);
+            
+    
+            var marker_5632082d5d2d70eba8945889ec1a3744 = L.marker(
+                [43.17, -85.71],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_88fa499bef12a8a30571fcfabaf4ee27 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8857855a73dcdfbb365de1832021643a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f3e6c333913c25468fef52ef1d0de903 = $(`<div id="html_f3e6c333913c25468fef52ef1d0de903" style="width: 100.0%; height: 100.0%;">Bradford Dairy-CAFO (Kent)</div>`)[0];
+                popup_8857855a73dcdfbb365de1832021643a.setContent(html_f3e6c333913c25468fef52ef1d0de903);
+            
+        
+
+        marker_5632082d5d2d70eba8945889ec1a3744.bindPopup(popup_8857855a73dcdfbb365de1832021643a)
+        ;
+
+        
+    
+    
+                marker_5632082d5d2d70eba8945889ec1a3744.setIcon(icon_88fa499bef12a8a30571fcfabaf4ee27);
+            
+    
+            var marker_cf92618f7e25abc3902b94feca200d34 = L.marker(
+                [42.78, -85.32],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_8e9fbd86201c4f10e64f19e43051e227 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2baf99fe4c9785f17b8fe6c9d2cebb25 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d97f432dcea8d96c44ac5948a043126c = $(`<div id="html_d97f432dcea8d96c44ac5948a043126c" style="width: 100.0%; height: 100.0%;">Brook View Dairy-CAFO (Kent)</div>`)[0];
+                popup_2baf99fe4c9785f17b8fe6c9d2cebb25.setContent(html_d97f432dcea8d96c44ac5948a043126c);
+            
+        
+
+        marker_cf92618f7e25abc3902b94feca200d34.bindPopup(popup_2baf99fe4c9785f17b8fe6c9d2cebb25)
+        ;
+
+        
+    
+    
+                marker_cf92618f7e25abc3902b94feca200d34.setIcon(icon_8e9fbd86201c4f10e64f19e43051e227);
+            
+    
+            var marker_859ae0233f5defbb498c89b13ad81cb7 = L.marker(
+                [41.76, -84.36],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_2d874b3ec65c79c4d93a198451ade8de = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d9205dcce4b8cc07f28b78b1efe3b4d3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_014fc4a76378d7d99be46262ab3130a1 = $(`<div id="html_014fc4a76378d7d99be46262ab3130a1" style="width: 100.0%; height: 100.0%;">Rathmourne Dairy Camden-CAFO (Hillsdale)</div>`)[0];
+                popup_d9205dcce4b8cc07f28b78b1efe3b4d3.setContent(html_014fc4a76378d7d99be46262ab3130a1);
+            
+        
+
+        marker_859ae0233f5defbb498c89b13ad81cb7.bindPopup(popup_d9205dcce4b8cc07f28b78b1efe3b4d3)
+        ;
+
+        
+    
+    
+                marker_859ae0233f5defbb498c89b13ad81cb7.setIcon(icon_2d874b3ec65c79c4d93a198451ade8de);
+            
+    
+            var marker_da55cd48ec09bd23b82f02db0ed4407f = L.marker(
+                [42.6, -84.25],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_ca28db45407f03cd5486d457d79fb4ff = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a28f84bf05d9afdff3bfb49fb7f822c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_438bc8c62e3fe7eee8ff9b86659236be = $(`<div id="html_438bc8c62e3fe7eee8ff9b86659236be" style="width: 100.0%; height: 100.0%;">Car Min Vu Dairy-CAFO (Ingham)</div>`)[0];
+                popup_a28f84bf05d9afdff3bfb49fb7f822c2.setContent(html_438bc8c62e3fe7eee8ff9b86659236be);
+            
+        
+
+        marker_da55cd48ec09bd23b82f02db0ed4407f.bindPopup(popup_a28f84bf05d9afdff3bfb49fb7f822c2)
+        ;
+
+        
+    
+    
+                marker_da55cd48ec09bd23b82f02db0ed4407f.setIcon(icon_ca28db45407f03cd5486d457d79fb4ff);
+            
+    
+            var marker_42728a1f025d10601f64e16bf75fc5d4 = L.marker(
+                [43.8, -82.76],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_150443fc3e09f7f54bd7854e8eb48e51 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f2543c36c1ec2511214ee5ba516ac1f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f436c32947c93a0bfd4298d27a019b35 = $(`<div id="html_f436c32947c93a0bfd4298d27a019b35" style="width: 100.0%; height: 100.0%;">Cardinal Dairy-CAFO (Huron)</div>`)[0];
+                popup_f2543c36c1ec2511214ee5ba516ac1f6.setContent(html_f436c32947c93a0bfd4298d27a019b35);
+            
+        
+
+        marker_42728a1f025d10601f64e16bf75fc5d4.bindPopup(popup_f2543c36c1ec2511214ee5ba516ac1f6)
+        ;
+
+        
+    
+    
+                marker_42728a1f025d10601f64e16bf75fc5d4.setIcon(icon_150443fc3e09f7f54bd7854e8eb48e51);
+            
+    
+            var marker_75cf9cae47ffd768c66174336f8dd0b4 = L.marker(
+                [42.41, -85.17],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_ff3a50582fe771b2eed1f0ed78e80648 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d799874385956f4555f927b56f57fe6f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f67d187b7377db51bb348ac39ab03f96 = $(`<div id="html_f67d187b7377db51bb348ac39ab03f96" style="width: 100.0%; height: 100.0%;">Cary Dairy Farm Inc-CAFO (Calhoun)</div>`)[0];
+                popup_d799874385956f4555f927b56f57fe6f.setContent(html_f67d187b7377db51bb348ac39ab03f96);
+            
+        
+
+        marker_75cf9cae47ffd768c66174336f8dd0b4.bindPopup(popup_d799874385956f4555f927b56f57fe6f)
+        ;
+
+        
+    
+    
+                marker_75cf9cae47ffd768c66174336f8dd0b4.setIcon(icon_ff3a50582fe771b2eed1f0ed78e80648);
+            
+    
+            var marker_cfaec1088ec0573ade7f5ec1b398fcf6 = L.marker(
+                [43.33, -84.79],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_3a198134ac6d2bea3fe3f17f1d8b1c7d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9090bc80c961c2de3ef159be9121ea63 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1459cb3d673d9f2b84f8f2b7ed049ad8 = $(`<div id="html_1459cb3d673d9f2b84f8f2b7ed049ad8" style="width: 100.0%; height: 100.0%;">Carys Pioneer Farm Inc-CAFO (Gratiot)</div>`)[0];
+                popup_9090bc80c961c2de3ef159be9121ea63.setContent(html_1459cb3d673d9f2b84f8f2b7ed049ad8);
+            
+        
+
+        marker_cfaec1088ec0573ade7f5ec1b398fcf6.bindPopup(popup_9090bc80c961c2de3ef159be9121ea63)
+        ;
+
+        
+    
+    
+                marker_cfaec1088ec0573ade7f5ec1b398fcf6.setIcon(icon_3a198134ac6d2bea3fe3f17f1d8b1c7d);
+            
+    
+            var marker_511b36f4b6aaf477832abf1dbddeef25 = L.marker(
+                [43.49, -84.65],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_0b44dccd7f8b232edbb51e6b328b6ff2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ae2b3d1f8a5a37cc516a4963acc761dd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ce78bd1f966372299f3b877046400c0f = $(`<div id="html_ce78bd1f966372299f3b877046400c0f" style="width: 100.0%; height: 100.0%;">Central MI Milk Prod-CAFO (Isabella)</div>`)[0];
+                popup_ae2b3d1f8a5a37cc516a4963acc761dd.setContent(html_ce78bd1f966372299f3b877046400c0f);
+            
+        
+
+        marker_511b36f4b6aaf477832abf1dbddeef25.bindPopup(popup_ae2b3d1f8a5a37cc516a4963acc761dd)
+        ;
+
+        
+    
+    
+                marker_511b36f4b6aaf477832abf1dbddeef25.setIcon(icon_0b44dccd7f8b232edbb51e6b328b6ff2);
+            
+    
+            var marker_aad9515863d334a733e43bb05b59b2ec = L.marker(
+                [43.44, -84.69],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_e4280e4f341b230c99c6dd5314822073 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1388377683421a95d8cecccac7498585 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_771782f84203b5c6032dc27b5e95cc13 = $(`<div id="html_771782f84203b5c6032dc27b5e95cc13" style="width: 100.0%; height: 100.0%;">Courter Farm West-CAFO (Gratiot)</div>`)[0];
+                popup_1388377683421a95d8cecccac7498585.setContent(html_771782f84203b5c6032dc27b5e95cc13);
+            
+        
+
+        marker_aad9515863d334a733e43bb05b59b2ec.bindPopup(popup_1388377683421a95d8cecccac7498585)
+        ;
+
+        
+    
+    
+                marker_aad9515863d334a733e43bb05b59b2ec.setIcon(icon_e4280e4f341b230c99c6dd5314822073);
+            
+    
+            var marker_6ed17998d7814a018d2dc276f9eddcb6 = L.marker(
+                [43.44, -84.68],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_87bdae1d78706654aed2e2083b9e5650 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9439c42e270c3620f5e3de7631c79e20 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_57963c2d10d29986efd5f5d478e56f01 = $(`<div id="html_57963c2d10d29986efd5f5d478e56f01" style="width: 100.0%; height: 100.0%;">Courter Farms East-CAFO (Gratiot)</div>`)[0];
+                popup_9439c42e270c3620f5e3de7631c79e20.setContent(html_57963c2d10d29986efd5f5d478e56f01);
+            
+        
+
+        marker_6ed17998d7814a018d2dc276f9eddcb6.bindPopup(popup_9439c42e270c3620f5e3de7631c79e20)
+        ;
+
+        
+    
+    
+                marker_6ed17998d7814a018d2dc276f9eddcb6.setIcon(icon_87bdae1d78706654aed2e2083b9e5650);
+            
+    
+            var marker_2d204d392c30e5a99722335e0fb41128 = L.marker(
+                [43.72, -84.91],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_089e76a943e08a3e1c77f5c07aead5c1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d9c4602d152a37964e39b2fe805f0c7c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2e2083b4c253fe02874a8765dc3abe19 = $(`<div id="html_2e2083b4c253fe02874a8765dc3abe19" style="width: 100.0%; height: 100.0%;">Cow Pleasant Dairy-CAFO (Isabella)</div>`)[0];
+                popup_d9c4602d152a37964e39b2fe805f0c7c.setContent(html_2e2083b4c253fe02874a8765dc3abe19);
+            
+        
+
+        marker_2d204d392c30e5a99722335e0fb41128.bindPopup(popup_d9c4602d152a37964e39b2fe805f0c7c)
+        ;
+
+        
+    
+    
+                marker_2d204d392c30e5a99722335e0fb41128.setIcon(icon_089e76a943e08a3e1c77f5c07aead5c1);
+            
+    
+            var marker_8617f40858e981371bd739be7b903a96 = L.marker(
+                [42.72, -85.55],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_1ecfdecaf783efaca9eaa6e225e7234a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9b22ecbaf823909acb23743b8a586db1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2772f45da356c92eaf2fa57b4087ae4f = $(`<div id="html_2772f45da356c92eaf2fa57b4087ae4f" style="width: 100.0%; height: 100.0%;">Crossroads Dairy-CAFO (Allegan)</div>`)[0];
+                popup_9b22ecbaf823909acb23743b8a586db1.setContent(html_2772f45da356c92eaf2fa57b4087ae4f);
+            
+        
+
+        marker_8617f40858e981371bd739be7b903a96.bindPopup(popup_9b22ecbaf823909acb23743b8a586db1)
+        ;
+
+        
+    
+    
+                marker_8617f40858e981371bd739be7b903a96.setIcon(icon_1ecfdecaf783efaca9eaa6e225e7234a);
+            
+    
+            var marker_8d47825a561d46440051e26bfd99a050 = L.marker(
+                [43.25, -84.76],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_68dd525d8268c699b191f0d93dc28555 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_64c9e1ce1061bc9887f9dfede28cee33 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_305226ebb6d55d6ac2785f449d2dadbe = $(`<div id="html_305226ebb6d55d6ac2785f449d2dadbe" style="width: 100.0%; height: 100.0%;">De Saegher Dairy-CAFO (Gratiot)</div>`)[0];
+                popup_64c9e1ce1061bc9887f9dfede28cee33.setContent(html_305226ebb6d55d6ac2785f449d2dadbe);
+            
+        
+
+        marker_8d47825a561d46440051e26bfd99a050.bindPopup(popup_64c9e1ce1061bc9887f9dfede28cee33)
+        ;
+
+        
+    
+    
+                marker_8d47825a561d46440051e26bfd99a050.setIcon(icon_68dd525d8268c699b191f0d93dc28555);
+            
+    
+            var marker_af85cd7e092a045ab1cb93b165aab4ed = L.marker(
+                [43.69, -83.0],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_747d08da60cc8a9c3c24e83b4a6fc252 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7594e0c553cece904387703f95390f84 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b9f6d4aecf9032342f05d95aeff3cd0a = $(`<div id="html_b9f6d4aecf9032342f05d95aeff3cd0a" style="width: 100.0%; height: 100.0%;">Dekker Dairy LLC-CAFO (Huron)</div>`)[0];
+                popup_7594e0c553cece904387703f95390f84.setContent(html_b9f6d4aecf9032342f05d95aeff3cd0a);
+            
+        
+
+        marker_af85cd7e092a045ab1cb93b165aab4ed.bindPopup(popup_7594e0c553cece904387703f95390f84)
+        ;
+
+        
+    
+    
+                marker_af85cd7e092a045ab1cb93b165aab4ed.setIcon(icon_747d08da60cc8a9c3c24e83b4a6fc252);
+            
+    
+            var marker_0dd03246f560bbea37b88b7a9f1478a1 = L.marker(
+                [43.53, -82.66],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_e31e89b4a129a5ed40d57e9c3ff47886 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0c78cd5134cabe720806547d84b10e74 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_831db23cbba1a08ac8e79e54b5ac789b = $(`<div id="html_831db23cbba1a08ac8e79e54b5ac789b" style="width: 100.0%; height: 100.0%;">Deluur Dairy Farm-CAFO (Sanilac)</div>`)[0];
+                popup_0c78cd5134cabe720806547d84b10e74.setContent(html_831db23cbba1a08ac8e79e54b5ac789b);
+            
+        
+
+        marker_0dd03246f560bbea37b88b7a9f1478a1.bindPopup(popup_0c78cd5134cabe720806547d84b10e74)
+        ;
+
+        
+    
+    
+                marker_0dd03246f560bbea37b88b7a9f1478a1.setIcon(icon_e31e89b4a129a5ed40d57e9c3ff47886);
+            
+    
+            var marker_88c4301e9ff3dadbeb79846fdc917b4a = L.marker(
+                [43.3, -82.98],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_5d94edbaf90350a0fbebcb8028bda5a0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f0b967bfbbb4e3bc5b1ac1e8e64b358e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cc2ab39f805483cd5c3962ec54c3767d = $(`<div id="html_cc2ab39f805483cd5c3962ec54c3767d" style="width: 100.0%; height: 100.0%;">Deluur Future LLC-CAFO (Sanilac)</div>`)[0];
+                popup_f0b967bfbbb4e3bc5b1ac1e8e64b358e.setContent(html_cc2ab39f805483cd5c3962ec54c3767d);
+            
+        
+
+        marker_88c4301e9ff3dadbeb79846fdc917b4a.bindPopup(popup_f0b967bfbbb4e3bc5b1ac1e8e64b358e)
+        ;
+
+        
+    
+    
+                marker_88c4301e9ff3dadbeb79846fdc917b4a.setIcon(icon_5d94edbaf90350a0fbebcb8028bda5a0);
+            
+    
+            var marker_8c03c400cb18a031632a4c16180bc39f = L.marker(
+                [43.16, -85.98],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_8f781125d879ca65e5fd2b1107aeeb91 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a1673926cf03c2ec6b65b5fd6a590952 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_445868e6af0664d3ea6c64d970e4fdef = $(`<div id="html_445868e6af0664d3ea6c64d970e4fdef" style="width: 100.0%; height: 100.0%;">Applegate Dairy-CAFO (Muskegon)</div>`)[0];
+                popup_a1673926cf03c2ec6b65b5fd6a590952.setContent(html_445868e6af0664d3ea6c64d970e4fdef);
+            
+        
+
+        marker_8c03c400cb18a031632a4c16180bc39f.bindPopup(popup_a1673926cf03c2ec6b65b5fd6a590952)
+        ;
+
+        
+    
+    
+                marker_8c03c400cb18a031632a4c16180bc39f.setIcon(icon_8f781125d879ca65e5fd2b1107aeeb91);
+            
+    
+            var marker_0fddd15f15cd7f9d55bc7d6653e5c503 = L.marker(
+                [43.21, -84.73],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_c57e190522548f4346214130bbf833c8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_395a4cb8a89948d085796ba8bdccbd7e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_243227a570ed9ffed2292b0ab1d0ad02 = $(`<div id="html_243227a570ed9ffed2292b0ab1d0ad02" style="width: 100.0%; height: 100.0%;">Double Eagle Dairy - CAFO (Gratiot)</div>`)[0];
+                popup_395a4cb8a89948d085796ba8bdccbd7e.setContent(html_243227a570ed9ffed2292b0ab1d0ad02);
+            
+        
+
+        marker_0fddd15f15cd7f9d55bc7d6653e5c503.bindPopup(popup_395a4cb8a89948d085796ba8bdccbd7e)
+        ;
+
+        
+    
+    
+                marker_0fddd15f15cd7f9d55bc7d6653e5c503.setIcon(icon_c57e190522548f4346214130bbf833c8);
+            
+    
+            var marker_7578b64ae9a00987d38c0f00dce3754f = L.marker(
+                [43.04, -84.7],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_99eb2a5a1fb5c2f451545e6f8e2aa0fa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6f3e4c9fdcc45dc065e672412c49229d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_559881878ecf9fd0311e10facc9e3318 = $(`<div id="html_559881878ecf9fd0311e10facc9e3318" style="width: 100.0%; height: 100.0%;">Dutch Meadows Dairy-CAFO (Clinton)</div>`)[0];
+                popup_6f3e4c9fdcc45dc065e672412c49229d.setContent(html_559881878ecf9fd0311e10facc9e3318);
+            
+        
+
+        marker_7578b64ae9a00987d38c0f00dce3754f.bindPopup(popup_6f3e4c9fdcc45dc065e672412c49229d)
+        ;
+
+        
+    
+    
+                marker_7578b64ae9a00987d38c0f00dce3754f.setIcon(icon_99eb2a5a1fb5c2f451545e6f8e2aa0fa);
+            
+    
+            var marker_2a97a55265865bb2e2d8b1e3dd782289 = L.marker(
+                [43.09, -84.48],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_27d0a1fa640962c1eb9ea23be493f63a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_37aaf37c97d0cd5da579f0af88a3e813 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_182e88e04fefc5601fdd5c39aa4f982b = $(`<div id="html_182e88e04fefc5601fdd5c39aa4f982b" style="width: 100.0%; height: 100.0%;">EB Ridge Dairy-CAFO (Gratiot)</div>`)[0];
+                popup_37aaf37c97d0cd5da579f0af88a3e813.setContent(html_182e88e04fefc5601fdd5c39aa4f982b);
+            
+        
+
+        marker_2a97a55265865bb2e2d8b1e3dd782289.bindPopup(popup_37aaf37c97d0cd5da579f0af88a3e813)
+        ;
+
+        
+    
+    
+                marker_2a97a55265865bb2e2d8b1e3dd782289.setIcon(icon_27d0a1fa640962c1eb9ea23be493f63a);
+            
+    
+            var marker_ae120aed995c642a45104a91967d4879 = L.marker(
+                [42.19, -85.41],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_cfff175d221c346636c7c8f4bf6569eb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4aa300ab33d35732a7a64e09b39b4313 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f04cb79917d0c6e3ae4a8e465598e6a1 = $(`<div id="html_f04cb79917d0c6e3ae4a8e465598e6a1" style="width: 100.0%; height: 100.0%;">Edge Wood Dairy LLC-CAFO (Kalamazoo)</div>`)[0];
+                popup_4aa300ab33d35732a7a64e09b39b4313.setContent(html_f04cb79917d0c6e3ae4a8e465598e6a1);
+            
+        
+
+        marker_ae120aed995c642a45104a91967d4879.bindPopup(popup_4aa300ab33d35732a7a64e09b39b4313)
+        ;
+
+        
+    
+    
+                marker_ae120aed995c642a45104a91967d4879.setIcon(icon_cfff175d221c346636c7c8f4bf6569eb);
+            
+    
+            var marker_3aa9557c3d1ccc60b249a49b6f66d270 = L.marker(
+                [43.81, -83.1],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_d45ee3e7a81b624903c85ab788065845 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_12c5e22b85ee755bea2259e8383ab197 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_47d338b866f84147341314c887d571dd = $(`<div id="html_47d338b866f84147341314c887d571dd" style="width: 100.0%; height: 100.0%;">Falco Dairy-CAFO (Huron)</div>`)[0];
+                popup_12c5e22b85ee755bea2259e8383ab197.setContent(html_47d338b866f84147341314c887d571dd);
+            
+        
+
+        marker_3aa9557c3d1ccc60b249a49b6f66d270.bindPopup(popup_12c5e22b85ee755bea2259e8383ab197)
+        ;
+
+        
+    
+    
+                marker_3aa9557c3d1ccc60b249a49b6f66d270.setIcon(icon_d45ee3e7a81b624903c85ab788065845);
+            
+    
+            var marker_a5719fd6a2b47dce945b4f7a43d2dbea = L.marker(
+                [43.95, -82.76],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_3464b3b244afb1dd89ab950c59e264b4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6e52b2503bbcc3d7fcc094c42dff2fd2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f88bad8b695e2cff074c98043b470c37 = $(`<div id="html_f88bad8b695e2cff074c98043b470c37" style="width: 100.0%; height: 100.0%;">Five Star Dairy-CAFO (Huron)</div>`)[0];
+                popup_6e52b2503bbcc3d7fcc094c42dff2fd2.setContent(html_f88bad8b695e2cff074c98043b470c37);
+            
+        
+
+        marker_a5719fd6a2b47dce945b4f7a43d2dbea.bindPopup(popup_6e52b2503bbcc3d7fcc094c42dff2fd2)
+        ;
+
+        
+    
+    
+                marker_a5719fd6a2b47dce945b4f7a43d2dbea.setIcon(icon_3464b3b244afb1dd89ab950c59e264b4);
+            
+    
+            var marker_a86d651f9b6d3aba872803197f9a398d = L.marker(
+                [44.26, -84.16],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_41c2c4b2cea7d457821674eb766f19f8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7e713e3c6c5ac876f030fb7e62b040b5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d753adc0fb6b4adafdc33b1d17bfedac = $(`<div id="html_d753adc0fb6b4adafdc33b1d17bfedac" style="width: 100.0%; height: 100.0%;">Gallagher Dairy Farm Inc - CAFO (Ogemaw)</div>`)[0];
+                popup_7e713e3c6c5ac876f030fb7e62b040b5.setContent(html_d753adc0fb6b4adafdc33b1d17bfedac);
+            
+        
+
+        marker_a86d651f9b6d3aba872803197f9a398d.bindPopup(popup_7e713e3c6c5ac876f030fb7e62b040b5)
+        ;
+
+        
+    
+    
+                marker_a86d651f9b6d3aba872803197f9a398d.setIcon(icon_41c2c4b2cea7d457821674eb766f19f8);
+            
+    
+            var marker_8b01a5b42eba20d68d27fad8e84634e8 = L.marker(
+                [44.23, -84.96],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_767528270965aa7b6daf529b798f7645 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b65a30f78fcba1166eda2cb4b994f4f2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cafe330963861bce868c92850dfff533 = $(`<div id="html_cafe330963861bce868c92850dfff533" style="width: 100.0%; height: 100.0%;">Gernaat Dairy LLC-CAFO (Missaukee)</div>`)[0];
+                popup_b65a30f78fcba1166eda2cb4b994f4f2.setContent(html_cafe330963861bce868c92850dfff533);
+            
+        
+
+        marker_8b01a5b42eba20d68d27fad8e84634e8.bindPopup(popup_b65a30f78fcba1166eda2cb4b994f4f2)
+        ;
+
+        
+    
+    
+                marker_8b01a5b42eba20d68d27fad8e84634e8.setIcon(icon_767528270965aa7b6daf529b798f7645);
+            
+    
+            var marker_339b15fd02815ca5f0c751094dccf1f4 = L.marker(
+                [43.31, -82.98],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_cb806298d009ebdf28068efc91d88d86 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_281987ddccf1c1f6891ac2f5b36b11ff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5ec2617459b51f7c6a788af1941ade57 = $(`<div id="html_5ec2617459b51f7c6a788af1941ade57" style="width: 100.0%; height: 100.0%;">Goma Dairy Farm LLC-CAFO (Sanilac)</div>`)[0];
+                popup_281987ddccf1c1f6891ac2f5b36b11ff.setContent(html_5ec2617459b51f7c6a788af1941ade57);
+            
+        
+
+        marker_339b15fd02815ca5f0c751094dccf1f4.bindPopup(popup_281987ddccf1c1f6891ac2f5b36b11ff)
+        ;
+
+        
+    
+    
+                marker_339b15fd02815ca5f0c751094dccf1f4.setIcon(icon_cb806298d009ebdf28068efc91d88d86);
+            
+    
+            var marker_d0ac1b950f2587f5831e3d5193c2deb7 = L.marker(
+                [43.07, -84.36],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_ff5a73a0bcb6f02a4c2b799d612d7c38 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f53b4d6a634fac0d26ba277bacdd7210 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_98659f0e3d2e1364af611cf77e415205 = $(`<div id="html_98659f0e3d2e1364af611cf77e415205" style="width: 100.0%; height: 100.0%;">Green Meadow Farms 2 & 3-CAFO (Shiawassee)</div>`)[0];
+                popup_f53b4d6a634fac0d26ba277bacdd7210.setContent(html_98659f0e3d2e1364af611cf77e415205);
+            
+        
+
+        marker_d0ac1b950f2587f5831e3d5193c2deb7.bindPopup(popup_f53b4d6a634fac0d26ba277bacdd7210)
+        ;
+
+        
+    
+    
+                marker_d0ac1b950f2587f5831e3d5193c2deb7.setIcon(icon_ff5a73a0bcb6f02a4c2b799d612d7c38);
+            
+    
+            var marker_17431ecae18eb6abf30f71adbd49a1b7 = L.marker(
+                [44.18, -85.05],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_c8b6172fc5e396b484b5b78a097fcf8e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7cebdbe0f07ae1dd78c6bfb26d9eb92e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f1b0c2a4a663f4fa27f6b41510e2d1b7 = $(`<div id="html_f1b0c2a4a663f4fa27f6b41510e2d1b7" style="width: 100.0%; height: 100.0%;">GW Dairy LLC-CAFO (Missaukee)</div>`)[0];
+                popup_7cebdbe0f07ae1dd78c6bfb26d9eb92e.setContent(html_f1b0c2a4a663f4fa27f6b41510e2d1b7);
+            
+        
+
+        marker_17431ecae18eb6abf30f71adbd49a1b7.bindPopup(popup_7cebdbe0f07ae1dd78c6bfb26d9eb92e)
+        ;
+
+        
+    
+    
+                marker_17431ecae18eb6abf30f71adbd49a1b7.setIcon(icon_c8b6172fc5e396b484b5b78a097fcf8e);
+            
+    
+            var marker_92270a99cba14729c1c9f16f3399a593 = L.marker(
+                [42.43, -85.25],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_2528b71aa8419397f782a9c2b33349bc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9e76864d5891c46d4041a943fafb43d9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f3b26e01ce49a287040b7d52b857f093 = $(`<div id="html_f3b26e01ce49a287040b7d52b857f093" style="width: 100.0%; height: 100.0%;">Spring Creek Dairy-CAFO (Barry)</div>`)[0];
+                popup_9e76864d5891c46d4041a943fafb43d9.setContent(html_f3b26e01ce49a287040b7d52b857f093);
+            
+        
+
+        marker_92270a99cba14729c1c9f16f3399a593.bindPopup(popup_9e76864d5891c46d4041a943fafb43d9)
+        ;
+
+        
+    
+    
+                marker_92270a99cba14729c1c9f16f3399a593.setIcon(icon_2528b71aa8419397f782a9c2b33349bc);
+            
+    
+            var marker_58d39a5eeb343e39fe2be67d9e39ffe6 = L.marker(
+                [41.92, -84.2],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_7064fec87370bd6d9833d9c76e028802 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c82b5bff4115e4730990ac08371cad3c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ba7f3d270589de64ff01c2c360639777 = $(`<div id="html_ba7f3d270589de64ff01c2c360639777" style="width: 100.0%; height: 100.0%;">Halliwill Farms-CAFO (Lenawee)</div>`)[0];
+                popup_c82b5bff4115e4730990ac08371cad3c.setContent(html_ba7f3d270589de64ff01c2c360639777);
+            
+        
+
+        marker_58d39a5eeb343e39fe2be67d9e39ffe6.bindPopup(popup_c82b5bff4115e4730990ac08371cad3c)
+        ;
+
+        
+    
+    
+                marker_58d39a5eeb343e39fe2be67d9e39ffe6.setIcon(icon_7064fec87370bd6d9833d9c76e028802);
+            
+    
+            var marker_681dc923201f3257c814230bd08f2983 = L.marker(
+                [41.89, -84.27],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_4ff2a5022992fbf8056785755e57c046 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e9df23c81983a6360fed9a838d741003 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8bc9379150cbc768b5167d8cd250fa38 = $(`<div id="html_8bc9379150cbc768b5167d8cd250fa38" style="width: 100.0%; height: 100.0%;">Hartland Farms-CAFO (Lenawee)</div>`)[0];
+                popup_e9df23c81983a6360fed9a838d741003.setContent(html_8bc9379150cbc768b5167d8cd250fa38);
+            
+        
+
+        marker_681dc923201f3257c814230bd08f2983.bindPopup(popup_e9df23c81983a6360fed9a838d741003)
+        ;
+
+        
+    
+    
+                marker_681dc923201f3257c814230bd08f2983.setIcon(icon_4ff2a5022992fbf8056785755e57c046);
+            
+    
+            var marker_1b31a30cf5de5040a994dd924290e16c = L.marker(
+                [43.82, -82.94],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_e745b3d784c9b503fefa5dbe35ccc7c4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6a743542c52e05b8d240a4c909655c98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f793c3cbd68622346276bd5710a722ad = $(`<div id="html_f793c3cbd68622346276bd5710a722ad" style="width: 100.0%; height: 100.0%;">Hass Feedlot Home Farm-CAFO (Huron)</div>`)[0];
+                popup_6a743542c52e05b8d240a4c909655c98.setContent(html_f793c3cbd68622346276bd5710a722ad);
+            
+        
+
+        marker_1b31a30cf5de5040a994dd924290e16c.bindPopup(popup_6a743542c52e05b8d240a4c909655c98)
+        ;
+
+        
+    
+    
+                marker_1b31a30cf5de5040a994dd924290e16c.setIcon(icon_e745b3d784c9b503fefa5dbe35ccc7c4);
+            
+    
+            var marker_454a4074bf7eb804d1f209cf60c3583a = L.marker(
+                [43.86, -83.04],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_b3bf9f886ad5471489bd6b1b94ca3adb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_00471a5d9fc76ed4ec41d14b2fcce301 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_96ba078aebba2abd7dc309c7bb717d19 = $(`<div id="html_96ba078aebba2abd7dc309c7bb717d19" style="width: 100.0%; height: 100.0%;">Hass Feedlot-2-CAFO (Huron)</div>`)[0];
+                popup_00471a5d9fc76ed4ec41d14b2fcce301.setContent(html_96ba078aebba2abd7dc309c7bb717d19);
+            
+        
+
+        marker_454a4074bf7eb804d1f209cf60c3583a.bindPopup(popup_00471a5d9fc76ed4ec41d14b2fcce301)
+        ;
+
+        
+    
+    
+                marker_454a4074bf7eb804d1f209cf60c3583a.setIcon(icon_b3bf9f886ad5471489bd6b1b94ca3adb);
+            
+    
+            var marker_7b6e40319771bee9f030dabb2286fb76 = L.marker(
+                [42.42, -85.47],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_8d62419b24ffcd0d6b49d69493bdc43b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_acd084e6594b92ebc1f0be842ca40dbc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_91e87ca56b1e86dea2d7b1d520413b90 = $(`<div id="html_91e87ca56b1e86dea2d7b1d520413b90" style="width: 100.0%; height: 100.0%;">Hickory Gables-CAFO (Barry)</div>`)[0];
+                popup_acd084e6594b92ebc1f0be842ca40dbc.setContent(html_91e87ca56b1e86dea2d7b1d520413b90);
+            
+        
+
+        marker_7b6e40319771bee9f030dabb2286fb76.bindPopup(popup_acd084e6594b92ebc1f0be842ca40dbc)
+        ;
+
+        
+    
+    
+                marker_7b6e40319771bee9f030dabb2286fb76.setIcon(icon_8d62419b24ffcd0d6b49d69493bdc43b);
+            
+    
+            var marker_ff3cea7cdb7ec003634c816e6df2e2e0 = L.marker(
+                [43.11, -84.39],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_c40aea8192392819f92bb3fbffd237bf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_024b667c3278199e55bba1f1925a8ca7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f6cb105a686a86e00ea76ba0db4a2d0d = $(`<div id="html_f6cb105a686a86e00ea76ba0db4a2d0d" style="width: 100.0%; height: 100.0%;">Highland Dairy-CAFO (Huron)</div>`)[0];
+                popup_024b667c3278199e55bba1f1925a8ca7.setContent(html_f6cb105a686a86e00ea76ba0db4a2d0d);
+            
+        
+
+        marker_ff3cea7cdb7ec003634c816e6df2e2e0.bindPopup(popup_024b667c3278199e55bba1f1925a8ca7)
+        ;
+
+        
+    
+    
+                marker_ff3cea7cdb7ec003634c816e6df2e2e0.setIcon(icon_c40aea8192392819f92bb3fbffd237bf);
+            
+    
+            var marker_a8ddf2fa89b7bbd67daa55ad9321bfa9 = L.marker(
+                [42.21, -84.89],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_3562b2cb049db4d1f98458a17600a25e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e5c33596a3e6a0cd4bfdae7b300f3ab5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e0e2de8085679d12e4b083527272f356 = $(`<div id="html_e0e2de8085679d12e4b083527272f356" style="width: 100.0%; height: 100.0%;">Holloo Farms-CAFO (Calhoun)</div>`)[0];
+                popup_e5c33596a3e6a0cd4bfdae7b300f3ab5.setContent(html_e0e2de8085679d12e4b083527272f356);
+            
+        
+
+        marker_a8ddf2fa89b7bbd67daa55ad9321bfa9.bindPopup(popup_e5c33596a3e6a0cd4bfdae7b300f3ab5)
+        ;
+
+        
+    
+    
+                marker_a8ddf2fa89b7bbd67daa55ad9321bfa9.setIcon(icon_3562b2cb049db4d1f98458a17600a25e);
+            
+    
+            var marker_97538ade958fa3d820c499b28d9defd6 = L.marker(
+                [43.39, -84.49],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_1461f846514b4565d1036ef34b61e88b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_70399c2df40de8174440be9defbe0c8d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4d26b91e798979380cc93afbfc194809 = $(`<div id="html_4d26b91e798979380cc93afbfc194809" style="width: 100.0%; height: 100.0%;">Hooks Dairy-CAFO (Gratiot)</div>`)[0];
+                popup_70399c2df40de8174440be9defbe0c8d.setContent(html_4d26b91e798979380cc93afbfc194809);
+            
+        
+
+        marker_97538ade958fa3d820c499b28d9defd6.bindPopup(popup_70399c2df40de8174440be9defbe0c8d)
+        ;
+
+        
+    
+    
+                marker_97538ade958fa3d820c499b28d9defd6.setIcon(icon_1461f846514b4565d1036ef34b61e88b);
+            
+    
+            var marker_c2e3933254d4e218b5ad44ae0ad287d2 = L.marker(
+                [41.8, -84.37],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_cf5c3525ac913eb321c4677f9fe0691e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ddd2fa1fc92f8be5d519978ff189f9a7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_069f30646fe23ecb6f51960118bc0975 = $(`<div id="html_069f30646fe23ecb6f51960118bc0975" style="width: 100.0%; height: 100.0%;">Rathmourne Dairy Hudson-CAFO (Lenawee)</div>`)[0];
+                popup_ddd2fa1fc92f8be5d519978ff189f9a7.setContent(html_069f30646fe23ecb6f51960118bc0975);
+            
+        
+
+        marker_c2e3933254d4e218b5ad44ae0ad287d2.bindPopup(popup_ddd2fa1fc92f8be5d519978ff189f9a7)
+        ;
+
+        
+    
+    
+                marker_c2e3933254d4e218b5ad44ae0ad287d2.setIcon(icon_cf5c3525ac913eb321c4677f9fe0691e);
+            
+    
+            var marker_1aa5ebebb08302ceca968e9f7b4b8162 = L.marker(
+                [42.86, -83.03],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_239982fc90b2ef43e1fb28f516cc862a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a26c42e3aa3546a2835e88f07677701a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4b583f1cd62df74ba6add05eaa6d144e = $(`<div id="html_4b583f1cd62df74ba6add05eaa6d144e" style="width: 100.0%; height: 100.0%;">Ingleside Farms-CAFO (Macomb)</div>`)[0];
+                popup_a26c42e3aa3546a2835e88f07677701a.setContent(html_4b583f1cd62df74ba6add05eaa6d144e);
+            
+        
+
+        marker_1aa5ebebb08302ceca968e9f7b4b8162.bindPopup(popup_a26c42e3aa3546a2835e88f07677701a)
+        ;
+
+        
+    
+    
+                marker_1aa5ebebb08302ceca968e9f7b4b8162.setIcon(icon_239982fc90b2ef43e1fb28f516cc862a);
+            
+    
+            var marker_2b7630c4dcb297fecccd7ea3757e70e1 = L.marker(
+                [42.76, -85.93],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_40626da74b40709214da3921db36864d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_374a079eef38ea4bbc97a9a1f4767c02 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_21af5075488c6f75e65a0b258042f558 = $(`<div id="html_21af5075488c6f75e65a0b258042f558" style="width: 100.0%; height: 100.0%;">Koert Longhorns, LLC-CAFO (Allegan)</div>`)[0];
+                popup_374a079eef38ea4bbc97a9a1f4767c02.setContent(html_21af5075488c6f75e65a0b258042f558);
+            
+        
+
+        marker_2b7630c4dcb297fecccd7ea3757e70e1.bindPopup(popup_374a079eef38ea4bbc97a9a1f4767c02)
+        ;
+
+        
+    
+    
+                marker_2b7630c4dcb297fecccd7ea3757e70e1.setIcon(icon_40626da74b40709214da3921db36864d);
+            
+    
+            var marker_cfdec2e086f4eef1ccf67c2cce36d860 = L.marker(
+                [43.5, -85.98],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_34ae3ac89e7797cce2f91335bf11c11f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7c571f520b2df7cbe297149fbd788c5f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f6f08b3ebc397584c2da0351f6e57af = $(`<div id="html_0f6f08b3ebc397584c2da0351f6e57af" style="width: 100.0%; height: 100.0%;">JMax LLC-CAFO (Newaygo)</div>`)[0];
+                popup_7c571f520b2df7cbe297149fbd788c5f.setContent(html_0f6f08b3ebc397584c2da0351f6e57af);
+            
+        
+
+        marker_cfdec2e086f4eef1ccf67c2cce36d860.bindPopup(popup_7c571f520b2df7cbe297149fbd788c5f)
+        ;
+
+        
+    
+    
+                marker_cfdec2e086f4eef1ccf67c2cce36d860.setIcon(icon_34ae3ac89e7797cce2f91335bf11c11f);
+            
+    
+            var marker_bd5bbc3968e9023bc8e88098bede7a6d = L.marker(
+                [42.64, -85.81],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_0a1e1d76c808e4fa879a0f6ebdc29316 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b57d11c56ae751264f70f1a4b4fdea73 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b2d49e88c61df05ba06e2bcb097655e = $(`<div id="html_5b2d49e88c61df05ba06e2bcb097655e" style="width: 100.0%; height: 100.0%;">John Schaendorf Dairy-CAFO (Allegan)</div>`)[0];
+                popup_b57d11c56ae751264f70f1a4b4fdea73.setContent(html_5b2d49e88c61df05ba06e2bcb097655e);
+            
+        
+
+        marker_bd5bbc3968e9023bc8e88098bede7a6d.bindPopup(popup_b57d11c56ae751264f70f1a4b4fdea73)
+        ;
+
+        
+    
+    
+                marker_bd5bbc3968e9023bc8e88098bede7a6d.setIcon(icon_0a1e1d76c808e4fa879a0f6ebdc29316);
+            
+    
+            var marker_3af79b33784059888a5c1432ee0016e4 = L.marker(
+                [45.48, -87.56],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_bbc39777812a4dc5b6cc13735249bb40 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e3de303527c0f9781d8e245d11ee53c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5a2ce01ea3166d1393a8c24e300a165a = $(`<div id="html_5a2ce01ea3166d1393a8c24e300a165a" style="width: 100.0%; height: 100.0%;">Johnson Farms-CAFO (Menominee)</div>`)[0];
+                popup_e3de303527c0f9781d8e245d11ee53c6.setContent(html_5a2ce01ea3166d1393a8c24e300a165a);
+            
+        
+
+        marker_3af79b33784059888a5c1432ee0016e4.bindPopup(popup_e3de303527c0f9781d8e245d11ee53c6)
+        ;
+
+        
+    
+    
+                marker_3af79b33784059888a5c1432ee0016e4.setIcon(icon_bbc39777812a4dc5b6cc13735249bb40);
+            
+    
+            var marker_20a2db8b661df1383c076f9aeadde1bd = L.marker(
+                [44.31, -85.07],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_7e624b3cb8a1455b3dce6722fdbeddc4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d520d595f4e1c9127a8eb31d1439a26d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_39591379fde88ae1f58c7cff5fc2a812 = $(`<div id="html_39591379fde88ae1f58c7cff5fc2a812" style="width: 100.0%; height: 100.0%;">Koster Dairy-CAFO (Missaukee)</div>`)[0];
+                popup_d520d595f4e1c9127a8eb31d1439a26d.setContent(html_39591379fde88ae1f58c7cff5fc2a812);
+            
+        
+
+        marker_20a2db8b661df1383c076f9aeadde1bd.bindPopup(popup_d520d595f4e1c9127a8eb31d1439a26d)
+        ;
+
+        
+    
+    
+                marker_20a2db8b661df1383c076f9aeadde1bd.setIcon(icon_7e624b3cb8a1455b3dce6722fdbeddc4);
+            
+    
+            var marker_a8dfff2e955ebd63fbc193e056bdd359 = L.marker(
+                [43.06, -84.5],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_81c70347036acdee4e72a317be9dedb0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4e3ee8d77e84c3e5efb25d41651951f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb1d013bede3b7033d058802947d443b = $(`<div id="html_cb1d013bede3b7033d058802947d443b" style="width: 100.0%; height: 100.0%;">Kurncz Farms - CAFO (Clinton)</div>`)[0];
+                popup_4e3ee8d77e84c3e5efb25d41651951f6.setContent(html_cb1d013bede3b7033d058802947d443b);
+            
+        
+
+        marker_a8dfff2e955ebd63fbc193e056bdd359.bindPopup(popup_4e3ee8d77e84c3e5efb25d41651951f6)
+        ;
+
+        
+    
+    
+                marker_a8dfff2e955ebd63fbc193e056bdd359.setIcon(icon_81c70347036acdee4e72a317be9dedb0);
+            
+    
+            var marker_f76727a6a5a5a17af807225486117503 = L.marker(
+                [42.72, -83.84],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_025ef9ad727e6790cae885b112cd21f9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f9819bf9d39eee6f839ca78ae570b8b3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0ea7a8230d6cd6757735b9a3c4759f2c = $(`<div id="html_0ea7a8230d6cd6757735b9a3c4759f2c" style="width: 100.0%; height: 100.0%;">Laier Farms-CAFO (Livingston)</div>`)[0];
+                popup_f9819bf9d39eee6f839ca78ae570b8b3.setContent(html_0ea7a8230d6cd6757735b9a3c4759f2c);
+            
+        
+
+        marker_f76727a6a5a5a17af807225486117503.bindPopup(popup_f9819bf9d39eee6f839ca78ae570b8b3)
+        ;
+
+        
+    
+    
+                marker_f76727a6a5a5a17af807225486117503.setIcon(icon_025ef9ad727e6790cae885b112cd21f9);
+            
+    
+            var marker_3c08d04826c60a02b781339343accd99 = L.marker(
+                [42.42, -85.47],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_97639048431c47ae74e2bcde41dd28a0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9b79f815280edb7a942387c78bb2a6a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_97ebfc7e97a3379d4eed914fd92ba51f = $(`<div id="html_97ebfc7e97a3379d4eed914fd92ba51f" style="width: 100.0%; height: 100.0%;">Liberty Beef Farms-CAFO (Kalamazoo)</div>`)[0];
+                popup_9b79f815280edb7a942387c78bb2a6a6.setContent(html_97ebfc7e97a3379d4eed914fd92ba51f);
+            
+        
+
+        marker_3c08d04826c60a02b781339343accd99.bindPopup(popup_9b79f815280edb7a942387c78bb2a6a6)
+        ;
+
+        
+    
+    
+                marker_3c08d04826c60a02b781339343accd99.setIcon(icon_97639048431c47ae74e2bcde41dd28a0);
+            
+    
+            var marker_59761e5c72335ac504ffa97bf80fc381 = L.marker(
+                [44.19, -85.3],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_08651f0715cc9afb3d505f76f3470fdc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ef0a09cf8af9872ef75681cff210bb54 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a110fbaa0d9d53281e50f2734b29599d = $(`<div id="html_a110fbaa0d9d53281e50f2734b29599d" style="width: 100.0%; height: 100.0%;">Lucky 7 Dairy LLC McBain - CAFO (Missaukee)</div>`)[0];
+                popup_ef0a09cf8af9872ef75681cff210bb54.setContent(html_a110fbaa0d9d53281e50f2734b29599d);
+            
+        
+
+        marker_59761e5c72335ac504ffa97bf80fc381.bindPopup(popup_ef0a09cf8af9872ef75681cff210bb54)
+        ;
+
+        
+    
+    
+                marker_59761e5c72335ac504ffa97bf80fc381.setIcon(icon_08651f0715cc9afb3d505f76f3470fdc);
+            
+    
+            var marker_4ce0e4b3a9162cf49c451121b91a3090 = L.marker(
+                [44.23, -85.29],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_345f3d6b39330503aacfc1c95618781a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5106c17e59ec88907bec916cebefcd05 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b6448c9eb8e6831a87c43b4907d2ad5 = $(`<div id="html_7b6448c9eb8e6831a87c43b4907d2ad5" style="width: 100.0%; height: 100.0%;">Many Blessings Dairy - CAFO (Missaukee)</div>`)[0];
+                popup_5106c17e59ec88907bec916cebefcd05.setContent(html_7b6448c9eb8e6831a87c43b4907d2ad5);
+            
+        
+
+        marker_4ce0e4b3a9162cf49c451121b91a3090.bindPopup(popup_5106c17e59ec88907bec916cebefcd05)
+        ;
+
+        
+    
+    
+                marker_4ce0e4b3a9162cf49c451121b91a3090.setIcon(icon_345f3d6b39330503aacfc1c95618781a);
+            
+    
+            var marker_d2993b0470d2a24e3eed4c50604016b3 = L.marker(
+                [42.98, -85.23],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_d13e3221361d8b55c3f460c8d4fd4fe0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0a7b7c21248afad350cc9deb349d3e44 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9eb0d9c2cc4b4d06aa5fb58bcfe99f70 = $(`<div id="html_9eb0d9c2cc4b4d06aa5fb58bcfe99f70" style="width: 100.0%; height: 100.0%;">Maple Row Dairy-CAFO (Ionia)</div>`)[0];
+                popup_0a7b7c21248afad350cc9deb349d3e44.setContent(html_9eb0d9c2cc4b4d06aa5fb58bcfe99f70);
+            
+        
+
+        marker_d2993b0470d2a24e3eed4c50604016b3.bindPopup(popup_0a7b7c21248afad350cc9deb349d3e44)
+        ;
+
+        
+    
+    
+                marker_d2993b0470d2a24e3eed4c50604016b3.setIcon(icon_d13e3221361d8b55c3f460c8d4fd4fe0);
+            
+    
+            var marker_7544286b9b678b7c5b52dc4d63e50c7c = L.marker(
+                [42.71, -85.5],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_1bc241bddf72a34b0fd4b919cfa472c8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0fbb083b5e8fd2f19964c6607ec0d242 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a5745f411c25599bd8628982f3ea56ef = $(`<div id="html_a5745f411c25599bd8628982f3ea56ef" style="width: 100.0%; height: 100.0%;">Masselink Dairy Farm-CAFO (Barry)</div>`)[0];
+                popup_0fbb083b5e8fd2f19964c6607ec0d242.setContent(html_a5745f411c25599bd8628982f3ea56ef);
+            
+        
+
+        marker_7544286b9b678b7c5b52dc4d63e50c7c.bindPopup(popup_0fbb083b5e8fd2f19964c6607ec0d242)
+        ;
+
+        
+    
+    
+                marker_7544286b9b678b7c5b52dc4d63e50c7c.setIcon(icon_1bc241bddf72a34b0fd4b919cfa472c8);
+            
+    
+            var marker_567cedf7f2e534128ad77a040d4e2f3c = L.marker(
+                [42.15, -86.15],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_0d05b6b352bb1a0d41d93aafcc372c89 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a009096757858ff4e81d8b7e4cfda796 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_91852987b8d066a0e8c95b998d866417 = $(`<div id="html_91852987b8d066a0e8c95b998d866417" style="width: 100.0%; height: 100.0%;">Mayflower Dairy LLC-CAFO (Van Buren)</div>`)[0];
+                popup_a009096757858ff4e81d8b7e4cfda796.setContent(html_91852987b8d066a0e8c95b998d866417);
+            
+        
+
+        marker_567cedf7f2e534128ad77a040d4e2f3c.bindPopup(popup_a009096757858ff4e81d8b7e4cfda796)
+        ;
+
+        
+    
+    
+                marker_567cedf7f2e534128ad77a040d4e2f3c.setIcon(icon_0d05b6b352bb1a0d41d93aafcc372c89);
+            
+    
+            var marker_37d656237a4ed829cb59a4e39d7c17a2 = L.marker(
+                [42.79, -85.07],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_a9b433da53313fd8542f417f292c203c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6063c7d4e5fb20e2931ef33bf7816435 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_04f24c1b5e3a42e13180320a3332b2fc = $(`<div id="html_04f24c1b5e3a42e13180320a3332b2fc" style="width: 100.0%; height: 100.0%;">Meadow Brook Dairy-CAFO (Ionia)</div>`)[0];
+                popup_6063c7d4e5fb20e2931ef33bf7816435.setContent(html_04f24c1b5e3a42e13180320a3332b2fc);
+            
+        
+
+        marker_37d656237a4ed829cb59a4e39d7c17a2.bindPopup(popup_6063c7d4e5fb20e2931ef33bf7816435)
+        ;
+
+        
+    
+    
+                marker_37d656237a4ed829cb59a4e39d7c17a2.setIcon(icon_a9b433da53313fd8542f417f292c203c);
+            
+    
+            var marker_e86e9ae399fe9ae9dee79e4ed5c173aa = L.marker(
+                [43.18, -85.18],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_9f8be1fa04f02ed007fcc5a97a02c36e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_20d5c48f930bb7ab26cba1e80316f65f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3be011c3d1a96be284d588bdffca0d95 = $(`<div id="html_3be011c3d1a96be284d588bdffca0d95" style="width: 100.0%; height: 100.0%;">Meadow Rock Dairy-CAFO (Montcalm)</div>`)[0];
+                popup_20d5c48f930bb7ab26cba1e80316f65f.setContent(html_3be011c3d1a96be284d588bdffca0d95);
+            
+        
+
+        marker_e86e9ae399fe9ae9dee79e4ed5c173aa.bindPopup(popup_20d5c48f930bb7ab26cba1e80316f65f)
+        ;
+
+        
+    
+    
+                marker_e86e9ae399fe9ae9dee79e4ed5c173aa.setIcon(icon_9f8be1fa04f02ed007fcc5a97a02c36e);
+            
+    
+            var marker_627870755e3b09499e0a389022ed4da3 = L.marker(
+                [41.8, -84.31],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_0626a6b634c184ade7f073403026c448 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1e8cadd02f3166a9d37bf79294801d95 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8484e5b55bc7f223e7cfdc8cb96152a4 = $(`<div id="html_8484e5b55bc7f223e7cfdc8cb96152a4" style="width: 100.0%; height: 100.0%;">Rathmourne Dairy Medina-CAFO (Lenawee)</div>`)[0];
+                popup_1e8cadd02f3166a9d37bf79294801d95.setContent(html_8484e5b55bc7f223e7cfdc8cb96152a4);
+            
+        
+
+        marker_627870755e3b09499e0a389022ed4da3.bindPopup(popup_1e8cadd02f3166a9d37bf79294801d95)
+        ;
+
+        
+    
+    
+                marker_627870755e3b09499e0a389022ed4da3.setIcon(icon_0626a6b634c184ade7f073403026c448);
+            
+    
+            var marker_4ec3d21d40cb7a9dc37ab1a42934cc82 = L.marker(
+                [43.49, -84.61],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_55b05dc307896080499cd960540243aa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cd2544912fa143ebcf4fdca2ad63dc88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ffbb621fe2e73b8f116fc58a2e1eb741 = $(`<div id="html_ffbb621fe2e73b8f116fc58a2e1eb741" style="width: 100.0%; height: 100.0%;">Mibelloon Dairy-CAFO (Midland)</div>`)[0];
+                popup_cd2544912fa143ebcf4fdca2ad63dc88.setContent(html_ffbb621fe2e73b8f116fc58a2e1eb741);
+            
+        
+
+        marker_4ec3d21d40cb7a9dc37ab1a42934cc82.bindPopup(popup_cd2544912fa143ebcf4fdca2ad63dc88)
+        ;
+
+        
+    
+    
+                marker_4ec3d21d40cb7a9dc37ab1a42934cc82.setIcon(icon_55b05dc307896080499cd960540243aa);
+            
+    
+            var marker_5bc1393f3811ca63531e4f9c21db6790 = L.marker(
+                [43.25, -84.48],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_e15bc808a231a45f69607556aea35c63 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8debe8e821875623f90da96e484b1220 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20f9f1a350bd5d6f7955c7539e7975d2 = $(`<div id="html_20f9f1a350bd5d6f7955c7539e7975d2" style="width: 100.0%; height: 100.0%;">MilkStar LLC-CAFO (Gratiot)</div>`)[0];
+                popup_8debe8e821875623f90da96e484b1220.setContent(html_20f9f1a350bd5d6f7955c7539e7975d2);
+            
+        
+
+        marker_5bc1393f3811ca63531e4f9c21db6790.bindPopup(popup_8debe8e821875623f90da96e484b1220)
+        ;
+
+        
+    
+    
+                marker_5bc1393f3811ca63531e4f9c21db6790.setIcon(icon_e15bc808a231a45f69607556aea35c63);
+            
+    
+            var marker_652eafad994e1f792ed6d4ec7efbfd01 = L.marker(
+                [42.19, -85.37],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_0c50ac7e6fc947caca93a39b7e01c0e9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7edb2abbc673ea923bff74f0d25503a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_341eadc3d97e80f93762c399e7f4bb3c = $(`<div id="html_341eadc3d97e80f93762c399e7f4bb3c" style="width: 100.0%; height: 100.0%;">Myers Farms-CAFO (Kalamazoo)</div>`)[0];
+                popup_7edb2abbc673ea923bff74f0d25503a2.setContent(html_341eadc3d97e80f93762c399e7f4bb3c);
+            
+        
+
+        marker_652eafad994e1f792ed6d4ec7efbfd01.bindPopup(popup_7edb2abbc673ea923bff74f0d25503a2)
+        ;
+
+        
+    
+    
+                marker_652eafad994e1f792ed6d4ec7efbfd01.setIcon(icon_0c50ac7e6fc947caca93a39b7e01c0e9);
+            
+    
+            var marker_9e16c97cffd4b138958e342c7130eedb = L.marker(
+                [41.91, -84.18],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_15b6cd35b096bdd8c9edc88e75c6288e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eb2dfdff5cdee9035beb45099b4a699f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a60eb52bb86416bb2d3b662126c03606 = $(`<div id="html_a60eb52bb86416bb2d3b662126c03606" style="width: 100.0%; height: 100.0%;">New Flevo Dairy-CAFO (Lenawee)</div>`)[0];
+                popup_eb2dfdff5cdee9035beb45099b4a699f.setContent(html_a60eb52bb86416bb2d3b662126c03606);
+            
+        
+
+        marker_9e16c97cffd4b138958e342c7130eedb.bindPopup(popup_eb2dfdff5cdee9035beb45099b4a699f)
+        ;
+
+        
+    
+    
+                marker_9e16c97cffd4b138958e342c7130eedb.setIcon(icon_15b6cd35b096bdd8c9edc88e75c6288e);
+            
+    
+            var marker_0daae6ae42b80e291f6fa8a7b58109ec = L.marker(
+                [43.56, -84.84],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_8ec419f407b577a7d8f16aff81e316b3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dff0c16f38fd058d6709f30b65ab7b85 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9164ad255820fe66b008787f581613ce = $(`<div id="html_9164ad255820fe66b008787f581613ce" style="width: 100.0%; height: 100.0%;">Neyer Farms Inc-CAFO (Isabella)</div>`)[0];
+                popup_dff0c16f38fd058d6709f30b65ab7b85.setContent(html_9164ad255820fe66b008787f581613ce);
+            
+        
+
+        marker_0daae6ae42b80e291f6fa8a7b58109ec.bindPopup(popup_dff0c16f38fd058d6709f30b65ab7b85)
+        ;
+
+        
+    
+    
+                marker_0daae6ae42b80e291f6fa8a7b58109ec.setIcon(icon_8ec419f407b577a7d8f16aff81e316b3);
+            
+    
+            var marker_f1002e4c48aad1df61ead191d34fe0e1 = L.marker(
+                [42.38, -85.8],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_7e293ef6a4f9eb90d415cb851e44316f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7d9aeb98dccfead2471c905820d64a82 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ae52c98f03818d60a5ec237f61673171 = $(`<div id="html_ae52c98f03818d60a5ec237f61673171" style="width: 100.0%; height: 100.0%;">Nobel Family Dairy LLC-CAFO (Van Buren)</div>`)[0];
+                popup_7d9aeb98dccfead2471c905820d64a82.setContent(html_ae52c98f03818d60a5ec237f61673171);
+            
+        
+
+        marker_f1002e4c48aad1df61ead191d34fe0e1.bindPopup(popup_7d9aeb98dccfead2471c905820d64a82)
+        ;
+
+        
+    
+    
+                marker_f1002e4c48aad1df61ead191d34fe0e1.setIcon(icon_7e293ef6a4f9eb90d415cb851e44316f);
+            
+    
+            var marker_3c9b11b02faf448c6f1fd34adf7b1f5b = L.marker(
+                [43.02, -84.64],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_59e703d87c510693a6ee742a44752a7a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_73462b1e2ebbc1591536bb1932c0fa8d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1f5962a02d5b0612e0a257d3f0fc7cd6 = $(`<div id="html_1f5962a02d5b0612e0a257d3f0fc7cd6" style="width: 100.0%; height: 100.0%;">Nobis Dairy Farms-CAFO (Clinton)</div>`)[0];
+                popup_73462b1e2ebbc1591536bb1932c0fa8d.setContent(html_1f5962a02d5b0612e0a257d3f0fc7cd6);
+            
+        
+
+        marker_3c9b11b02faf448c6f1fd34adf7b1f5b.bindPopup(popup_73462b1e2ebbc1591536bb1932c0fa8d)
+        ;
+
+        
+    
+    
+                marker_3c9b11b02faf448c6f1fd34adf7b1f5b.setIcon(icon_59e703d87c510693a6ee742a44752a7a);
+            
+    
+            var marker_df8c42680abb832d49099abcb762e421 = L.marker(
+                [43.49, -86.01],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_cc7bf3536ae0fcfb8fee778b576bd07e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_68050debd70b5e6462d7235551d818e1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_39a8588c07b0bf3541eae94ae8e568d8 = $(`<div id="html_39a8588c07b0bf3541eae94ae8e568d8" style="width: 100.0%; height: 100.0%;">Northpoint Dairy-CAFO (Newaygo)</div>`)[0];
+                popup_68050debd70b5e6462d7235551d818e1.setContent(html_39a8588c07b0bf3541eae94ae8e568d8);
+            
+        
+
+        marker_df8c42680abb832d49099abcb762e421.bindPopup(popup_68050debd70b5e6462d7235551d818e1)
+        ;
+
+        
+    
+    
+                marker_df8c42680abb832d49099abcb762e421.setIcon(icon_cc7bf3536ae0fcfb8fee778b576bd07e);
+            
+    
+            var marker_39324ec8ef55fce139e1d880c6e0a756 = L.marker(
+                [43.54, -84.61],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_d84a51c67b485015caa08041fb6bc6a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_38bd7786545871e795b4eb1c0fcc4ca4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_329135f16da29e61826fd75c4431b006 = $(`<div id="html_329135f16da29e61826fd75c4431b006" style="width: 100.0%; height: 100.0%;">NVF Inc-CAFO (Isabella)</div>`)[0];
+                popup_38bd7786545871e795b4eb1c0fcc4ca4.setContent(html_329135f16da29e61826fd75c4431b006);
+            
+        
+
+        marker_39324ec8ef55fce139e1d880c6e0a756.bindPopup(popup_38bd7786545871e795b4eb1c0fcc4ca4)
+        ;
+
+        
+    
+    
+                marker_39324ec8ef55fce139e1d880c6e0a756.setIcon(icon_d84a51c67b485015caa08041fb6bc6a2);
+            
+    
+            var marker_a31667f92b91ddf72b1054a0425008b8 = L.marker(
+                [43.9, -84.69],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_7bcd2442c1ee309c185777c858f36e36 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_78b31b29c509aaa202219bd707885474 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d8efb15def6858a8f0a7d0864723919c = $(`<div id="html_d8efb15def6858a8f0a7d0864723919c" style="width: 100.0%; height: 100.0%;">Packard Farms-CAFO (Clare)</div>`)[0];
+                popup_78b31b29c509aaa202219bd707885474.setContent(html_d8efb15def6858a8f0a7d0864723919c);
+            
+        
+
+        marker_a31667f92b91ddf72b1054a0425008b8.bindPopup(popup_78b31b29c509aaa202219bd707885474)
+        ;
+
+        
+    
+    
+                marker_a31667f92b91ddf72b1054a0425008b8.setIcon(icon_7bcd2442c1ee309c185777c858f36e36);
+            
+    
+            var marker_cd05c2415a73d87a61fca2d0e3d2a344 = L.marker(
+                [43.61, -82.76],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_f11f6d7eed0ee7bf0cf48422932d2a7f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9a3936157fc63ac35e6f4b392a3796d2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f5cfc892bc0b4f3bb03c53cdac5a9663 = $(`<div id="html_f5cfc892bc0b4f3bb03c53cdac5a9663" style="width: 100.0%; height: 100.0%;">Palms Boys Dairy - CAFO (Sanilac)</div>`)[0];
+                popup_9a3936157fc63ac35e6f4b392a3796d2.setContent(html_f5cfc892bc0b4f3bb03c53cdac5a9663);
+            
+        
+
+        marker_cd05c2415a73d87a61fca2d0e3d2a344.bindPopup(popup_9a3936157fc63ac35e6f4b392a3796d2)
+        ;
+
+        
+    
+    
+                marker_cd05c2415a73d87a61fca2d0e3d2a344.setIcon(icon_f11f6d7eed0ee7bf0cf48422932d2a7f);
+            
+    
+            var marker_d7108ed1920eeb76738e91b9a1620c10 = L.marker(
+                [43.55, -83.33],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_e2cc5981ec8651f6944b6b352e33f1ec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dc47902fa351cd47016c2e5549b47961 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb06940da0e423804db55471750d6189 = $(`<div id="html_bb06940da0e423804db55471750d6189" style="width: 100.0%; height: 100.0%;">Paramount Enterprises-CAFO (Tuscola)</div>`)[0];
+                popup_dc47902fa351cd47016c2e5549b47961.setContent(html_bb06940da0e423804db55471750d6189);
+            
+        
+
+        marker_d7108ed1920eeb76738e91b9a1620c10.bindPopup(popup_dc47902fa351cd47016c2e5549b47961)
+        ;
+
+        
+    
+    
+                marker_d7108ed1920eeb76738e91b9a1620c10.setIcon(icon_e2cc5981ec8651f6944b6b352e33f1ec);
+            
+    
+            var marker_99159630f057af2747e844ebe0e26fec = L.marker(
+                [42.58, -85.63],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_720b49d06d9fea6ce0ce85c1d7074b25 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b6f6f000030229a77b1e5b355f3b56d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_71f70f34009c864d24e6d6336a9c3e16 = $(`<div id="html_71f70f34009c864d24e6d6336a9c3e16" style="width: 100.0%; height: 100.0%;">Peaceful Road Farms-CAFO (Allegan)</div>`)[0];
+                popup_b6f6f000030229a77b1e5b355f3b56d5.setContent(html_71f70f34009c864d24e6d6336a9c3e16);
+            
+        
+
+        marker_99159630f057af2747e844ebe0e26fec.bindPopup(popup_b6f6f000030229a77b1e5b355f3b56d5)
+        ;
+
+        
+    
+    
+                marker_99159630f057af2747e844ebe0e26fec.setIcon(icon_720b49d06d9fea6ce0ce85c1d7074b25);
+            
+    
+            var marker_37abdf2ce7bf3baad82c112d5b32974c = L.marker(
+                [42.44, -85.89],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_c9d0b17c6bbe66e4037984ca5fc64a74 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2d9eca7b98945785016cf6c8084f29be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0111074bf39fb51de4cf2b29a28a333d = $(`<div id="html_0111074bf39fb51de4cf2b29a28a333d" style="width: 100.0%; height: 100.0%;">Petro Farms-CAFO (Allegan)</div>`)[0];
+                popup_2d9eca7b98945785016cf6c8084f29be.setContent(html_0111074bf39fb51de4cf2b29a28a333d);
+            
+        
+
+        marker_37abdf2ce7bf3baad82c112d5b32974c.bindPopup(popup_2d9eca7b98945785016cf6c8084f29be)
+        ;
+
+        
+    
+    
+                marker_37abdf2ce7bf3baad82c112d5b32974c.setIcon(icon_c9d0b17c6bbe66e4037984ca5fc64a74);
+            
+    
+            var marker_3ec3413b8971c38753ee02ecdba28533 = L.marker(
+                [42.47, -85.46],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_2f740295d90933d935e7bd4e4c6a2408 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4078f8cba7bb232849a7bf19550188be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c48b47bd365f16091edf0c24444c76f2 = $(`<div id="html_c48b47bd365f16091edf0c24444c76f2" style="width: 100.0%; height: 100.0%;">Prairie View Dairy LLC-CAFO (Barry)</div>`)[0];
+                popup_4078f8cba7bb232849a7bf19550188be.setContent(html_c48b47bd365f16091edf0c24444c76f2);
+            
+        
+
+        marker_3ec3413b8971c38753ee02ecdba28533.bindPopup(popup_4078f8cba7bb232849a7bf19550188be)
+        ;
+
+        
+    
+    
+                marker_3ec3413b8971c38753ee02ecdba28533.setIcon(icon_2f740295d90933d935e7bd4e4c6a2408);
+            
+    
+            var marker_fc10d708e542802abae789b9a3ecc2b3 = L.marker(
+                [42.54, -84.54],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_b396ab6537c42dfd5df7d8d03118be44 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed32c8ba19eed31dc962005876d797e6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87c9941d7509846417c6a60326b3c076 = $(`<div id="html_87c9941d7509846417c6a60326b3c076" style="width: 100.0%; height: 100.0%;">Rapid Ridge-CAFO (Ingham)</div>`)[0];
+                popup_ed32c8ba19eed31dc962005876d797e6.setContent(html_87c9941d7509846417c6a60326b3c076);
+            
+        
+
+        marker_fc10d708e542802abae789b9a3ecc2b3.bindPopup(popup_ed32c8ba19eed31dc962005876d797e6)
+        ;
+
+        
+    
+    
+                marker_fc10d708e542802abae789b9a3ecc2b3.setIcon(icon_b396ab6537c42dfd5df7d8d03118be44);
+            
+    
+            var marker_0b1540bda58f1eeefd53b37a8273725c = L.marker(
+                [43.74, -82.8],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_478a32eafd69bef5b8c99b2de7d552a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_57759ae31ecca9c0a3739a99f3e748b3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_082934537384b30cab19340348e78984 = $(`<div id="html_082934537384b30cab19340348e78984" style="width: 100.0%; height: 100.0%;">Rathmourne  Dairy 8-CAFO (Huron)</div>`)[0];
+                popup_57759ae31ecca9c0a3739a99f3e748b3.setContent(html_082934537384b30cab19340348e78984);
+            
+        
+
+        marker_0b1540bda58f1eeefd53b37a8273725c.bindPopup(popup_57759ae31ecca9c0a3739a99f3e748b3)
+        ;
+
+        
+    
+    
+                marker_0b1540bda58f1eeefd53b37a8273725c.setIcon(icon_478a32eafd69bef5b8c99b2de7d552a6);
+            
+    
+            var marker_a55db34b396b23f541437c972a27b7bf = L.marker(
+                [43.51, -83.06],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_586b3d6eff04140070afb39b3c2534f0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5f1de929426d70766e822742b66f9084 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b2f114d25341f5380265e6bdf92f771d = $(`<div id="html_b2f114d25341f5380265e6bdf92f771d" style="width: 100.0%; height: 100.0%;">Rathmourne Dairy 10-CAFO (Sanilac)</div>`)[0];
+                popup_5f1de929426d70766e822742b66f9084.setContent(html_b2f114d25341f5380265e6bdf92f771d);
+            
+        
+
+        marker_a55db34b396b23f541437c972a27b7bf.bindPopup(popup_5f1de929426d70766e822742b66f9084)
+        ;
+
+        
+    
+    
+                marker_a55db34b396b23f541437c972a27b7bf.setIcon(icon_586b3d6eff04140070afb39b3c2534f0);
+            
+    
+            var marker_1f8d4e6f55950913b709d1b6ea16871c = L.marker(
+                [44.04, -82.95],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_b5bebf0c49574da4225dd682216dc77a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6c2d560f8e960d6c39e37e7417e57759 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_59edb27dbccb0231edddbbb63519e5ab = $(`<div id="html_59edb27dbccb0231edddbbb63519e5ab" style="width: 100.0%; height: 100.0%;">Rathmourne Dairy 1-CAFO (Huron)</div>`)[0];
+                popup_6c2d560f8e960d6c39e37e7417e57759.setContent(html_59edb27dbccb0231edddbbb63519e5ab);
+            
+        
+
+        marker_1f8d4e6f55950913b709d1b6ea16871c.bindPopup(popup_6c2d560f8e960d6c39e37e7417e57759)
+        ;
+
+        
+    
+    
+                marker_1f8d4e6f55950913b709d1b6ea16871c.setIcon(icon_b5bebf0c49574da4225dd682216dc77a);
+            
+    
+            var marker_fe2bdbf139107b05e038d1071463a6ea = L.marker(
+                [43.96, -82.83],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_1b447d702925cfe2d362948fa63d83ff = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d5db58a2c2956aa69b088acefd338290 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_616f3461d59d46416ec14e4d556a204d = $(`<div id="html_616f3461d59d46416ec14e4d556a204d" style="width: 100.0%; height: 100.0%;">Rathmourne Dairy 2-CAFO (Huron)</div>`)[0];
+                popup_d5db58a2c2956aa69b088acefd338290.setContent(html_616f3461d59d46416ec14e4d556a204d);
+            
+        
+
+        marker_fe2bdbf139107b05e038d1071463a6ea.bindPopup(popup_d5db58a2c2956aa69b088acefd338290)
+        ;
+
+        
+    
+    
+                marker_fe2bdbf139107b05e038d1071463a6ea.setIcon(icon_1b447d702925cfe2d362948fa63d83ff);
+            
+    
+            var marker_c7cfade0e68c0070deacd48f46824858 = L.marker(
+                [43.35, -82.97],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_8dbca7816a0fdd729eb83914b69d9947 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bdccf8f436527260c78ca75a1a1a1f00 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_56683f71c062838da47985fb67dad3db = $(`<div id="html_56683f71c062838da47985fb67dad3db" style="width: 100.0%; height: 100.0%;">Rathmourne Dairy 4 - CAFO (Sanilac)</div>`)[0];
+                popup_bdccf8f436527260c78ca75a1a1a1f00.setContent(html_56683f71c062838da47985fb67dad3db);
+            
+        
+
+        marker_c7cfade0e68c0070deacd48f46824858.bindPopup(popup_bdccf8f436527260c78ca75a1a1a1f00)
+        ;
+
+        
+    
+    
+                marker_c7cfade0e68c0070deacd48f46824858.setIcon(icon_8dbca7816a0fdd729eb83914b69d9947);
+            
+    
+            var marker_07ceadd7755647f0a9543c2aad0aec05 = L.marker(
+                [43.59, -83.04],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_5057c7a46824affbd1df1d0d3dc186f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a7b78e0dd9d8430f3ad99f9f36c918bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d83cc46c0450e1dc761f08fe06a54aa7 = $(`<div id="html_d83cc46c0450e1dc761f08fe06a54aa7" style="width: 100.0%; height: 100.0%;">Rathmourne Dairy 5-CAFO (Sanilac)</div>`)[0];
+                popup_a7b78e0dd9d8430f3ad99f9f36c918bd.setContent(html_d83cc46c0450e1dc761f08fe06a54aa7);
+            
+        
+
+        marker_07ceadd7755647f0a9543c2aad0aec05.bindPopup(popup_a7b78e0dd9d8430f3ad99f9f36c918bd)
+        ;
+
+        
+    
+    
+                marker_07ceadd7755647f0a9543c2aad0aec05.setIcon(icon_5057c7a46824affbd1df1d0d3dc186f4);
+            
+    
+            var marker_90644f2355d621775fb3a4f6e3036963 = L.marker(
+                [43.4, -82.63],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_3c09803f128e04c348cf57bd7d79742d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fb84bed6d95379531847ccd1e3d3d0c9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8aee4e96f442b29041f6b9fcd0fc0864 = $(`<div id="html_8aee4e96f442b29041f6b9fcd0fc0864" style="width: 100.0%; height: 100.0%;">Rathmourne Dairy 7-CAFO (Sanilac)</div>`)[0];
+                popup_fb84bed6d95379531847ccd1e3d3d0c9.setContent(html_8aee4e96f442b29041f6b9fcd0fc0864);
+            
+        
+
+        marker_90644f2355d621775fb3a4f6e3036963.bindPopup(popup_fb84bed6d95379531847ccd1e3d3d0c9)
+        ;
+
+        
+    
+    
+                marker_90644f2355d621775fb3a4f6e3036963.setIcon(icon_3c09803f128e04c348cf57bd7d79742d);
+            
+    
+            var marker_42d4e0b48caffb26509b279ef531aca5 = L.marker(
+                [43.7, -83.36],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_c5e04f1782aa6f51aedc9f7b20a86281 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cdcc97bba529e22719dadf6563766354 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0967b030fa6fbf9f048412df40e7abb6 = $(`<div id="html_0967b030fa6fbf9f048412df40e7abb6" style="width: 100.0%; height: 100.0%;">Rathmourne Dairy 9-CAFO (Huron)</div>`)[0];
+                popup_cdcc97bba529e22719dadf6563766354.setContent(html_0967b030fa6fbf9f048412df40e7abb6);
+            
+        
+
+        marker_42d4e0b48caffb26509b279ef531aca5.bindPopup(popup_cdcc97bba529e22719dadf6563766354)
+        ;
+
+        
+    
+    
+                marker_42d4e0b48caffb26509b279ef531aca5.setIcon(icon_c5e04f1782aa6f51aedc9f7b20a86281);
+            
+    
+            var marker_4972b9ab45c550b7ff2c0a5eeba487de = L.marker(
+                [42.17, -86.18],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_e6c192e3f74eb557f3d21cba66325359 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a046a32d946bb1dda5e10931ba012970 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bdcc906aea3504c21fe0cdf9d59b2665 = $(`<div id="html_bdcc906aea3504c21fe0cdf9d59b2665" style="width: 100.0%; height: 100.0%;">Red Arrow Dairy-CAFO (Van Buren)</div>`)[0];
+                popup_a046a32d946bb1dda5e10931ba012970.setContent(html_bdcc906aea3504c21fe0cdf9d59b2665);
+            
+        
+
+        marker_4972b9ab45c550b7ff2c0a5eeba487de.bindPopup(popup_a046a32d946bb1dda5e10931ba012970)
+        ;
+
+        
+    
+    
+                marker_4972b9ab45c550b7ff2c0a5eeba487de.setIcon(icon_e6c192e3f74eb557f3d21cba66325359);
+            
+    
+            var marker_3de8655b7335ddc4236c5cb9ad3e0ca0 = L.marker(
+                [43.47, -84.6],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_d323634b4a55eb983b850632ab71a7e3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d3c3b99d91c4b8e86a620061eac7ec47 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bfa5874512ea7796898b2097cd3bc61b = $(`<div id="html_bfa5874512ea7796898b2097cd3bc61b" style="width: 100.0%; height: 100.0%;">Redstone Dairy-CAFO (Midland)</div>`)[0];
+                popup_d3c3b99d91c4b8e86a620061eac7ec47.setContent(html_bfa5874512ea7796898b2097cd3bc61b);
+            
+        
+
+        marker_3de8655b7335ddc4236c5cb9ad3e0ca0.bindPopup(popup_d3c3b99d91c4b8e86a620061eac7ec47)
+        ;
+
+        
+    
+    
+                marker_3de8655b7335ddc4236c5cb9ad3e0ca0.setIcon(icon_d323634b4a55eb983b850632ab71a7e3);
+            
+    
+            var marker_7e6d60af3541ecb8faa9df8474e10b16 = L.marker(
+                [42.99, -84.7],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_da4b4e36fdde1b38bacb8c3a81c8835f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2a276c80f6689d9f8c99394c5265dc76 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_459dfdbe0b57336d1cb040ae64f46ff9 = $(`<div id="html_459dfdbe0b57336d1cb040ae64f46ff9" style="width: 100.0%; height: 100.0%;">Rich Ro Dairy South-CAFO (Clinton)</div>`)[0];
+                popup_2a276c80f6689d9f8c99394c5265dc76.setContent(html_459dfdbe0b57336d1cb040ae64f46ff9);
+            
+        
+
+        marker_7e6d60af3541ecb8faa9df8474e10b16.bindPopup(popup_2a276c80f6689d9f8c99394c5265dc76)
+        ;
+
+        
+    
+    
+                marker_7e6d60af3541ecb8faa9df8474e10b16.setIcon(icon_da4b4e36fdde1b38bacb8c3a81c8835f);
+            
+    
+            var marker_b47bd02fd6a5e791f0e46b1a9e66ee2a = L.marker(
+                [43.04, -84.69],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_90ff2c19b3c4360d0ae5e1bb0940961f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_89e99d01a8db2e53362953f3c32525aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ec8a318e4720b377846de0d1493a348c = $(`<div id="html_ec8a318e4720b377846de0d1493a348c" style="width: 100.0%; height: 100.0%;">Rich Ro North-CAFO (Clinton)</div>`)[0];
+                popup_89e99d01a8db2e53362953f3c32525aa.setContent(html_ec8a318e4720b377846de0d1493a348c);
+            
+        
+
+        marker_b47bd02fd6a5e791f0e46b1a9e66ee2a.bindPopup(popup_89e99d01a8db2e53362953f3c32525aa)
+        ;
+
+        
+    
+    
+                marker_b47bd02fd6a5e791f0e46b1a9e66ee2a.setIcon(icon_90ff2c19b3c4360d0ae5e1bb0940961f);
+            
+    
+            var marker_ba6ec644725e83247eeac0d4a0ef133e = L.marker(
+                [41.99, -85.53],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_3964a37c9c6dec7a73fd969cb2f12bc9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_36bd8a9852ef9c565e839bbd2cdf0cdb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_003f991e2b205dbc972f78176fd4d36c = $(`<div id="html_003f991e2b205dbc972f78176fd4d36c" style="width: 100.0%; height: 100.0%;">Riedstra Dairy-CAFO (St. Joseph)</div>`)[0];
+                popup_36bd8a9852ef9c565e839bbd2cdf0cdb.setContent(html_003f991e2b205dbc972f78176fd4d36c);
+            
+        
+
+        marker_ba6ec644725e83247eeac0d4a0ef133e.bindPopup(popup_36bd8a9852ef9c565e839bbd2cdf0cdb)
+        ;
+
+        
+    
+    
+                marker_ba6ec644725e83247eeac0d4a0ef133e.setIcon(icon_3964a37c9c6dec7a73fd969cb2f12bc9);
+            
+    
+            var marker_05f77c850e67e3a4d9b189dcacef20c2 = L.marker(
+                [43.05, -85.96],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_6da77fbcb0d36af19157d3970d22c3fc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1797c31408287a690136757495103e89 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c9808a103d3dd3771b3e5c3ae825d5fd = $(`<div id="html_c9808a103d3dd3771b3e5c3ae825d5fd" style="width: 100.0%; height: 100.0%;">River Ridge Farms-CAFO (Ottawa)</div>`)[0];
+                popup_1797c31408287a690136757495103e89.setContent(html_c9808a103d3dd3771b3e5c3ae825d5fd);
+            
+        
+
+        marker_05f77c850e67e3a4d9b189dcacef20c2.bindPopup(popup_1797c31408287a690136757495103e89)
+        ;
+
+        
+    
+    
+                marker_05f77c850e67e3a4d9b189dcacef20c2.setIcon(icon_6da77fbcb0d36af19157d3970d22c3fc);
+            
+    
+            var marker_00bd9bc9e2a2afe7609b0b8910af570f = L.marker(
+                [42.62, -85.84],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_33a43be83d177002292d859691284a88 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d19973945032791025361be2b0de36a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2acd156f0980cb51f5f5a4e881603444 = $(`<div id="html_2acd156f0980cb51f5f5a4e881603444" style="width: 100.0%; height: 100.0%;">John B. Schaendorf Dairy #2-CAFO (Allegan)</div>`)[0];
+                popup_d19973945032791025361be2b0de36a3.setContent(html_2acd156f0980cb51f5f5a4e881603444);
+            
+        
+
+        marker_00bd9bc9e2a2afe7609b0b8910af570f.bindPopup(popup_d19973945032791025361be2b0de36a3)
+        ;
+
+        
+    
+    
+                marker_00bd9bc9e2a2afe7609b0b8910af570f.setIcon(icon_33a43be83d177002292d859691284a88);
+            
+    
+            var marker_f12ce3272fd8c511924e7ee7d8b08ec3 = L.marker(
+                [43.49, -82.96],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_0fb9041b020c87f810fc0699c978b39d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_201a9e08d6a8663e12c0b5b8e3c2b33d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c09240c033be1583617d17d54b269cc0 = $(`<div id="html_c09240c033be1583617d17d54b269cc0" style="width: 100.0%; height: 100.0%;">Roto-Z Dairy LLC-CAFO (Sanilac)</div>`)[0];
+                popup_201a9e08d6a8663e12c0b5b8e3c2b33d.setContent(html_c09240c033be1583617d17d54b269cc0);
+            
+        
+
+        marker_f12ce3272fd8c511924e7ee7d8b08ec3.bindPopup(popup_201a9e08d6a8663e12c0b5b8e3c2b33d)
+        ;
+
+        
+    
+    
+                marker_f12ce3272fd8c511924e7ee7d8b08ec3.setIcon(icon_0fb9041b020c87f810fc0699c978b39d);
+            
+    
+            var marker_b0449ecfdf7467f2a3161da49c74df56 = L.marker(
+                [43.88, -83.2],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_91241b517c2acd940d8826a7e33f04c6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f3d77a39769e9d5e80a0fbc17e28556d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b116c600f8454abbe5f50bfd7297c25 = $(`<div id="html_3b116c600f8454abbe5f50bfd7297c25" style="width: 100.0%; height: 100.0%;">Roundtree Dairy Farms-CAFO (Huron)</div>`)[0];
+                popup_f3d77a39769e9d5e80a0fbc17e28556d.setContent(html_3b116c600f8454abbe5f50bfd7297c25);
+            
+        
+
+        marker_b0449ecfdf7467f2a3161da49c74df56.bindPopup(popup_f3d77a39769e9d5e80a0fbc17e28556d)
+        ;
+
+        
+    
+    
+                marker_b0449ecfdf7467f2a3161da49c74df56.setIcon(icon_91241b517c2acd940d8826a7e33f04c6);
+            
+    
+            var marker_7e194026d6aee5371514f59481427b7c = L.marker(
+                [43.69, -83.16],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_8e42a1f381b37dfae157623e6bf40853 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4d50cadfe97b47941ddf394c373285e5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8b6addcc34036e01cfa63fc07117bbe8 = $(`<div id="html_8b6addcc34036e01cfa63fc07117bbe8" style="width: 100.0%; height: 100.0%;">Roundtree Dairy Hartsell-CAFO (Huron)</div>`)[0];
+                popup_4d50cadfe97b47941ddf394c373285e5.setContent(html_8b6addcc34036e01cfa63fc07117bbe8);
+            
+        
+
+        marker_7e194026d6aee5371514f59481427b7c.bindPopup(popup_4d50cadfe97b47941ddf394c373285e5)
+        ;
+
+        
+    
+    
+                marker_7e194026d6aee5371514f59481427b7c.setIcon(icon_8e42a1f381b37dfae157623e6bf40853);
+            
+    
+            var marker_3b576fe7c7e61a709e84f34c1e8ff192 = L.marker(
+                [43.41, -83.17],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_65cedad8b65f818033276e2200115155 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d63f0a3666ef86ea310f79de2a5f2ccc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a310dc5426240c2d5d682815a20488b9 = $(`<div id="html_a310dc5426240c2d5d682815a20488b9" style="width: 100.0%; height: 100.0%;">Ruggles Beef Farms-CAFO (Tuscola)</div>`)[0];
+                popup_d63f0a3666ef86ea310f79de2a5f2ccc.setContent(html_a310dc5426240c2d5d682815a20488b9);
+            
+        
+
+        marker_3b576fe7c7e61a709e84f34c1e8ff192.bindPopup(popup_d63f0a3666ef86ea310f79de2a5f2ccc)
+        ;
+
+        
+    
+    
+                marker_3b576fe7c7e61a709e84f34c1e8ff192.setIcon(icon_65cedad8b65f818033276e2200115155);
+            
+    
+            var marker_e84789660d677858f5734014d9938fc8 = L.marker(
+                [43.3, -85.9],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_253b157ff24b6fad1479d8ff6fe420a9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4f62bd45a8284f904c5cd1a4e9ebc4e3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0bfe9ef8709454ea3119c30e6cdb139a = $(`<div id="html_0bfe9ef8709454ea3119c30e6cdb139a" style="width: 100.0%; height: 100.0%;">Ryzebol Dairy-CAFO (Newaygo)</div>`)[0];
+                popup_4f62bd45a8284f904c5cd1a4e9ebc4e3.setContent(html_0bfe9ef8709454ea3119c30e6cdb139a);
+            
+        
+
+        marker_e84789660d677858f5734014d9938fc8.bindPopup(popup_4f62bd45a8284f904c5cd1a4e9ebc4e3)
+        ;
+
+        
+    
+    
+                marker_e84789660d677858f5734014d9938fc8.setIcon(icon_253b157ff24b6fad1479d8ff6fe420a9);
+            
+    
+            var marker_b351d067e6f00b6ca7ec33ef5e638bdd = L.marker(
+                [42.67, -85.36],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_1a3bbdc8302e0e6ca633d9e2c91664c1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_04fdab6a8c78aad90ec84395bef07a9e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_21fff2819d08b7b1484fd9d04c64643a = $(`<div id="html_21fff2819d08b7b1484fd9d04c64643a" style="width: 100.0%; height: 100.0%;">Sand Creek Dairy LLC-CAFO (Barry)</div>`)[0];
+                popup_04fdab6a8c78aad90ec84395bef07a9e.setContent(html_21fff2819d08b7b1484fd9d04c64643a);
+            
+        
+
+        marker_b351d067e6f00b6ca7ec33ef5e638bdd.bindPopup(popup_04fdab6a8c78aad90ec84395bef07a9e)
+        ;
+
+        
+    
+    
+                marker_b351d067e6f00b6ca7ec33ef5e638bdd.setIcon(icon_1a3bbdc8302e0e6ca633d9e2c91664c1);
+            
+    
+            var marker_9176297b8bf51773045870f1cbab0c0d = L.marker(
+                [43.04, -85.06],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_7a2a48fc37db49af08704fd5b288e8c2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_023ed734cee094913f57106c21d0b859 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_57e6fb7efd4c766c518f47ecccdc1989 = $(`<div id="html_57e6fb7efd4c766c518f47ecccdc1989" style="width: 100.0%; height: 100.0%;">Sandy Ridge Dairy-CAFO (Ionia)</div>`)[0];
+                popup_023ed734cee094913f57106c21d0b859.setContent(html_57e6fb7efd4c766c518f47ecccdc1989);
+            
+        
+
+        marker_9176297b8bf51773045870f1cbab0c0d.bindPopup(popup_023ed734cee094913f57106c21d0b859)
+        ;
+
+        
+    
+    
+                marker_9176297b8bf51773045870f1cbab0c0d.setIcon(icon_7a2a48fc37db49af08704fd5b288e8c2);
+            
+    
+            var marker_b1474dfd8f7def3c1213f901ea30a98b = L.marker(
+                [43.27, -82.8],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_678db373c5aa7eb4815f4c32c4766e24 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0798e4f10f16acafa42f9465149ceb29 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_64ffa89d7a3dba399bfb835050755335 = $(`<div id="html_64ffa89d7a3dba399bfb835050755335" style="width: 100.0%; height: 100.0%;">Sharrard Farms LLC-CAFO (Sanilac)</div>`)[0];
+                popup_0798e4f10f16acafa42f9465149ceb29.setContent(html_64ffa89d7a3dba399bfb835050755335);
+            
+        
+
+        marker_b1474dfd8f7def3c1213f901ea30a98b.bindPopup(popup_0798e4f10f16acafa42f9465149ceb29)
+        ;
+
+        
+    
+    
+                marker_b1474dfd8f7def3c1213f901ea30a98b.setIcon(icon_678db373c5aa7eb4815f4c32c4766e24);
+            
+    
+            var marker_e13827299a312472cb6eb72e2a1d6e3c = L.marker(
+                [43.85, -83.1],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_2939feed33896e11b74ecf28add06467 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6e677f8a146b10f25f9975ad83727883 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_21b582b594e2a343b4c235d4cead43bc = $(`<div id="html_21b582b594e2a343b4c235d4cead43bc" style="width: 100.0%; height: 100.0%;">Shupe Dairy Inc-CAFO (Huron)</div>`)[0];
+                popup_6e677f8a146b10f25f9975ad83727883.setContent(html_21b582b594e2a343b4c235d4cead43bc);
+            
+        
+
+        marker_e13827299a312472cb6eb72e2a1d6e3c.bindPopup(popup_6e677f8a146b10f25f9975ad83727883)
+        ;
+
+        
+    
+    
+                marker_e13827299a312472cb6eb72e2a1d6e3c.setIcon(icon_2939feed33896e11b74ecf28add06467);
+            
+    
+            var marker_347017e8dea79ec008b341dcefa2be1e = L.marker(
+                [42.95, -84.84],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_ae7f76431bf0b6073326eda4f6a77148 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_668493387ddc3eea3deb6308031f4279 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fe8fd4fa61915e5a388589261884afda = $(`<div id="html_fe8fd4fa61915e5a388589261884afda" style="width: 100.0%; height: 100.0%;">Simon Dairy Farm-CAFO (Ionia)</div>`)[0];
+                popup_668493387ddc3eea3deb6308031f4279.setContent(html_fe8fd4fa61915e5a388589261884afda);
+            
+        
+
+        marker_347017e8dea79ec008b341dcefa2be1e.bindPopup(popup_668493387ddc3eea3deb6308031f4279)
+        ;
+
+        
+    
+    
+                marker_347017e8dea79ec008b341dcefa2be1e.setIcon(icon_ae7f76431bf0b6073326eda4f6a77148);
+            
+    
+            var marker_cd0d6e2d1be9f5b9b4d25686ec7f3460 = L.marker(
+                [43.44, -86.06],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_9bf0990529e22b8e770f93f40ba3aec7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4c1a969e223f1fa70a8b8ba7720eb96e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_99426a64383355732d69d05925828573 = $(`<div id="html_99426a64383355732d69d05925828573" style="width: 100.0%; height: 100.0%;">Slater Farms-CAFO (Muskegon)</div>`)[0];
+                popup_4c1a969e223f1fa70a8b8ba7720eb96e.setContent(html_99426a64383355732d69d05925828573);
+            
+        
+
+        marker_cd0d6e2d1be9f5b9b4d25686ec7f3460.bindPopup(popup_4c1a969e223f1fa70a8b8ba7720eb96e)
+        ;
+
+        
+    
+    
+                marker_cd0d6e2d1be9f5b9b4d25686ec7f3460.setIcon(icon_9bf0990529e22b8e770f93f40ba3aec7);
+            
+    
+            var marker_b13a844123b4e11c842da89f3f095355 = L.marker(
+                [43.04, -84.83],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_2277c5f0658858a8002ccfc99b158def = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_99224fe4a2bdc3f3ed7c83e7c3f4e172 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_31a3ba2307dde214a865f5db56bca829 = $(`<div id="html_31a3ba2307dde214a865f5db56bca829" style="width: 100.0%; height: 100.0%;">Rathmourne Dairy LLC - Pewamo-CAFO (Clinton)</div>`)[0];
+                popup_99224fe4a2bdc3f3ed7c83e7c3f4e172.setContent(html_31a3ba2307dde214a865f5db56bca829);
+            
+        
+
+        marker_b13a844123b4e11c842da89f3f095355.bindPopup(popup_99224fe4a2bdc3f3ed7c83e7c3f4e172)
+        ;
+
+        
+    
+    
+                marker_b13a844123b4e11c842da89f3f095355.setIcon(icon_2277c5f0658858a8002ccfc99b158def);
+            
+    
+            var marker_3a45eb57c8ef84f50e852b487d90e97a = L.marker(
+                [43.07, -84.75],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_00fc5ba929c2db941f65a9e5a89153bd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c3125774512ce79c16a65c636e3d5a86 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3519a452995b35664c692229b65a1b70 = $(`<div id="html_3519a452995b35664c692229b65a1b70" style="width: 100.0%; height: 100.0%;">Stone Road Farms-CAFO (Clinton)</div>`)[0];
+                popup_c3125774512ce79c16a65c636e3d5a86.setContent(html_3519a452995b35664c692229b65a1b70);
+            
+        
+
+        marker_3a45eb57c8ef84f50e852b487d90e97a.bindPopup(popup_c3125774512ce79c16a65c636e3d5a86)
+        ;
+
+        
+    
+    
+                marker_3a45eb57c8ef84f50e852b487d90e97a.setIcon(icon_00fc5ba929c2db941f65a9e5a89153bd);
+            
+    
+            var marker_fd7494f71314b8185db4b3095cc01d95 = L.marker(
+                [43.37, -84.47],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_c26e298a80c107a4b9f8b96cb867112c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dc60034773956eceeca7332411c6de73 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_42bc0f906bac2978be82ff3858fe5f3d = $(`<div id="html_42bc0f906bac2978be82ff3858fe5f3d" style="width: 100.0%; height: 100.0%;">High Line Cattle Feeding-CAFO (Gratiot)</div>`)[0];
+                popup_dc60034773956eceeca7332411c6de73.setContent(html_42bc0f906bac2978be82ff3858fe5f3d);
+            
+        
+
+        marker_fd7494f71314b8185db4b3095cc01d95.bindPopup(popup_dc60034773956eceeca7332411c6de73)
+        ;
+
+        
+    
+    
+                marker_fd7494f71314b8185db4b3095cc01d95.setIcon(icon_c26e298a80c107a4b9f8b96cb867112c);
+            
+    
+            var marker_83f4d870b57fd6158991731e8e1cb29e = L.marker(
+                [41.74, -84.19],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_d6a336ad708089ae4509f629276d10df = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7bdd7050b9d6a452f1fd25938bbac1d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ffc8e7dbc37e5e008445c19cb81fd75c = $(`<div id="html_ffc8e7dbc37e5e008445c19cb81fd75c" style="width: 100.0%; height: 100.0%;">SunRyz Dairy LLC-CAFO (Lenawee)</div>`)[0];
+                popup_7bdd7050b9d6a452f1fd25938bbac1d0.setContent(html_ffc8e7dbc37e5e008445c19cb81fd75c);
+            
+        
+
+        marker_83f4d870b57fd6158991731e8e1cb29e.bindPopup(popup_7bdd7050b9d6a452f1fd25938bbac1d0)
+        ;
+
+        
+    
+    
+                marker_83f4d870b57fd6158991731e8e1cb29e.setIcon(icon_d6a336ad708089ae4509f629276d10df);
+            
+    
+            var marker_86ffadce360654581a83772a9a4e5a76 = L.marker(
+                [42.81, -85.34],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_da4e304b2afef07950b3cf6af4ff3815 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0af9f80cb1e64aa2473387bfdc589271 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9cfda623a3f94acdac0ace8928335887 = $(`<div id="html_9cfda623a3f94acdac0ace8928335887" style="width: 100.0%; height: 100.0%;">Swisslane Farms-CAFO (Kent)</div>`)[0];
+                popup_0af9f80cb1e64aa2473387bfdc589271.setContent(html_9cfda623a3f94acdac0ace8928335887);
+            
+        
+
+        marker_86ffadce360654581a83772a9a4e5a76.bindPopup(popup_0af9f80cb1e64aa2473387bfdc589271)
+        ;
+
+        
+    
+    
+                marker_86ffadce360654581a83772a9a4e5a76.setIcon(icon_da4e304b2afef07950b3cf6af4ff3815);
+            
+    
+            var marker_44d67b2a54a52ac21f978b490caa724f = L.marker(
+                [43.03, -84.74],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_ff11f7309674b391d22c04076e95198b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_22d3fb070ad86242ea4f546e8a5407c3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_018f3dec3295faf76326d53cf4def0ca = $(`<div id="html_018f3dec3295faf76326d53cf4def0ca" style="width: 100.0%; height: 100.0%;">T & H Dairy-CAFO (Clinton)</div>`)[0];
+                popup_22d3fb070ad86242ea4f546e8a5407c3.setContent(html_018f3dec3295faf76326d53cf4def0ca);
+            
+        
+
+        marker_44d67b2a54a52ac21f978b490caa724f.bindPopup(popup_22d3fb070ad86242ea4f546e8a5407c3)
+        ;
+
+        
+    
+    
+                marker_44d67b2a54a52ac21f978b490caa724f.setIcon(icon_ff11f7309674b391d22c04076e95198b);
+            
+    
+            var marker_bf26f829ae4a27242514d6aa5c986cda = L.marker(
+                [44.0, -84.09],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_2a4020fb7ca2588de45d2c8587e6f8fd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c110b00c9fc8a5630c87dd0c08ce9298 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0be4837c39656d3ca29a9575aab2d10a = $(`<div id="html_0be4837c39656d3ca29a9575aab2d10a" style="width: 100.0%; height: 100.0%;">T and T Dairy-CAFO (Bay)</div>`)[0];
+                popup_c110b00c9fc8a5630c87dd0c08ce9298.setContent(html_0be4837c39656d3ca29a9575aab2d10a);
+            
+        
+
+        marker_bf26f829ae4a27242514d6aa5c986cda.bindPopup(popup_c110b00c9fc8a5630c87dd0c08ce9298)
+        ;
+
+        
+    
+    
+                marker_bf26f829ae4a27242514d6aa5c986cda.setIcon(icon_2a4020fb7ca2588de45d2c8587e6f8fd);
+            
+    
+            var marker_3b3278ee01bff444c48800ba47a7e697 = L.marker(
+                [43.78, -83.13],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_54096c6d8a89ba4ed1e02fe5fe788e55 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6e7dbc572505be9547196b33d85f01b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f0d86fb86090510766c8caddbee07977 = $(`<div id="html_f0d86fb86090510766c8caddbee07977" style="width: 100.0%; height: 100.0%;">Bad Axe Dairy LLC-CAFO (Huron)</div>`)[0];
+                popup_6e7dbc572505be9547196b33d85f01b2.setContent(html_f0d86fb86090510766c8caddbee07977);
+            
+        
+
+        marker_3b3278ee01bff444c48800ba47a7e697.bindPopup(popup_6e7dbc572505be9547196b33d85f01b2)
+        ;
+
+        
+    
+    
+                marker_3b3278ee01bff444c48800ba47a7e697.setIcon(icon_54096c6d8a89ba4ed1e02fe5fe788e55);
+            
+    
+            var marker_0410a51f326dd1c2eab97513833d8955 = L.marker(
+                [41.93, -84.1],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_bd9920d256798768e17ed21d2c64c603 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b047bad6cb815516a99594c93c9659d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b55babafdd1f0b8b8c8d67ec2d8d1946 = $(`<div id="html_b55babafdd1f0b8b8c8d67ec2d8d1946" style="width: 100.0%; height: 100.0%;">Terrehaven Farms - CAFO (Lenawee)</div>`)[0];
+                popup_b047bad6cb815516a99594c93c9659d4.setContent(html_b55babafdd1f0b8b8c8d67ec2d8d1946);
+            
+        
+
+        marker_0410a51f326dd1c2eab97513833d8955.bindPopup(popup_b047bad6cb815516a99594c93c9659d4)
+        ;
+
+        
+    
+    
+                marker_0410a51f326dd1c2eab97513833d8955.setIcon(icon_bd9920d256798768e17ed21d2c64c603);
+            
+    
+            var marker_65214019ee36798381ee3ac5bd0b8b9e = L.marker(
+                [42.88, -84.8],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_9ad8b6280d1c6e01772b487bd4bbd386 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_570a4edf6d0a67ca335d40a85daae43b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dee6dadd36d608d4a7e3bada65862237 = $(`<div id="html_dee6dadd36d608d4a7e3bada65862237" style="width: 100.0%; height: 100.0%;">Trierweiler Dairy Inc-CAFO (Clinton)</div>`)[0];
+                popup_570a4edf6d0a67ca335d40a85daae43b.setContent(html_dee6dadd36d608d4a7e3bada65862237);
+            
+        
+
+        marker_65214019ee36798381ee3ac5bd0b8b9e.bindPopup(popup_570a4edf6d0a67ca335d40a85daae43b)
+        ;
+
+        
+    
+    
+                marker_65214019ee36798381ee3ac5bd0b8b9e.setIcon(icon_9ad8b6280d1c6e01772b487bd4bbd386);
+            
+    
+            var marker_530c215fb96944407db785f41056d414 = L.marker(
+                [42.96, -85.02],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_6c50a7f00114775bc0f5546ca7b9fc50 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f4538ad0b6d3c62a01dc4af4b573c698 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3a629623d6098470ddb217c841c2a89d = $(`<div id="html_3a629623d6098470ddb217c841c2a89d" style="width: 100.0%; height: 100.0%;">Tubergen Dairy Farm-CAFO (Ionia)</div>`)[0];
+                popup_f4538ad0b6d3c62a01dc4af4b573c698.setContent(html_3a629623d6098470ddb217c841c2a89d);
+            
+        
+
+        marker_530c215fb96944407db785f41056d414.bindPopup(popup_f4538ad0b6d3c62a01dc4af4b573c698)
+        ;
+
+        
+    
+    
+                marker_530c215fb96944407db785f41056d414.setIcon(icon_6c50a7f00114775bc0f5546ca7b9fc50);
+            
+    
+            var marker_8665b09313985d4e52a07164a5bd31ef = L.marker(
+                [43.27, -84.63],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_35ffae3b2dadb0813757e841227c2bd9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_17c48ae5188a013d4b8c461004ca5ae9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd5a8ac8872f6d1068c56a32b3c13870 = $(`<div id="html_dd5a8ac8872f6d1068c56a32b3c13870" style="width: 100.0%; height: 100.0%;">Vanderploeg Holsteins-CAFO (Gratiot)</div>`)[0];
+                popup_17c48ae5188a013d4b8c461004ca5ae9.setContent(html_dd5a8ac8872f6d1068c56a32b3c13870);
+            
+        
+
+        marker_8665b09313985d4e52a07164a5bd31ef.bindPopup(popup_17c48ae5188a013d4b8c461004ca5ae9)
+        ;
+
+        
+    
+    
+                marker_8665b09313985d4e52a07164a5bd31ef.setIcon(icon_35ffae3b2dadb0813757e841227c2bd9);
+            
+    
+            var marker_7cb0f13d9ab9dcd20f70fffb9e9d86f1 = L.marker(
+                [43.18, -85.8],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_1c6f9e0f6b7cae6c10ec975f530e6a1c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e9073abf54e7ff20b098cd1cd7547264 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f93642c2ae8c50192004d08713f0a97 = $(`<div id="html_0f93642c2ae8c50192004d08713f0a97" style="width: 100.0%; height: 100.0%;">Van-Oeffelen Farm Services - CAFO (Ottawa)</div>`)[0];
+                popup_e9073abf54e7ff20b098cd1cd7547264.setContent(html_0f93642c2ae8c50192004d08713f0a97);
+            
+        
+
+        marker_7cb0f13d9ab9dcd20f70fffb9e9d86f1.bindPopup(popup_e9073abf54e7ff20b098cd1cd7547264)
+        ;
+
+        
+    
+    
+                marker_7cb0f13d9ab9dcd20f70fffb9e9d86f1.setIcon(icon_1c6f9e0f6b7cae6c10ec975f530e6a1c);
+            
+    
+            var marker_2a1990dcaa92f12b2e5c2c3634306725 = L.marker(
+                [42.11, -85.33],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_6d2ae9b03030e8ca63796be640196d35 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4accee5c4d7446c392f72031f358b6be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ad67fd560f6a210d4066045972fd019 = $(`<div id="html_4ad67fd560f6a210d4066045972fd019" style="width: 100.0%; height: 100.0%;">VDS Farms-Fulton-CAFO (Kalamazoo)</div>`)[0];
+                popup_4accee5c4d7446c392f72031f358b6be.setContent(html_4ad67fd560f6a210d4066045972fd019);
+            
+        
+
+        marker_2a1990dcaa92f12b2e5c2c3634306725.bindPopup(popup_4accee5c4d7446c392f72031f358b6be)
+        ;
+
+        
+    
+    
+                marker_2a1990dcaa92f12b2e5c2c3634306725.setIcon(icon_6d2ae9b03030e8ca63796be640196d35);
+            
+    
+            var marker_9ee565974d66fd087d90dfa8880a2da9 = L.marker(
+                [42.17, -85.46],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_690a6fdba969d331502ff977dfb84fff = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e47e8ff70138c9fef94567a05bb007a1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cefc1a340ee1f0daf0e4e35cc5a1b0ab = $(`<div id="html_cefc1a340ee1f0daf0e4e35cc5a1b0ab" style="width: 100.0%; height: 100.0%;">VDS Farms-S Avenue-CAFO (Kalamazoo)</div>`)[0];
+                popup_e47e8ff70138c9fef94567a05bb007a1.setContent(html_cefc1a340ee1f0daf0e4e35cc5a1b0ab);
+            
+        
+
+        marker_9ee565974d66fd087d90dfa8880a2da9.bindPopup(popup_e47e8ff70138c9fef94567a05bb007a1)
+        ;
+
+        
+    
+    
+                marker_9ee565974d66fd087d90dfa8880a2da9.setIcon(icon_690a6fdba969d331502ff977dfb84fff);
+            
+    
+            var marker_bc18efcf557610be5baf5d397ef1693f = L.marker(
+                [44.15, -85.23],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_688933aabf1974ed72552f242a2b9088 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7ff2435756f82de663de8eee604e9889 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ed196c1d09b10fcd8cd0046878aebee6 = $(`<div id="html_ed196c1d09b10fcd8cd0046878aebee6" style="width: 100.0%; height: 100.0%;">Veddler Dairy Farms-CAFO (Osceola)</div>`)[0];
+                popup_7ff2435756f82de663de8eee604e9889.setContent(html_ed196c1d09b10fcd8cd0046878aebee6);
+            
+        
+
+        marker_bc18efcf557610be5baf5d397ef1693f.bindPopup(popup_7ff2435756f82de663de8eee604e9889)
+        ;
+
+        
+    
+    
+                marker_bc18efcf557610be5baf5d397ef1693f.setIcon(icon_688933aabf1974ed72552f242a2b9088);
+            
+    
+            var marker_00c5277113008d5f43f5cc314416e016 = L.marker(
+                [43.85, -83.17],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_a55223e24484fc5bdc3bb7d84181cd69 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_29a9e9289cad6a9cfa9a8cca28d4ce60 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_747cddb668933c993a771cd68ac0dea4 = $(`<div id="html_747cddb668933c993a771cd68ac0dea4" style="width: 100.0%; height: 100.0%;">W A Herford & Sons - CAFO (Huron)</div>`)[0];
+                popup_29a9e9289cad6a9cfa9a8cca28d4ce60.setContent(html_747cddb668933c993a771cd68ac0dea4);
+            
+        
+
+        marker_00c5277113008d5f43f5cc314416e016.bindPopup(popup_29a9e9289cad6a9cfa9a8cca28d4ce60)
+        ;
+
+        
+    
+    
+                marker_00c5277113008d5f43f5cc314416e016.setIcon(icon_a55223e24484fc5bdc3bb7d84181cd69);
+            
+    
+            var marker_3cd8b762e790c35589be790bb75e0a37 = L.marker(
+                [42.73, -85.68],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_8240dd0d8c263b98d197ec85ee377b0e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_655ad41abc43e88a51cbb0e68076e941 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bde7edf7f304c6394d4d37196dabc1f7 = $(`<div id="html_bde7edf7f304c6394d4d37196dabc1f7" style="width: 100.0%; height: 100.0%;">Walnutdale Farms Dorr Twp-CAFO (Allegan)</div>`)[0];
+                popup_655ad41abc43e88a51cbb0e68076e941.setContent(html_bde7edf7f304c6394d4d37196dabc1f7);
+            
+        
+
+        marker_3cd8b762e790c35589be790bb75e0a37.bindPopup(popup_655ad41abc43e88a51cbb0e68076e941)
+        ;
+
+        
+    
+    
+                marker_3cd8b762e790c35589be790bb75e0a37.setIcon(icon_8240dd0d8c263b98d197ec85ee377b0e);
+            
+    
+            var marker_24d904ad8f548bc3a83d38f0d655c425 = L.marker(
+                [43.44, -82.87],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_ae2f7c9973edc3a041c9b4552937c6a1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f49e8ac0fbbdcdc9d8e11eb6f4e0cb0f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e5d8270108c2f8a43b628efc2ea9cf3 = $(`<div id="html_0e5d8270108c2f8a43b628efc2ea9cf3" style="width: 100.0%; height: 100.0%;">Weaverland Farms-CAFO (Sanilac)</div>`)[0];
+                popup_f49e8ac0fbbdcdc9d8e11eb6f4e0cb0f.setContent(html_0e5d8270108c2f8a43b628efc2ea9cf3);
+            
+        
+
+        marker_24d904ad8f548bc3a83d38f0d655c425.bindPopup(popup_f49e8ac0fbbdcdc9d8e11eb6f4e0cb0f)
+        ;
+
+        
+    
+    
+                marker_24d904ad8f548bc3a83d38f0d655c425.setIcon(icon_ae2f7c9973edc3a041c9b4552937c6a1);
+            
+    
+            var marker_a71bf6455fee92bb7d2d1599627fa77b = L.marker(
+                [43.46, -84.45],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_d4efaed1c33663b0143db1493fcb1ab6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6b750a8826d9abc5f82e4a67e2880fce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2771b2d4f3c2d3b84be85d7c2d55e633 = $(`<div id="html_2771b2d4f3c2d3b84be85d7c2d55e633" style="width: 100.0%; height: 100.0%;">Wheeler Dairy LLC-CAFO (Gratiot)</div>`)[0];
+                popup_6b750a8826d9abc5f82e4a67e2880fce.setContent(html_2771b2d4f3c2d3b84be85d7c2d55e633);
+            
+        
+
+        marker_a71bf6455fee92bb7d2d1599627fa77b.bindPopup(popup_6b750a8826d9abc5f82e4a67e2880fce)
+        ;
+
+        
+    
+    
+                marker_a71bf6455fee92bb7d2d1599627fa77b.setIcon(icon_d4efaed1c33663b0143db1493fcb1ab6);
+            
+    
+            var marker_12ed2db0372849eb7031c658483108c6 = L.marker(
+                [43.25, -84.52],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_9480d12f47c62bdc75ec0fa41a26b023 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6c3baea8d8e157b90e022a1d4f5c8b59 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6b95ac8547ab5deb076294be3ee32df8 = $(`<div id="html_6b95ac8547ab5deb076294be3ee32df8" style="width: 100.0%; height: 100.0%;">Whitmore Operations-CAFO (Gratiot)</div>`)[0];
+                popup_6c3baea8d8e157b90e022a1d4f5c8b59.setContent(html_6b95ac8547ab5deb076294be3ee32df8);
+            
+        
+
+        marker_12ed2db0372849eb7031c658483108c6.bindPopup(popup_6c3baea8d8e157b90e022a1d4f5c8b59)
+        ;
+
+        
+    
+    
+                marker_12ed2db0372849eb7031c658483108c6.setIcon(icon_9480d12f47c62bdc75ec0fa41a26b023);
+            
+    
+            var marker_51eda69b2a59c4a0060ebb4cd4f94f19 = L.marker(
+                [43.84, -83.0],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_bfba104e5c918c953544cf3efa4fe146 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_62b3e3888dac93d564933f1298040d4a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_329c372d9926aab0d4455e9fb581c735 = $(`<div id="html_329c372d9926aab0d4455e9fb581c735" style="width: 100.0%; height: 100.0%;">Wil-Le Farms-CAFO (Huron)</div>`)[0];
+                popup_62b3e3888dac93d564933f1298040d4a.setContent(html_329c372d9926aab0d4455e9fb581c735);
+            
+        
+
+        marker_51eda69b2a59c4a0060ebb4cd4f94f19.bindPopup(popup_62b3e3888dac93d564933f1298040d4a)
+        ;
+
+        
+    
+    
+                marker_51eda69b2a59c4a0060ebb4cd4f94f19.setIcon(icon_bfba104e5c918c953544cf3efa4fe146);
+            
+    
+            var marker_bb381c79e1c9025268eb8aa5e531279c = L.marker(
+                [43.06, -85.12],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_645da99b6ffe046235c24e62d19f5e41 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e6c529877c2419f926afd337a876b125 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27184284d26e4bfa3a4342c78417bebf = $(`<div id="html_27184284d26e4bfa3a4342c78417bebf" style="width: 100.0%; height: 100.0%;">Willow Point Dairy-CAFO (Ionia)</div>`)[0];
+                popup_e6c529877c2419f926afd337a876b125.setContent(html_27184284d26e4bfa3a4342c78417bebf);
+            
+        
+
+        marker_bb381c79e1c9025268eb8aa5e531279c.bindPopup(popup_e6c529877c2419f926afd337a876b125)
+        ;
+
+        
+    
+    
+                marker_bb381c79e1c9025268eb8aa5e531279c.setIcon(icon_645da99b6ffe046235c24e62d19f5e41);
+            
+    
+            var marker_06c0fe7041bc96a81d2232ad48b64aae = L.marker(
+                [43.13, -84.83],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_c1b534598fec15d50f0330261a5e967e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9443274f4b89f3e6fc05334b0304d70e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_14f82b1d4955453954fe3857fdaa5ce8 = $(`<div id="html_14f82b1d4955453954fe3857fdaa5ce8" style="width: 100.0%; height: 100.0%;">Wilson Centennial Farm LLC-CAFO (Gratiot)</div>`)[0];
+                popup_9443274f4b89f3e6fc05334b0304d70e.setContent(html_14f82b1d4955453954fe3857fdaa5ce8);
+            
+        
+
+        marker_06c0fe7041bc96a81d2232ad48b64aae.bindPopup(popup_9443274f4b89f3e6fc05334b0304d70e)
+        ;
+
+        
+    
+    
+                marker_06c0fe7041bc96a81d2232ad48b64aae.setIcon(icon_c1b534598fec15d50f0330261a5e967e);
+            
+    
+            var marker_2163854fd7faa3abb7a45108c3d9f015 = L.marker(
+                [43.93, -85.25],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_cbc75859bd5d3223e521609f56b81b74 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8f6a7a328aaa4d0eec1f846244f557cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f255e5eb02f65e3abf4e97809efeea85 = $(`<div id="html_f255e5eb02f65e3abf4e97809efeea85" style="width: 100.0%; height: 100.0%;">Wirth Dairy Farm-CAFO (Osceola)</div>`)[0];
+                popup_8f6a7a328aaa4d0eec1f846244f557cd.setContent(html_f255e5eb02f65e3abf4e97809efeea85);
+            
+        
+
+        marker_2163854fd7faa3abb7a45108c3d9f015.bindPopup(popup_8f6a7a328aaa4d0eec1f846244f557cd)
+        ;
+
+        
+    
+    
+                marker_2163854fd7faa3abb7a45108c3d9f015.setIcon(icon_cbc75859bd5d3223e521609f56b81b74);
+            
+    
+            var marker_6dd0153b5f8ae9b8a7e760b93ddf2591 = L.marker(
+                [42.68, -85.54],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_c58825089e1f77673c3d7a5e0b567aae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1e4bb5f3e9fa5c8f2368b6079ba3fd5a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7aa03deef29de12ccbf9092bac091223 = $(`<div id="html_7aa03deef29de12ccbf9092bac091223" style="width: 100.0%; height: 100.0%;">Yankee Springs Dairy-CAFO (Barry)</div>`)[0];
+                popup_1e4bb5f3e9fa5c8f2368b6079ba3fd5a.setContent(html_7aa03deef29de12ccbf9092bac091223);
+            
+        
+
+        marker_6dd0153b5f8ae9b8a7e760b93ddf2591.bindPopup(popup_1e4bb5f3e9fa5c8f2368b6079ba3fd5a)
+        ;
+
+        
+    
+    
+                marker_6dd0153b5f8ae9b8a7e760b93ddf2591.setIcon(icon_c58825089e1f77673c3d7a5e0b567aae);
+            
+    
+            var marker_c1533688ec3930635fcf920f485dfe65 = L.marker(
+                [44.19, -85.31],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_4767505585606e34228dcbbe476c6b98 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1117eb15d8d908d58f1bde45cc823edc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_152b28546d37026490c10443d8dda0ba = $(`<div id="html_152b28546d37026490c10443d8dda0ba" style="width: 100.0%; height: 100.0%;">Yonkman-Pinecrest Family Farms - CAFO (Missaukee)</div>`)[0];
+                popup_1117eb15d8d908d58f1bde45cc823edc.setContent(html_152b28546d37026490c10443d8dda0ba);
+            
+        
+
+        marker_c1533688ec3930635fcf920f485dfe65.bindPopup(popup_1117eb15d8d908d58f1bde45cc823edc)
+        ;
+
+        
+    
+    
+                marker_c1533688ec3930635fcf920f485dfe65.setIcon(icon_4767505585606e34228dcbbe476c6b98);
+            
+    
+            var marker_6459b5079ccf3e5c378dd8f485fd21fb = L.marker(
+                [43.92, -83.16],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_afe68d51ce07212717d0698423601be3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e199519d973fcba9d1166f9f79e8a6a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_40295afb56653b2867e5ac3c03bbd28f = $(`<div id="html_40295afb56653b2867e5ac3c03bbd28f" style="width: 100.0%; height: 100.0%;">Z-Star-CAFO (Huron)</div>`)[0];
+                popup_e199519d973fcba9d1166f9f79e8a6a2.setContent(html_40295afb56653b2867e5ac3c03bbd28f);
+            
+        
+
+        marker_6459b5079ccf3e5c378dd8f485fd21fb.bindPopup(popup_e199519d973fcba9d1166f9f79e8a6a2)
+        ;
+
+        
+    
+    
+                marker_6459b5079ccf3e5c378dd8f485fd21fb.setIcon(icon_afe68d51ce07212717d0698423601be3);
+            
+    
+            var marker_0c697dd440c7204ca72742f9c89c9e4b = L.marker(
+                [43.85, -83.11],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_18631673bfe3cd6f2b6e52664749f7a4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9414a8321e3a22536548b7ec4aa990c1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a72594a3786c9619592c70d21d729f73 = $(`<div id="html_a72594a3786c9619592c70d21d729f73" style="width: 100.0%; height: 100.0%;">Zwemmer Dairy-CAFO (Huron)</div>`)[0];
+                popup_9414a8321e3a22536548b7ec4aa990c1.setContent(html_a72594a3786c9619592c70d21d729f73);
+            
+        
+
+        marker_0c697dd440c7204ca72742f9c89c9e4b.bindPopup(popup_9414a8321e3a22536548b7ec4aa990c1)
+        ;
+
+        
+    
+    
+                marker_0c697dd440c7204ca72742f9c89c9e4b.setIcon(icon_18631673bfe3cd6f2b6e52664749f7a4);
+            
+    
+            var marker_349e49cab20edd741f3025986e8a347a = L.marker(
+                [44.3, -85.05],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_41ab65620b9296d76f5e1cb4948f2ff4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_25ea1b9711de6148384f0e133804432d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a0a9a4585c71d270858ee1702fe822cc = $(`<div id="html_a0a9a4585c71d270858ee1702fe822cc" style="width: 100.0%; height: 100.0%;">Garlomar Farms Inc-CAFO (Missaukee)</div>`)[0];
+                popup_25ea1b9711de6148384f0e133804432d.setContent(html_a0a9a4585c71d270858ee1702fe822cc);
+            
+        
+
+        marker_349e49cab20edd741f3025986e8a347a.bindPopup(popup_25ea1b9711de6148384f0e133804432d)
+        ;
+
+        
+    
+    
+                marker_349e49cab20edd741f3025986e8a347a.setIcon(icon_41ab65620b9296d76f5e1cb4948f2ff4);
+            
+    
+            var marker_93b83c9165b29e6bb379b990c20eb8cc = L.marker(
+                [41.83, -84.21],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_3dd2281ce3d267dfff60bc5958842435 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8e961b630d77ffb914c86c5cedaeaf6e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8fbb6105de132defb4c2a283047f4c80 = $(`<div id="html_8fbb6105de132defb4c2a283047f4c80" style="width: 100.0%; height: 100.0%;">Hoffland Dairy-CAFO (Lenawee)</div>`)[0];
+                popup_8e961b630d77ffb914c86c5cedaeaf6e.setContent(html_8fbb6105de132defb4c2a283047f4c80);
+            
+        
+
+        marker_93b83c9165b29e6bb379b990c20eb8cc.bindPopup(popup_8e961b630d77ffb914c86c5cedaeaf6e)
+        ;
+
+        
+    
+    
+                marker_93b83c9165b29e6bb379b990c20eb8cc.setIcon(icon_3dd2281ce3d267dfff60bc5958842435);
+            
+    
+            var marker_8e48958a56dfc1db414b688814931a37 = L.marker(
+                [43.22, -84.18],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_92f17151e0174e1c6508fd52e224b75a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_77aa16ce2cd02c5c03e67c070ba72343 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_24dbd38aa6e6e1510fa718a291d021b2 = $(`<div id="html_24dbd38aa6e6e1510fa718a291d021b2" style="width: 100.0%; height: 100.0%;">Neumann Farms-CAFO (Saginaw)</div>`)[0];
+                popup_77aa16ce2cd02c5c03e67c070ba72343.setContent(html_24dbd38aa6e6e1510fa718a291d021b2);
+            
+        
+
+        marker_8e48958a56dfc1db414b688814931a37.bindPopup(popup_77aa16ce2cd02c5c03e67c070ba72343)
+        ;
+
+        
+    
+    
+                marker_8e48958a56dfc1db414b688814931a37.setIcon(icon_92f17151e0174e1c6508fd52e224b75a);
+            
+    
+            var marker_a2d9a5137379d7345562893cf473500a = L.marker(
+                [43.75, -83.11],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_8db52862d0490c981364ccd9f4162c9e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_62188b6deea8eb364edf0ac986a40cae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0163e9245e42f06b9ed7843561a87f21 = $(`<div id="html_0163e9245e42f06b9ed7843561a87f21" style="width: 100.0%; height: 100.0%;">Red Mountain Jerseys, LLC-CAFO (Huron)</div>`)[0];
+                popup_62188b6deea8eb364edf0ac986a40cae.setContent(html_0163e9245e42f06b9ed7843561a87f21);
+            
+        
+
+        marker_a2d9a5137379d7345562893cf473500a.bindPopup(popup_62188b6deea8eb364edf0ac986a40cae)
+        ;
+
+        
+    
+    
+                marker_a2d9a5137379d7345562893cf473500a.setIcon(icon_8db52862d0490c981364ccd9f4162c9e);
+            
+    
+            var marker_b16ddf3a3b3617e8498100e185df7c48 = L.marker(
+                [43.55, -85.21],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_c93def682c4164ffd953a4d9d5366cd8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fd0a6e264a296ac4a53d52ecc32ad229 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ffdf2055bc7f2e6caafcf381c6681df5 = $(`<div id="html_ffdf2055bc7f2e6caafcf381c6681df5" style="width: 100.0%; height: 100.0%;">Chapin Farmily Farms LLC-CAFO (Mecosta)</div>`)[0];
+                popup_fd0a6e264a296ac4a53d52ecc32ad229.setContent(html_ffdf2055bc7f2e6caafcf381c6681df5);
+            
+        
+
+        marker_b16ddf3a3b3617e8498100e185df7c48.bindPopup(popup_fd0a6e264a296ac4a53d52ecc32ad229)
+        ;
+
+        
+    
+    
+                marker_b16ddf3a3b3617e8498100e185df7c48.setIcon(icon_c93def682c4164ffd953a4d9d5366cd8);
+            
+    
+            var marker_b5c89bc326e7a9f60123d1748b44cbba = L.marker(
+                [42.72, -85.27],
+                {
+}
+            ).addTo(map_6a064cf2e008c333b2559a627f27c781);
+        
+    
+            var icon_e841375c9e5ccd52aedf8650f534bf65 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b8639e39fbd9122901af70abb3ea9f30 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab7ca9ca9867af8a8cb98ec6dadc4f67 = $(`<div id="html_ab7ca9ca9867af8a8cb98ec6dadc4f67" style="width: 100.0%; height: 100.0%;">Tubergen Dairy Farm South-CAFO (Barry)</div>`)[0];
+                popup_b8639e39fbd9122901af70abb3ea9f30.setContent(html_ab7ca9ca9867af8a8cb98ec6dadc4f67);
+            
+        
+
+        marker_b5c89bc326e7a9f60123d1748b44cbba.bindPopup(popup_b8639e39fbd9122901af70abb3ea9f30)
+        ;
+
+        
+    
+    
+                marker_b5c89bc326e7a9f60123d1748b44cbba.setIcon(icon_e841375c9e5ccd52aedf8650f534bf65);
+            
+</script>
+</html>
