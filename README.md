@@ -12,3 +12,5 @@ For prediction of methane production in dairy farms from satellite images.
 
 # AI_detection
 [This is a link to the AI-detected dairy farm map for Wyoming county](https://bovi-analytics.github.io/Satellite/final_filtered_wyoming_map.html)
+
+[This is a link to the AI-detected dairy farm map for Lenawee county](https://bovi-analytics.github.io/Satellite/Lenawee_W_farm_detection_cluster_map.html)
