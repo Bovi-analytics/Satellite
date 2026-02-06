@@ -14,6 +14,9 @@ MI state: https://gis-egle.hub.arcgis.com/datasets/egle::michigan-concentrated-a
 
 [This is a link to the map for cattle only in MI](https://bovi-analytics.github.io/Satellite/Michigan_cafo_filtered.html)
 
+# NAIP image source
+https://earthexplorer.usgs.gov/
+
 # AI_detection maps
 [This is a link to the AI-detected dairy farm map for Wyoming county](https://bovi-analytics.github.io/Satellite/final_filtered_wyoming_map.html)
 
